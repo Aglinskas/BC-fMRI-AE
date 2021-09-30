@@ -29,13 +29,14 @@ def sampling(args):
     return z_mean + K.exp(0.5 * z_log_var) * epsilon
 
 
-def get_MRI_VAE_3D(input_shape=(48,48,48,51),
+def get_fMRI_VAE_4D(input_shape=(48,48,48,51),
                    latent_dim=2, 
                    batch_size = 32, 
                    disentangle=False, 
                    gamma=1,
                    kernel_size = 3,
                    filters = 16,
+                   bias=True,
                    intermediate_dim = 128,
                    nlayers = 2,
                    learning_rate=0.001):
@@ -56,6 +57,7 @@ def get_MRI_VAE_3D(input_shape=(48,48,48,51),
                 kernel_size=kernel_size,
                 activation='relu',
                 strides=2,
+                use_bias=bias,
                 padding='same')(x)
 
     # shape info needed to build decoder model
@@ -63,9 +65,9 @@ def get_MRI_VAE_3D(input_shape=(48,48,48,51),
 
     # generate latent vector Q(z|X)
     x = Flatten()(x)
-    x = Dense(intermediate_dim, activation='relu')(x)
-    z_mean = Dense(latent_dim, name='z_mean')(x)
-    z_log_var = Dense(latent_dim, name='z_log_var')(x)
+    x = Dense(intermediate_dim, activation='relu',use_bias=bias)(x)
+    z_mean = Dense(latent_dim, name='z_mean',use_bias=bias)(x)
+    z_log_var = Dense(latent_dim, name='z_log_var',use_bias=bias)(x)
 
     # use reparameterization trick to push the sampling out as input
     # note that "output_shape" isn't necessary with the TensorFlow backend
@@ -76,8 +78,8 @@ def get_MRI_VAE_3D(input_shape=(48,48,48,51),
 
     # build decoder model
     latent_inputs = Input(shape=(latent_dim,), name='z_sampling')
-    x = Dense(intermediate_dim, activation='relu')(latent_inputs)
-    x = Dense(shape[1] * shape[2] * shape[3] * shape[4], activation='relu')(x)
+    x = Dense(intermediate_dim, activation='relu',use_bias=bias)(latent_inputs)
+    x = Dense(shape[1] * shape[2] * shape[3] * shape[4], activation='relu',use_bias=bias)(x)
     x = Reshape((shape[1], shape[2], shape[3],shape[4]))(x)
 
     for i in range(nlayers):
@@ -85,6 +87,7 @@ def get_MRI_VAE_3D(input_shape=(48,48,48,51),
                           kernel_size=kernel_size,
                           activation='relu',
                           strides=2,
+                          use_bias=bias,
                           padding='same')(x)
         filters //= 2
 
@@ -92,6 +95,7 @@ def get_MRI_VAE_3D(input_shape=(48,48,48,51),
                             kernel_size=kernel_size,
                             activation='sigmoid',
                             padding='same',
+                            use_bias=bias,
                             name='decoder_output')(x)
 
     # instantiate decoder model
@@ -147,12 +151,12 @@ def get_MRI_VAE_3D(input_shape=(48,48,48,51),
         vae_loss = K.mean(reconstruction_loss) + K.mean(kl_loss) + gamma * K.mean(tc_loss) + K.mean(discriminator_loss)
     else:
         vae_loss = K.mean(reconstruction_loss) + K.mean(kl_loss)
-
     vae.add_loss(vae_loss)
-    opt = tf.keras.optimizers.Adam(learning_rate=learning_rate,beta_1=0.9,beta_2=0.999,epsilon=1e-07,amsgrad=False,name='Adam')
+
+    if type(opt)==type(None):
+        opt = tf.keras.optimizers.Adam(learning_rate=learning_rate,beta_1=0.9,beta_2=0.999,epsilon=1e-07,amsgrad=False,name='Adam')
         
-    vae.compile(optimizer='rmsprop')
-    #vae.compile(optimizer=opt)
+    vae.compile(optimizer=opt)
     
 
     if disentangle:
@@ -166,12 +170,7 @@ def get_MRI_VAE_3D(input_shape=(48,48,48,51),
 
 
 
-
-
-
-
-
-def get_MRI_CCVAE_3D(input_shape=(48,48,48,51),
+def get_fMRI_CVAE_4D(input_shape=(48,48,48,51),
                      latent_dim=2,
                      beta=1,
                      disentangle=False,
@@ -182,8 +181,9 @@ def get_MRI_CCVAE_3D(input_shape=(48,48,48,51),
                      filters = 16,
                      intermediate_dim = 128,
                      nlayers = 2,
-                     learning_rate=0.001):
-    #epochs = 10
+                     learning_rate=0.001,
+                     opt=None):
+    
     image_size, _, _, channels = input_shape
     
 
@@ -191,19 +191,19 @@ def get_MRI_CCVAE_3D(input_shape=(48,48,48,51),
     tg_inputs = Input(shape=input_shape, name='tg_inputs')
     bg_inputs = Input(shape=input_shape, name='bg_inputs')
 
-    z_conv1 = Conv3D(filters=filters*2,
-            kernel_size=kernel_size,
-            activation='relu',
-            strides=2,
-            use_bias=bias,
-            padding='same')
+#     z_conv1 = Conv3D(filters=filters*2,
+#             kernel_size=kernel_size,
+#             activation='relu',
+#             strides=2,
+#             use_bias=bias,
+#             padding='same')
 
-    z_conv2 = Conv3D(filters=filters*4,
-            kernel_size=kernel_size,
-            activation='relu',
-            strides=2,
-            use_bias=bias,
-            padding='same')
+#     z_conv2 = Conv3D(filters=filters*4,
+#             kernel_size=kernel_size,
+#             activation='relu',
+#             strides=2,
+#             use_bias=bias,
+#             padding='same')
 
 
     # generate latent vector Q(z|X)
@@ -214,8 +214,19 @@ def get_MRI_CCVAE_3D(input_shape=(48,48,48,51),
 
     def z_encoder_func(inputs):
         z_h = inputs
-        z_h = z_conv1(z_h)
-        z_h = z_conv2(z_h)
+        #z_h = z_conv1(z_h)
+        #z_h = z_conv2(z_h)
+        
+        these_filters = filters
+        for i in range(nlayers):
+            these_filters *= 2
+            #print(these_filters)
+            z_h = Conv3D(filters=these_filters,
+                    kernel_size=kernel_size,
+                    activation='relu',
+                    strides=2,
+                    padding='same')(z_h)
+        
         # shape info needed to build decoder model
         shape = K.int_shape(z_h)
         z_h = Flatten()(z_h)
@@ -228,19 +239,19 @@ def get_MRI_CCVAE_3D(input_shape=(48,48,48,51),
     tg_z_mean, tg_z_log_var, tg_z, shape_z = z_encoder_func(tg_inputs)
 
 
-    s_conv1 = Conv3D(filters=filters*2,
-            kernel_size=kernel_size,
-            activation='relu',
-            strides=2,
-            use_bias=bias,
-            padding='same')
+#     s_conv1 = Conv3D(filters=filters*2,
+#             kernel_size=kernel_size,
+#             activation='relu',
+#             strides=2,
+#             use_bias=bias,
+#             padding='same')
 
-    s_conv2 = Conv3D(filters=filters*4,
-            kernel_size=kernel_size,
-            activation='relu',
-            strides=2,
-            use_bias=bias,
-            padding='same')
+#     s_conv2 = Conv3D(filters=filters*4,
+#             kernel_size=kernel_size,
+#             activation='relu',
+#             strides=2,
+#             use_bias=bias,
+#             padding='same')
 
 
     # generate latent vector Q(z|X)
@@ -251,8 +262,18 @@ def get_MRI_CCVAE_3D(input_shape=(48,48,48,51),
 
     def s_encoder_func(inputs):
         s_h = inputs
-        s_h = s_conv1(s_h)
-        s_h = s_conv2(s_h)
+        #s_h = s_conv1(s_h)
+        #s_h = s_conv2(s_h)
+        
+        these_filters = filters
+        for i in range(nlayers):
+            these_filters *= 2
+            s_h = Conv3D(filters=these_filters,
+                    kernel_size=kernel_size,
+                    activation='relu',
+                    strides=2,
+                    padding='same')(s_h)
+        
         # shape info needed to build decoder model
         shape = K.int_shape(s_h)
         s_h = Flatten()(s_h)
@@ -365,7 +386,9 @@ def get_MRI_CCVAE_3D(input_shape=(48,48,48,51),
     cvae_loss = tf.keras.backend.mean(reconstruction_loss + beta*kl_loss + gamma*tc_loss + discriminator_loss)
     cvae.add_loss(cvae_loss)
     
-    opt = tf.keras.optimizers.Adam(learning_rate=learning_rate,beta_1=0.9,beta_2=0.999,epsilon=1e-07,amsgrad=False,name='Adam')
+    if type(opt)==type(None):
+        print('optimizer not specified using ADAM, wroom wroom')
+        opt = tf.keras.optimizers.Adam(learning_rate=learning_rate,beta_1=0.9,beta_2=0.999,epsilon=1e-07,amsgrad=False,name='Adam')
     
 #     opt = tf.keras.optimizers.SGD(
 #     learning_rate=0.01, momentum=0.0, nesterov=False, name='SGD')
