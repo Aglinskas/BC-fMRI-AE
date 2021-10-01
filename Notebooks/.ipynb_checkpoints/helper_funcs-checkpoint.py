@@ -16,6 +16,52 @@ from umap import UMAP
 default_keys = ['ADOS_Total','ADOS_Social','DSMIVTR','AgeAtScan','Sex','ScannerID','ScanSiteID','FIQ']
 
 
+class vae_data_loader():
+    ''' this is the info'''
+    def __init__(self,data_dir,df,batch_size=32):
+        #self.data = data
+        #self.n = data.shape[0]
+        self.n = len(df)
+        self.data_dir = data_dir
+        self.epoch = -1
+        self.batch_size = batch_size
+        self.df = df
+        
+        self.new_epoch()
+        self.n_batches = int(self.n/self.batch_size)
+        
+    def new_epoch(self):
+        #self.df = self.df.iloc[np.random.permutation(np.arange(self.n))]
+        #self.df.index = np.arange(self.n)
+        self.idxs = np.arange(self.n)
+        
+        #self.asd_idxs = np.random.permutation(self.asd_idxs)
+        self.idxs = np.random.permutation(self.idxs)
+        
+        self.epoch += 1
+        self.b = 0
+        
+        
+    def get_batch(self):
+        self.b += 1
+        
+        if self.b==self.n_batches:
+            self.new_epoch()
+        
+       # self.batch_asd_idx = self.asd_idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
+        self.batch_idx = self.idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
+        #self.batch_asd = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_asd_idx]])
+        self.batch = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_idx]])
+        self.batch_df = self.df.iloc[self.batch_idx,:]
+        
+        self.batch = self.batch/2
+        #self.batch_td = self.batch_td/2
+        
+    
+        return self.batch,self.batch_df
+    
+    
+
 class cvae_data_loader():
     ''' this is the info'''
     def __init__(self,data_dir,df,batch_size=32):

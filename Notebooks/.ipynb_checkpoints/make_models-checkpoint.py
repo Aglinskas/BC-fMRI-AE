@@ -387,7 +387,7 @@ def get_fMRI_CVAE_4D(input_shape=(48,48,48,51),
     cvae.add_loss(cvae_loss)
     
     if type(opt)==type(None):
-        print('optimizer not specified using ADAM, wroom wroom')
+        #print('optimizer not specified using ADAM, wroom wroom')
         opt = tf.keras.optimizers.Adam(learning_rate=learning_rate,beta_1=0.9,beta_2=0.999,epsilon=1e-07,amsgrad=False,name='Adam')
     
 #     opt = tf.keras.optimizers.SGD(
