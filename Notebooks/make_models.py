@@ -39,7 +39,8 @@ def get_fMRI_VAE_4D(input_shape=(48,48,48,51),
                    bias=True,
                    intermediate_dim = 128,
                    nlayers = 2,
-                   learning_rate=0.001):
+                   learning_rate=0.001,
+                   opt=None):
     
   #TODO: add discriminator loss, see if there is improvement. Perhaps try on shapes dataset if it's easier...
 
