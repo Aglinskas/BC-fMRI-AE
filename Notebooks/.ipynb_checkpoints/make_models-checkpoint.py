@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from scipy.special import expit
 from sklearn.metrics import silhouette_score
 from tensorflow.keras.layers import *
+from tensorflow.keras import regularizers
 from tensorflow.keras import backend as K
 from tensorflow.keras.models import Model
 from tensorflow.keras.losses import mse
@@ -186,31 +187,17 @@ def get_fMRI_CVAE_4D(input_shape=(48,48,48,51),
                      opt=None):
     
     image_size, _, _, channels = input_shape
-    
+
+    kernel_regularizer=regularizers.l2(.01)
 
     # build encoder model
     tg_inputs = Input(shape=input_shape, name='tg_inputs')
     bg_inputs = Input(shape=input_shape, name='bg_inputs')
 
-#     z_conv1 = Conv3D(filters=filters*2,
-#             kernel_size=kernel_size,
-#             activation='relu',
-#             strides=2,
-#             use_bias=bias,
-#             padding='same')
-
-#     z_conv2 = Conv3D(filters=filters*4,
-#             kernel_size=kernel_size,
-#             activation='relu',
-#             strides=2,
-#             use_bias=bias,
-#             padding='same')
-
-
     # generate latent vector Q(z|X)
-    z_h_layer = Dense(intermediate_dim, activation='relu', use_bias=bias)
-    z_mean_layer = Dense(latent_dim, name='z_mean', use_bias=bias)
-    z_log_var_layer = Dense(latent_dim, name='z_log_var', use_bias=bias)
+    z_h_layer = Dense(intermediate_dim, activation='relu', use_bias=bias,kernel_regularizer=kernel_regularizer)
+    z_mean_layer = Dense(latent_dim, name='z_mean', use_bias=bias,kernel_regularizer=kernel_regularizer)
+    z_log_var_layer = Dense(latent_dim, name='z_log_var', use_bias=bias,kernel_regularizer=kernel_regularizer)
     z_layer = Lambda(sampling, output_shape=(latent_dim,), name='z')
 
     def z_encoder_func(inputs):
@@ -226,7 +213,9 @@ def get_fMRI_CVAE_4D(input_shape=(48,48,48,51),
                     kernel_size=kernel_size,
                     activation='relu',
                     strides=2,
-                    padding='same')(z_h)
+                    padding='same',
+                    use_bias=bias,
+                    kernel_regularizer=kernel_regularizer)(z_h)
         
         # shape info needed to build decoder model
         shape = K.int_shape(z_h)
@@ -239,33 +228,15 @@ def get_fMRI_CVAE_4D(input_shape=(48,48,48,51),
 
     tg_z_mean, tg_z_log_var, tg_z, shape_z = z_encoder_func(tg_inputs)
 
-
-#     s_conv1 = Conv3D(filters=filters*2,
-#             kernel_size=kernel_size,
-#             activation='relu',
-#             strides=2,
-#             use_bias=bias,
-#             padding='same')
-
-#     s_conv2 = Conv3D(filters=filters*4,
-#             kernel_size=kernel_size,
-#             activation='relu',
-#             strides=2,
-#             use_bias=bias,
-#             padding='same')
-
-
     # generate latent vector Q(z|X)
-    s_h_layer = Dense(intermediate_dim, activation='relu', use_bias=bias)
-    s_mean_layer = Dense(latent_dim, name='s_mean', use_bias=bias)
-    s_log_var_layer = Dense(latent_dim, name='s_log_var', use_bias=bias)
+    s_h_layer = Dense(intermediate_dim, activation='relu', use_bias=bias,kernel_regularizer=kernel_regularizer)
+    s_mean_layer = Dense(latent_dim, name='s_mean', use_bias=bias,kernel_regularizer=kernel_regularizer)
+    s_log_var_layer = Dense(latent_dim, name='s_log_var', use_bias=bias,kernel_regularizer=kernel_regularizer)
     s_layer = Lambda(sampling, output_shape=(latent_dim,), name='s')
 
     def s_encoder_func(inputs):
         s_h = inputs
-        #s_h = s_conv1(s_h)
-        #s_h = s_conv2(s_h)
-        
+
         these_filters = filters
         for i in range(nlayers):
             these_filters *= 2
@@ -273,6 +244,8 @@ def get_fMRI_CVAE_4D(input_shape=(48,48,48,51),
                     kernel_size=kernel_size,
                     activation='relu',
                     strides=2,
+                    use_bias=bias,
+                    kernel_regularizer=kernel_regularizer,
                     padding='same')(s_h)
         
         # shape info needed to build decoder model
@@ -297,24 +270,28 @@ def get_fMRI_CVAE_4D(input_shape=(48,48,48,51),
       # build decoder model
     latent_inputs = Input(shape=(2*latent_dim,), name='z_sampling')
 
-    x = Dense(intermediate_dim, activation='relu', use_bias=bias)(latent_inputs)
-    x = Dense(shape_z[1] * shape_z[2] * shape_z[3] * shape_z[4], activation='relu', use_bias=bias)(x)
+    x = Dense(intermediate_dim, activation='relu', use_bias=bias,kernel_regularizer=kernel_regularizer)(latent_inputs)
+    x = Dense(shape_z[1] * shape_z[2] * shape_z[3] * shape_z[4], activation='relu', use_bias=bias,kernel_regularizer=kernel_regularizer)(x)
     x = Reshape((shape_z[1], shape_z[2], shape_z[3],shape_z[4]))(x)
 
-    for i in range(nlayers):
-        x = Conv3DTranspose(filters=filters,
+    these_filters = filters*(2**nlayers)/2
+    for i in range(nlayers-1):
+        x = Conv3DTranspose(filters=these_filters,
                           kernel_size=kernel_size,
                           activation='relu',
                           strides=2,
                           use_bias=bias,
+                          kernel_regularizer=kernel_regularizer,
                           padding='same')(x)
-        filters //= 2
+        these_filters //= 2
 
     outputs = Conv3DTranspose(filters=channels,
                             kernel_size=kernel_size,
                             activation='sigmoid',
                             padding='same',
+                            strides=2,
                             use_bias=bias,
+                            kernel_regularizer=kernel_regularizer,
                             name='decoder_output')(x)
 
     # instantiate decoder model
