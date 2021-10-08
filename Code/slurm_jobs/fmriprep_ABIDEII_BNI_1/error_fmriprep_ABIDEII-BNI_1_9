@@ -1,1 +1,6 @@
 INFO:    Converting SIF file to temporary sandbox...
+Fatal Python error: initsite: Failed to import the site module
+ModuleNotFoundError: No module named 'site'
+
+Current thread 0x0000155555541700 (most recent call first):
+INFO:    Cleaning up image...
