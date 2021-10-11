@@ -1,6 +1,1 @@
 INFO:    Converting SIF file to temporary sandbox...
-Traceback (most recent call last):
-  File "/usr/local/miniconda/bin/fmriprep", line 6, in <module>
-    from fmriprep.cli.run import main
-ModuleNotFoundError: No module named 'fmriprep'
-INFO:    Cleaning up image...
