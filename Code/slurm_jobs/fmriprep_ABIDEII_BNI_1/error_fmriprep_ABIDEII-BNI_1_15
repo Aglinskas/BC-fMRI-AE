@@ -1,12 +1,1 @@
 INFO:    Converting SIF file to temporary sandbox...
-Traceback (most recent call last):
-  File "/usr/local/miniconda/bin/fmriprep", line 6, in <module>
-    from fmriprep.cli.run import main
-  File "/usr/local/miniconda/lib/python3.7/site-packages/fmriprep/cli/run.py", line 4, in <module>
-    from .. import config
-  File "/usr/local/miniconda/lib/python3.7/site-packages/fmriprep/config.py", line 95, in <module>
-    from nipype import __version__ as _nipype_ver
-  File "/usr/local/miniconda/lib/python3.7/site-packages/nipype/__init__.py", line 18, in <module>
-    from .utils.config import NipypeConfig
-ModuleNotFoundError: No module named 'nipype.utils'
-INFO:    Cleaning up image...

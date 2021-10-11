@@ -14,6 +14,10 @@
 #sbatch fmriprep_ABIDEII-BNI_1.slurm
 #$SLURM_ARRAY_TASK_ID
 
+
+rm -rf output_fmriprep_ABIDEII-BNI_1_%a
+rm -rf error_fmriprep_ABIDEII-BNI_1_%a
+
 module load singularity/
 
 this_dir=$(pwd);echo $this_dir
@@ -41,13 +45,7 @@ echo $sub
 
 #echo ${files[$SLURM_ARRAY_TASK_ID]}
 
-singularity run --cleanenv $sing_image $data_dir $output_dir participant --participant-label $sub --fs-no-reconall --task-id 'rest' --fs-license-file $fs_lic
-
-
-
-
-
-
+singularity run --bind /data/aglinska/scratch:/scratch --cleanenv $sing_image $data_dir $output_dir participant --participant-label $sub --fs-no-reconall --task-id 'rest' --fs-license-file $fs_lic
 
 
 
