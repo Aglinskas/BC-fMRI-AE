@@ -1,0 +1,4 @@
+src=/gsfs0/data/aglinsai/fMRI_InData/XSimonsVIP-masterCopy
+dest=aglinska@andromeda.bc.edu:/data/aglinska/data/
+
+rsync --progress -avz -e "ssh -p 22022" $src $dest
