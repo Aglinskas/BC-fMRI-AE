@@ -11,3 +11,4 @@ discourage its usage.
 pandoc: /data/aglinska/data/ABIDE2/Derivatives/test/fmriprep/logs/CITATION.md: openBinaryFile: does not exist (No such file or directory)
 Could not generate CITATION.tex file:
 pandoc -s --bibliography /usr/local/miniconda/lib/python3.7/site-packages/fmriprep/data/boilerplate.bib --natbib /data/aglinska/data/ABIDE2/Derivatives/test/fmriprep/logs/CITATION.md -o /data/aglinska/data/ABIDE2/Derivatives/test/fmriprep/logs/CITATION.tex
+INFO:    Cleaning up image...
