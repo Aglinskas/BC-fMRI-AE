@@ -8,3 +8,4 @@ WARNING: Version 20.2.0 of fMRIPrep (current) has been FLAGGED
 (reason: Functional outputs in standard space can be wrong depending on the original data's orientation headers - see https://github.com/nipreps/fmriprep/issues/2307).
 That means some severe flaw was found in it and we strongly
 discourage its usage.
+INFO:    Cleaning up image...
