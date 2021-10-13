@@ -943,3 +943,11 @@ antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /data
 	 Changing /data/aglinska/data/ABIDE2/Derivatives/test/fmriprep/sub-29164/ses-1/anat/sub-29164_ses-1_run-1_space-MNI152NLin2009cAsym_desc-brain_mask.nii.gz dtype from float64 to uint8
 211012-15:00:21,26 nipype.workflow INFO:
 	 [Node] Finished "fmriprep_wf.single_subject_29164_wf.anat_preproc_wf.anat_derivatives_wf.anat2std_dseg".
+211012-15:00:23,404 nipype.interface WARNING:
+	 Changing /data/aglinska/data/ABIDE2/Derivatives/test/fmriprep/sub-29164/ses-1/anat/sub-29164_ses-1_run-1_space-MNI152NLin2009cAsym_dseg.nii.gz dtype from float64 to int16
+211012-15:00:23,664 nipype.workflow ERROR:
+	 could not run node: fmriprep_wf.single_subject_29164_wf.func_preproc_ses_1_task_rest_run_1_wf.bold_stc_wf.slice_timing_correction
+211012-15:00:23,670 nipype.workflow CRITICAL:
+	 fMRIPrep failed: Workflow did not execute cleanly. Check log for details
+211012-15:00:24,491 cli ERROR:
+	 Preprocessing did not finish successfully. Errors occurred while processing data from participants: 29164 (1). Check the HTML reports for details.
