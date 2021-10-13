@@ -1,1 +1,1 @@
-sbatch job_fmriprep_ABIDEII-USM_1.slurm
+sbatch job_fmriprep_ABIDEII-SDSU_1.slurm
