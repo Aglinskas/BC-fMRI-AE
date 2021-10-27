@@ -13,100 +13,99 @@ from sklearn.decomposition import PCA
 from umap import UMAP
 
 
-default_keys = ['ADOS_Total','ADOS_Social','DSMIVTR','AgeAtScan','Sex','ScannerID','ScanSiteID','FIQ']
+#default_keys = ['ADOS_Total','ADOS_Social','DSMIVTR','AgeAtScan','Sex','ScannerID','ScanSiteID','FIQ']
 
+# class vae_data_loader():
+#     ''' this is the info'''
+#     def __init__(self,data_dir,df,batch_size=32):
+#         #self.data = data
+#         #self.n = data.shape[0]
+#         self.n = len(df)
+#         self.data_dir = data_dir
+#         self.epoch = -1
+#         self.batch_size = batch_size
+#         self.df = df
+        
+#         self.new_epoch()
+#         self.n_batches = int(self.n/self.batch_size)
+        
+#     def new_epoch(self):
+#         #self.df = self.df.iloc[np.random.permutation(np.arange(self.n))]
+#         #self.df.index = np.arange(self.n)
+#         self.idxs = np.arange(self.n)
+        
+#         #self.asd_idxs = np.random.permutation(self.asd_idxs)
+#         self.idxs = np.random.permutation(self.idxs)
+        
+#         self.epoch += 1
+#         self.b = 0
+        
+        
+#     def get_batch(self):
+#         self.b += 1
+        
+#         if self.b==self.n_batches:
+#             self.new_epoch()
+        
+#        # self.batch_asd_idx = self.asd_idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
+#         self.batch_idx = self.idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
+#         #self.batch_asd = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_asd_idx]])
+#         self.batch = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_idx]])
+#         self.batch_df = self.df.iloc[self.batch_idx,:]
+        
+#         self.batch = self.batch/2
+#         #self.batch_td = self.batch_td/2
+        
+    
+#         return self.batch,self.batch_df
+    
+    
 
-class vae_data_loader():
-    ''' this is the info'''
-    def __init__(self,data_dir,df,batch_size=32):
-        #self.data = data
-        #self.n = data.shape[0]
-        self.n = len(df)
-        self.data_dir = data_dir
-        self.epoch = -1
-        self.batch_size = batch_size
-        self.df = df
+# class cvae_data_loader():
+#     ''' this is the info'''
+#     def __init__(self,data_dir,df,batch_size=32):
+#         #self.data = data
+#         #self.n = data.shape[0]
+#         self.n = len(df)
+#         self.data_dir = data_dir
+#         self.epoch = -1
+#         self.batch_size = batch_size
+#         self.df = df
         
-        self.new_epoch()
-        self.n_batches = int(self.n/self.batch_size)
+#         self.new_epoch()
+#         self.n_batches = int(np.floor(min((len(self.asd_idxs),len(self.td_idxs)))/self.batch_size))
         
-    def new_epoch(self):
-        #self.df = self.df.iloc[np.random.permutation(np.arange(self.n))]
-        #self.df.index = np.arange(self.n)
-        self.idxs = np.arange(self.n)
+#     def new_epoch(self):
+#         #self.df = self.df.iloc[np.random.permutation(np.arange(self.n))]
+#         #self.df.index = np.arange(self.n)
+#         self.asd_idxs = np.nonzero((self.df['DX_GROUP'].values==1))[0]
+#         self.td_idxs = np.nonzero((self.df['DX_GROUP'].values==2))[0]
         
-        #self.asd_idxs = np.random.permutation(self.asd_idxs)
-        self.idxs = np.random.permutation(self.idxs)
+#         self.asd_idxs = np.random.permutation(self.asd_idxs)
+#         self.td_idxs = np.random.permutation(self.td_idxs)
         
-        self.epoch += 1
-        self.b = 0
-        
-        
-    def get_batch(self):
-        self.b += 1
-        
-        if self.b==self.n_batches:
-            self.new_epoch()
-        
-       # self.batch_asd_idx = self.asd_idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
-        self.batch_idx = self.idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
-        #self.batch_asd = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_asd_idx]])
-        self.batch = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_idx]])
-        self.batch_df = self.df.iloc[self.batch_idx,:]
-        
-        self.batch = self.batch/2
-        #self.batch_td = self.batch_td/2
-        
-    
-        return self.batch,self.batch_df
-    
-    
-
-class cvae_data_loader():
-    ''' this is the info'''
-    def __init__(self,data_dir,df,batch_size=32):
-        #self.data = data
-        #self.n = data.shape[0]
-        self.n = len(df)
-        self.data_dir = data_dir
-        self.epoch = -1
-        self.batch_size = batch_size
-        self.df = df
-        
-        self.new_epoch()
-        self.n_batches = int(np.floor(min((len(self.asd_idxs),len(self.td_idxs)))/self.batch_size))
-        
-    def new_epoch(self):
-        #self.df = self.df.iloc[np.random.permutation(np.arange(self.n))]
-        #self.df.index = np.arange(self.n)
-        self.asd_idxs = np.nonzero((self.df['DX_GROUP'].values==1))[0]
-        self.td_idxs = np.nonzero((self.df['DX_GROUP'].values==2))[0]
-        
-        self.asd_idxs = np.random.permutation(self.asd_idxs)
-        self.td_idxs = np.random.permutation(self.td_idxs)
-        
-        self.epoch += 1
-        self.b = 0
+#         self.epoch += 1
+#         self.b = 0
         
         
-    def get_batch(self):
-        self.b += 1
+#     def get_batch(self):
+#         self.b += 1
         
-        if self.b==self.n_batches:
-            self.new_epoch()
+#         if self.b==self.n_batches:
+#             self.new_epoch()
         
         
-        self.batch_asd_idx = self.asd_idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
-        self.batch_td_idx = self.td_idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
-        self.batch_asd = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_asd_idx]])
-        self.batch_td = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_td_idx]])
-        self.batch_df = self.df.iloc[np.hstack((self.batch_asd_idx,self.batch_td_idx)),:]
+#         self.batch_asd_idx = self.asd_idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
+#         self.batch_td_idx = self.td_idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
+#         self.batch_asd = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_asd_idx]])
+#         self.batch_td = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_td_idx]])
+#         self.batch_df = self.df.iloc[np.hstack((self.batch_asd_idx,self.batch_td_idx)),:]
         
-        self.batch_asd = self.batch_asd/2
-        self.batch_td = self.batch_td/2
+#         self.batch_asd = self.batch_asd/2
+#         self.batch_td = self.batch_td/2
         
     
-        return self.batch_asd,self.batch_td,self.batch_df
+#         return self.batch_asd,self.batch_td,self.batch_df
 
 def fit_rsa(rdm_data,rdm_model):
     return np.corrcoef(get_triu(rdm_data),get_triu(rdm_model))[0,1]
@@ -142,220 +141,220 @@ def get_triu(inMat):
     return triu_vec
 
 
-def cvae_dashboard(epoch,b_idx,i,cvae,z_encoder,s_encoder,loss,all_rsas,c_sim,df,patient_batch,control_batch,batch_rsas,red='UMAP'):
+# def cvae_dashboard(epoch,b_idx,i,cvae,z_encoder,s_encoder,loss,all_rsas,c_sim,df,patient_batch,control_batch,batch_rsas,red='UMAP'):
     
-    if red=='PCA':
-        reducer = PCA
-    elif red=='UMAP':
-        reducer = UMAP
-    else:
-        reducer = UMAP
+#     if red=='PCA':
+#         reducer = PCA
+#     elif red=='UMAP':
+#         reducer = UMAP
+#     else:
+#         reducer = UMAP
         
-    #prediction = cvae.predict(patient_batch)    
-    predictions = cvae.predict([patient_batch,control_batch])
-    #predictions = np.concatenate((predictions[0],predictions[1]),axis=0)
-    prediction = predictions[0]
+#     #prediction = cvae.predict(patient_batch)    
+#     predictions = cvae.predict([patient_batch,control_batch])
+#     #predictions = np.concatenate((predictions[0],predictions[1]),axis=0)
+#     prediction = predictions[0]
     
-    if np.mod(i,1)==0:        
-        pc_s = reducer(n_components=2).fit_transform(s_encoder.predict(np.concatenate((patient_batch,control_batch),axis=0))[2])
-        pc_z = reducer(n_components=2).fit_transform(z_encoder.predict(np.concatenate((patient_batch,control_batch),axis=0))[2])
+#     if np.mod(i,1)==0:        
+#         pc_s = reducer(n_components=2).fit_transform(s_encoder.predict(np.concatenate((patient_batch,control_batch),axis=0))[2])
+#         pc_z = reducer(n_components=2).fit_transform(z_encoder.predict(np.concatenate((patient_batch,control_batch),axis=0))[2])
         
-        global pc_s_asd, pc_s_td, pc_z_asd, pc_z_td
+#         global pc_s_asd, pc_s_td, pc_z_asd, pc_z_td
 
-        pc_s_asd = pc_s[0:patient_batch.shape[0],:]
-        pc_s_td = pc_s[patient_batch.shape[0]::,:]
+#         pc_s_asd = pc_s[0:patient_batch.shape[0],:]
+#         pc_s_td = pc_s[patient_batch.shape[0]::,:]
 
-        pc_z_asd = pc_z[0:patient_batch.shape[0],:]
-        pc_z_td = pc_z[patient_batch.shape[0]::,:]
+#         pc_z_asd = pc_z[0:patient_batch.shape[0],:]
+#         pc_z_td = pc_z[patient_batch.shape[0]::,:]
         
-        #all_rsas.append(get_batch_rsas(z_encoder,s_encoder,df,n=50))
+#         #all_rsas.append(get_batch_rsas(z_encoder,s_encoder,df,n=50))
         
-    cmat_actual = np.corrcoef(np.vstack((patient_batch.reshape(patient_batch.shape[0],-1),control_batch.reshape(control_batch.shape[0],-1))))
-    cmat_pred = np.corrcoef(np.vstack((predictions[0].reshape(predictions[0].shape[0],-1),predictions[1].reshape(predictions[1].shape[0],-1))))
-    c_sim.append(np.corrcoef(get_triu(cmat_pred),get_triu(cmat_actual))[0,1])
+#     cmat_actual = np.corrcoef(np.vstack((patient_batch.reshape(patient_batch.shape[0],-1),control_batch.reshape(control_batch.shape[0],-1))))
+#     cmat_pred = np.corrcoef(np.vstack((predictions[0].reshape(predictions[0].shape[0],-1),predictions[1].reshape(predictions[1].shape[0],-1))))
+#     c_sim.append(np.corrcoef(get_triu(cmat_pred),get_triu(cmat_actual))[0,1])
 
     
-    ### PROGRESS PLOTTING
-    display.clear_output(wait=True);
-    display.display(plt.gcf());
-    #Organise figure
-    ncols = 4;nrows=5
-    if np.mod(i,5)==0:
-        plt.close()
-    plt.subplots(nrows,ncols,figsize=(15,15)); # MAKE THE FIGURE
+#     ### PROGRESS PLOTTING
+#     display.clear_output(wait=True);
+#     display.display(plt.gcf());
+#     #Organise figure
+#     ncols = 4;nrows=5
+#     if np.mod(i,5)==0:
+#         plt.close()
+#     plt.subplots(nrows,ncols,figsize=(15,15)); # MAKE THE FIGURE
     
     
-    ##### SUBPLOT 1 & 2 ##### 
+#     ##### SUBPLOT 1 & 2 ##### 
 
-    plt.subplot(nrows,ncols/2,1) # PLOT LOSS
-    xs = np.arange(len(loss))+1
-    m,b = np.polyfit(xs,loss,deg=1)
-    plt.plot(loss)
-    plt.plot(xs, m*xs + b)
-    plt.title(f'Epoch {epoch} batch {b_idx} | Loss {loss[-1]:.2f}, beta: {m:.4f}')
+#     plt.subplot(nrows,ncols/2,1) # PLOT LOSS
+#     xs = np.arange(len(loss))+1
+#     m,b = np.polyfit(xs,loss,deg=1)
+#     plt.plot(loss)
+#     plt.plot(xs, m*xs + b)
+#     plt.title(f'Epoch {epoch} batch {b_idx} | Loss {loss[-1]:.2f}, beta: {m:.4f}')
     
-    ##### SUBPLOT 3 ##### 
-    plt.subplot(nrows,ncols,3) # PLOT LOSS LAST 50
-    hb = 50
-    if len(loss)>hb:
-        plot_loss = loss[-hb::]
-        xs = np.arange(len(plot_loss))
-        m,b = np.polyfit(xs,plot_loss,deg=1)
-        plt.plot(plot_loss)
-        plt.plot(xs, m*xs + b)
-        #plt.title(hist)
-        plt.title(f'Loss last {hb} it, beta {m:.4f}')
+#     ##### SUBPLOT 3 ##### 
+#     plt.subplot(nrows,ncols,3) # PLOT LOSS LAST 50
+#     hb = 50
+#     if len(loss)>hb:
+#         plot_loss = loss[-hb::]
+#         xs = np.arange(len(plot_loss))
+#         m,b = np.polyfit(xs,plot_loss,deg=1)
+#         plt.plot(plot_loss)
+#         plt.plot(xs, m*xs + b)
+#         #plt.title(hist)
+#         plt.title(f'Loss last {hb} it, beta {m:.4f}')
         
-    ##### SUBPLOT 4 ##### 
-    plt.subplot(nrows,ncols,4)
-    plt.hist(prediction[0,:,:,:,0].flatten(),alpha=.5)
-    plt.hist(patient_batch[0,:,:,:,0].flatten(),alpha=.5)
-    plt.legend(['predicted','actual'])
-    plt.title('in/out histograms')
+#     ##### SUBPLOT 4 ##### 
+#     plt.subplot(nrows,ncols,4)
+#     plt.hist(prediction[0,:,:,:,0].flatten(),alpha=.5)
+#     plt.hist(patient_batch[0,:,:,:,0].flatten(),alpha=.5)
+#     plt.legend(['predicted','actual'])
+#     plt.title('in/out histograms')
     
-    ##### SUBPLOT 5 ##### 
-    plt.subplot(nrows,ncols,5) #RSA over time
-    plt.plot(c_sim)
-    plt.title(f'in/out RSA: {c_sim[-1].round(2)}')
+#     ##### SUBPLOT 5 ##### 
+#     plt.subplot(nrows,ncols,5) #RSA over time
+#     plt.plot(c_sim)
+#     plt.title(f'in/out RSA: {c_sim[-1].round(2)}')
     
-    if len(c_sim)>5: # PLOT LS LINE
-        xs = np.arange(len(c_sim))+1
-        m,b = np.polyfit(xs,c_sim,deg=1)
-        plt.plot(xs, m*xs + b)
-        plt.title(f'in/out RSA: {c_sim[-1].round(2)}, b={m:.4f}')
+#     if len(c_sim)>5: # PLOT LS LINE
+#         xs = np.arange(len(c_sim))+1
+#         m,b = np.polyfit(xs,c_sim,deg=1)
+#         plt.plot(xs, m*xs + b)
+#         plt.title(f'in/out RSA: {c_sim[-1].round(2)}, b={m:.4f}')
         
 
-    ##### SUBPLOT 6 ##### 
-    plt.subplot(nrows,ncols,6)
-    if len(c_sim)>hb:
-        #plot_loss = loss[-hb::]
-        xs = np.arange(len(c_sim[-hb::]))
-        m,b = np.polyfit(xs,c_sim[-hb::],deg=1)
-        plt.plot(c_sim[-hb::])
-        plt.plot(xs, m*xs + b)
-        #plt.title(hist)
-        plt.title(f'in/outRSA last {hb} it, b={m:.4f}')
+#     ##### SUBPLOT 6 ##### 
+#     plt.subplot(nrows,ncols,6)
+#     if len(c_sim)>hb:
+#         #plot_loss = loss[-hb::]
+#         xs = np.arange(len(c_sim[-hb::]))
+#         m,b = np.polyfit(xs,c_sim[-hb::],deg=1)
+#         plt.plot(c_sim[-hb::])
+#         plt.plot(xs, m*xs + b)
+#         #plt.title(hist)
+#         plt.title(f'in/outRSA last {hb} it, b={m:.4f}')
 
-    ##### SUBPLOT 7 ##### 
-    plt.subplot(nrows,ncols,7)
-    lbls = ['age','sex','fiq','dsm','site','ados'];
-    xs = np.arange(len(lbls));
-    plt.bar(xs,batch_rsas[0:6]);
-    plt.xticks(xs,labels=lbls);
-    plt.title('S RSA')
+#     ##### SUBPLOT 7 ##### 
+#     plt.subplot(nrows,ncols,7)
+#     lbls = ['age','sex','fiq','dsm','site','ados'];
+#     xs = np.arange(len(lbls));
+#     plt.bar(xs,batch_rsas[0:6]);
+#     plt.xticks(xs,labels=lbls);
+#     plt.title('S RSA')
     
-    ##### SUBPLOT 8 ##### 
-    plt.subplot(nrows,ncols,8)
-    lbls = ['age','sex','fiq','dsm','site','ados'];
-    xs = np.arange(len(lbls));
-    plt.bar(xs,batch_rsas[6::]);
-    plt.xticks(xs,labels=lbls);
-    plt.title('Z RSA')
+#     ##### SUBPLOT 8 ##### 
+#     plt.subplot(nrows,ncols,8)
+#     lbls = ['age','sex','fiq','dsm','site','ados'];
+#     xs = np.arange(len(lbls));
+#     plt.bar(xs,batch_rsas[6::]);
+#     plt.xticks(xs,labels=lbls);
+#     plt.title('Z RSA')
 
         
-    ##### SUBPLOT 9 ##### 
-    plt.subplot(nrows,ncols,9)
-    plt.scatter(pc_s_asd[:,0],pc_s_asd[:,1],s=100,alpha=.5);plt.title(f'batch latent S rep. {red}')
-    plt.scatter(pc_s_td[:,0],pc_s_td[:,1],s=100,alpha=.5);plt.title(f'batch latent S rep. {red}')
-    plt.legend(['ASD','TD'])
+#     ##### SUBPLOT 9 ##### 
+#     plt.subplot(nrows,ncols,9)
+#     plt.scatter(pc_s_asd[:,0],pc_s_asd[:,1],s=100,alpha=.5);plt.title(f'batch latent S rep. {red}')
+#     plt.scatter(pc_s_td[:,0],pc_s_td[:,1],s=100,alpha=.5);plt.title(f'batch latent S rep. {red}')
+#     plt.legend(['ASD','TD'])
     
-    ##### SUBPLOT 10 ##### 
-    plt.subplot(nrows,ncols,10)
-    plt.scatter(pc_z_asd[:,0],pc_z_asd[:,1],s=100,alpha=.5);plt.title(f'batch latent Z rep. {red}')
-    plt.scatter(pc_z_td[:,0],pc_z_td[:,1],s=100,alpha=.5);plt.title(f'batch latent Z rep. {red}')
-    plt.legend(['ASD','TD'])
+#     ##### SUBPLOT 10 ##### 
+#     plt.subplot(nrows,ncols,10)
+#     plt.scatter(pc_z_asd[:,0],pc_z_asd[:,1],s=100,alpha=.5);plt.title(f'batch latent Z rep. {red}')
+#     plt.scatter(pc_z_td[:,0],pc_z_td[:,1],s=100,alpha=.5);plt.title(f'batch latent Z rep. {red}')
+#     plt.legend(['ASD','TD'])
     
-    ##### SUBPLOT 11 ##### 
-    plt.subplot(nrows,ncols,11)
-    sns.heatmap(cmat_actual,xticklabels=[],yticklabels=[])
-    plt.title('input RSA')
+#     ##### SUBPLOT 11 ##### 
+#     plt.subplot(nrows,ncols,11)
+#     sns.heatmap(cmat_actual,xticklabels=[],yticklabels=[])
+#     plt.title('input RSA')
         
-    ##### SUBPLOT 12 ##### 
-    plt.subplot(nrows,ncols,12)
-    sns.heatmap(cmat_pred,xticklabels=[],yticklabels=[])
-    plt.title('output RSA')
+#     ##### SUBPLOT 12 ##### 
+#     plt.subplot(nrows,ncols,12)
+#     sns.heatmap(cmat_pred,xticklabels=[],yticklabels=[])
+#     plt.title('output RSA')
   
-    ##### SUBPLOT 13 #####     
-    plt.subplot(nrows,ncols,13)
-    plt.imshow(np.rot90(patient_batch[0,:,16,:,0]))
-    plt.xticks([]);plt.yticks([]);plt.title('actual')
+#     ##### SUBPLOT 13 #####     
+#     plt.subplot(nrows,ncols,13)
+#     plt.imshow(np.rot90(patient_batch[0,:,16,:,0]))
+#     plt.xticks([]);plt.yticks([]);plt.title('actual')
 
-    ##### SUBPLOT 14 #####     
-    plt.subplot(nrows,ncols,14)
-    plt.imshow(np.rot90(prediction[0,:,16,:,0]))
-    plt.xticks([]);plt.yticks([]);plt.title('predicted')
-    ##### SUBPLOT 15 #####     
-    plt.subplot(nrows,ncols,15)
-    plt.imshow(np.rot90(patient_batch[0,16,:,:,0]))
-    plt.xticks([]);plt.yticks([]);plt.title('actual')
-    ##### SUBPLOT 16 #####                                             
-    plt.subplot(nrows,ncols,16)
-    plt.imshow(np.rot90(prediction[0,16,:,:,0]))
-    plt.xticks([]);plt.yticks([]);plt.title('predicted')
-    ##### SUBPLOT 17 #####     
-    plt.subplot(nrows,ncols,17)
-    plt.imshow(np.rot90(patient_batch[0,6,:,:,0]))
-    plt.xticks([]);plt.yticks([]);plt.title('actual')
-    ##### SUBPLOT 18 #####                                             
-    plt.subplot(nrows,ncols,18)
-    plt.imshow(np.rot90(prediction[0,6,:,:,0]))
-    plt.xticks([]);plt.yticks([]);plt.title('predicted')
-    ##### SUBPLOT 19 #####     
-    plt.subplot(nrows,ncols,19)
-    plt.imshow(patient_batch[0,:,:,16,0])
-    plt.xticks([]);plt.yticks([]);plt.title('actual')
-    ##### SUBPLOT 20 #####     
-    plt.subplot(nrows,ncols,20)
-    plt.imshow(prediction[0,:,:,16,0])
-    plt.xticks([]);plt.yticks([]);plt.title('predicted')
+#     ##### SUBPLOT 14 #####     
+#     plt.subplot(nrows,ncols,14)
+#     plt.imshow(np.rot90(prediction[0,:,16,:,0]))
+#     plt.xticks([]);plt.yticks([]);plt.title('predicted')
+#     ##### SUBPLOT 15 #####     
+#     plt.subplot(nrows,ncols,15)
+#     plt.imshow(np.rot90(patient_batch[0,16,:,:,0]))
+#     plt.xticks([]);plt.yticks([]);plt.title('actual')
+#     ##### SUBPLOT 16 #####                                             
+#     plt.subplot(nrows,ncols,16)
+#     plt.imshow(np.rot90(prediction[0,16,:,:,0]))
+#     plt.xticks([]);plt.yticks([]);plt.title('predicted')
+#     ##### SUBPLOT 17 #####     
+#     plt.subplot(nrows,ncols,17)
+#     plt.imshow(np.rot90(patient_batch[0,6,:,:,0]))
+#     plt.xticks([]);plt.yticks([]);plt.title('actual')
+#     ##### SUBPLOT 18 #####                                             
+#     plt.subplot(nrows,ncols,18)
+#     plt.imshow(np.rot90(prediction[0,6,:,:,0]))
+#     plt.xticks([]);plt.yticks([]);plt.title('predicted')
+#     ##### SUBPLOT 19 #####     
+#     plt.subplot(nrows,ncols,19)
+#     plt.imshow(patient_batch[0,:,:,16,0])
+#     plt.xticks([]);plt.yticks([]);plt.title('actual')
+#     ##### SUBPLOT 20 #####     
+#     plt.subplot(nrows,ncols,20)
+#     plt.imshow(prediction[0,:,:,16,0])
+#     plt.xticks([]);plt.yticks([]);plt.title('predicted')
     
-    plt.tight_layout()
-    plt.show()
-    #sys.stdout.flush()
+#     plt.tight_layout()
+#     plt.show()
+#     #sys.stdout.flush()
     
-    return c_sim,all_rsas
+#     return c_sim,all_rsas
 
 
 
 
-def get_batch_rsas(data_dir,df,z_encoder,s_encoder,batch_size=400):
+# def get_batch_rsas(data_dir,df,z_encoder,s_encoder,batch_size=400):
     
-    temp_loader = cvae_data_loader(data_dir=data_dir, df=df, batch_size=batch_size)
-    temp_batch_asd,temp_batch_td,temp_batch_df = temp_loader.get_batch()
+#     temp_loader = cvae_data_loader(data_dir=data_dir, df=df, batch_size=batch_size)
+#     temp_batch_asd,temp_batch_td,temp_batch_df = temp_loader.get_batch()
 
 
-    asd_idx =  ~np.isnan(temp_batch_df['ADOS_TOTAL'].values) * (temp_batch_df['DX_GROUP'].values==1) * ~np.isnan(temp_batch_df['FIQ'].values)
+#     asd_idx =  ~np.isnan(temp_batch_df['ADOS_TOTAL'].values) * (temp_batch_df['DX_GROUP'].values==1) * ~np.isnan(temp_batch_df['FIQ'].values)
 
-    z_embedding = z_encoder.predict(temp_batch_asd[asd_idx[0:batch_size],:,:,:,:])[2]
-    s_embedding = s_encoder.predict(temp_batch_asd[asd_idx[0:batch_size],:,:,:,:])[2]
+#     z_embedding = z_encoder.predict(temp_batch_asd[asd_idx[0:batch_size],:,:,:,:])[2]
+#     s_embedding = s_encoder.predict(temp_batch_asd[asd_idx[0:batch_size],:,:,:,:])[2]
 
-    rdm_age = make_RDM(temp_batch_df['AGE_AT_SCAN'].values[asd_idx])
-    rdm_sex = make_RDM(temp_batch_df['SEX'].values[asd_idx],data_scale='ordinal')
-    rdm_fiq = make_RDM(temp_batch_df['FIQ'].values[asd_idx])
-    rdm_dsm = make_RDM(temp_batch_df['DSM_IV_TR'].values[asd_idx],data_scale='ordinal')
-    rdm_site = make_RDM(temp_batch_df['site'].values[asd_idx],data_scale='ordinal')
-    rdm_adosTotal = make_RDM(temp_batch_df['ADOS_TOTAL'].values[asd_idx])
+#     rdm_age = make_RDM(temp_batch_df['AGE_AT_SCAN'].values[asd_idx])
+#     rdm_sex = make_RDM(temp_batch_df['SEX'].values[asd_idx],data_scale='ordinal')
+#     rdm_fiq = make_RDM(temp_batch_df['FIQ'].values[asd_idx])
+#     rdm_dsm = make_RDM(temp_batch_df['DSM_IV_TR'].values[asd_idx],data_scale='ordinal')
+#     rdm_site = make_RDM(temp_batch_df['site'].values[asd_idx],data_scale='ordinal')
+#     rdm_adosTotal = make_RDM(temp_batch_df['ADOS_TOTAL'].values[asd_idx])
 
-    rdm_z = make_RDM(z_embedding)
-    rdm_s = make_RDM(s_embedding)
+#     rdm_z = make_RDM(z_embedding)
+#     rdm_s = make_RDM(s_embedding)
 
-    batch_rsas = list()
+#     batch_rsas = list()
 
-    batch_rsas.append(fit_rsa(rdm_s,rdm_age))
-    batch_rsas.append(fit_rsa(rdm_s,rdm_sex))
-    batch_rsas.append(fit_rsa(rdm_s,rdm_fiq))
-    batch_rsas.append(fit_rsa(rdm_s,rdm_dsm))
-    batch_rsas.append(fit_rsa(rdm_s,rdm_site))
-    batch_rsas.append(fit_rsa(rdm_s,rdm_adosTotal))
+#     batch_rsas.append(fit_rsa(rdm_s,rdm_age))
+#     batch_rsas.append(fit_rsa(rdm_s,rdm_sex))
+#     batch_rsas.append(fit_rsa(rdm_s,rdm_fiq))
+#     batch_rsas.append(fit_rsa(rdm_s,rdm_dsm))
+#     batch_rsas.append(fit_rsa(rdm_s,rdm_site))
+#     batch_rsas.append(fit_rsa(rdm_s,rdm_adosTotal))
 
-    batch_rsas.append(fit_rsa(rdm_z,rdm_age))
-    batch_rsas.append(fit_rsa(rdm_z,rdm_sex))
-    batch_rsas.append(fit_rsa(rdm_z,rdm_fiq))
-    batch_rsas.append(fit_rsa(rdm_z,rdm_dsm))
-    batch_rsas.append(fit_rsa(rdm_z,rdm_site))
-    batch_rsas.append(fit_rsa(rdm_z,rdm_adosTotal))
+#     batch_rsas.append(fit_rsa(rdm_z,rdm_age))
+#     batch_rsas.append(fit_rsa(rdm_z,rdm_sex))
+#     batch_rsas.append(fit_rsa(rdm_z,rdm_fiq))
+#     batch_rsas.append(fit_rsa(rdm_z,rdm_dsm))
+#     batch_rsas.append(fit_rsa(rdm_z,rdm_site))
+#     batch_rsas.append(fit_rsa(rdm_z,rdm_adosTotal))
     
-    return batch_rsas
+#     return batch_rsas
 
 
 
