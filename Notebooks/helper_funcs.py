@@ -61,52 +61,6 @@ from umap import UMAP
     
     
 
-# class cvae_data_loader():
-#     ''' this is the info'''
-#     def __init__(self,data_dir,df,batch_size=32):
-#         #self.data = data
-#         #self.n = data.shape[0]
-#         self.n = len(df)
-#         self.data_dir = data_dir
-#         self.epoch = -1
-#         self.batch_size = batch_size
-#         self.df = df
-        
-#         self.new_epoch()
-#         self.n_batches = int(np.floor(min((len(self.asd_idxs),len(self.td_idxs)))/self.batch_size))
-        
-#     def new_epoch(self):
-#         #self.df = self.df.iloc[np.random.permutation(np.arange(self.n))]
-#         #self.df.index = np.arange(self.n)
-#         self.asd_idxs = np.nonzero((self.df['DX_GROUP'].values==1))[0]
-#         self.td_idxs = np.nonzero((self.df['DX_GROUP'].values==2))[0]
-        
-#         self.asd_idxs = np.random.permutation(self.asd_idxs)
-#         self.td_idxs = np.random.permutation(self.td_idxs)
-        
-#         self.epoch += 1
-#         self.b = 0
-        
-        
-#     def get_batch(self):
-#         self.b += 1
-        
-#         if self.b==self.n_batches:
-#             self.new_epoch()
-        
-        
-#         self.batch_asd_idx = self.asd_idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
-#         self.batch_td_idx = self.td_idxs[np.arange(self.b*self.batch_size,self.b*self.batch_size+self.batch_size)]
-#         self.batch_asd = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_asd_idx]])
-#         self.batch_td = np.array([np.load(os.path.join(self.data_dir,val+'.npy')) for val in self.df['bids_folder'].values[self.batch_td_idx]])
-#         self.batch_df = self.df.iloc[np.hstack((self.batch_asd_idx,self.batch_td_idx)),:]
-        
-#         self.batch_asd = self.batch_asd/2
-#         self.batch_td = self.batch_td/2
-        
-    
-#         return self.batch_asd,self.batch_td,self.batch_df
-
 def fit_rsa(rdm_data,rdm_model):
     return np.corrcoef(get_triu(rdm_data),get_triu(rdm_model))[0,1]
         
