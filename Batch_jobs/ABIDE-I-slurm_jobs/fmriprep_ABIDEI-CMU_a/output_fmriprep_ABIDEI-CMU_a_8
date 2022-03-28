@@ -1,0 +1,1533 @@
+Fri Mar  4 13:16:20 EST 2022
+/data/aglinska
+/data/aglinska/data/ABIDE/RawDataBIDS/CMU_a/
+/data/aglinska/data/ABIDE/Derivatives/fmriprep/
+sub-0050660
+bids-validator@1.4.0
+
+	[33m1: [WARN] The recommended file /README is missing. See Section 03 (Modality agnostic files) of the BIDS specification. (code: 101 - README_FILE_MISSING)[39m
+
+[36m	Please visit https://neurostars.org/search?q=README_FILE_MISSING for existing conversations about this issue.[39m
+
+	[33m2: [WARN] The Authors field of dataset_description.json should contain an array of fields - with one author per field. This was triggered because there are no authors, which will make DOI registration from dataset metadata impossible. (code: 113 - NO_AUTHORS)[39m
+
+[36m	Please visit https://neurostars.org/search?q=NO_AUTHORS for existing conversations about this issue.[39m
+
+
+        [34m[4mSummary:[24m[39m                 [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
+        32 Files, 525.6MB        rest                    T1w                   
+        14 - Subjects                                    bold                  
+        1 - Session                                                            
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+
+220304-13:22:21,129 nipype.workflow IMPORTANT:
+	 
+    Running fMRIPREP version 20.2.0:
+      * BIDS dataset path: /data/aglinska/data/ABIDE/RawDataBIDS/CMU_a.
+      * Participant list: ['0050660'].
+      * Run identifier: 20220304-132117_20833b26-d406-464c-85e8-60356bd23ff7.
+      * Output spaces: MNI152NLin2009cAsym:res-native.
+      * Pre-run FreeSurfer's SUBJECTS_DIR: /data/aglinska/data/ABIDE/Derivatives/fmriprep/freesurfer.
+220304-13:22:23,119 nipype.workflow INFO:
+	 No single-band-reference found for sub-0050660_task-rest_run-1_bold.nii.gz.
+220304-13:22:37,177 nipype.workflow INFO:
+	 fMRIPrep workflow graph with 316 nodes built successfully.
+220304-13:22:57,135 nipype.workflow IMPORTANT:
+	 fMRIPrep started!
+220304-13:24:02,565 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.func_derivatives_wf.raw_sources" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/func_derivatives_wf/raw_sources".
+220304-13:24:02,566 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.full_wm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/full_wm".
+220304-13:24:02,576 nipype.workflow INFO:
+	 [Node] Running "full_wm" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:24:02,580 nipype.workflow INFO:
+	 [Node] Running "raw_sources" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:24:02,585 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.func_derivatives_wf.raw_sources".
+220304-13:24:03,156 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.lap_tmpl" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/lap_tmpl".
+220304-13:24:03,170 nipype.workflow INFO:
+	 [Node] Running "lap_tmpl" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 tpl-OASIS30ANTs_res-01_T1w_maths.nii.gz Laplacian /data/aglinska/.cache/templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_T1w.nii.gz 1.5 1
+220304-13:24:03,848 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.full_wm".
+220304-13:24:08,117 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.val_bold" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/val_bold".
+220304-13:24:08,124 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.res_tmpl" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/res_tmpl".
+220304-13:24:08,137 nipype.workflow INFO:
+	 [Node] Running "res_tmpl" ("niworkflows.interfaces.images.RegridToZooms")
+220304-13:24:08,146 nipype.workflow INFO:
+	 [Node] Setting-up "_val_bold0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/val_bold/mapflow/_val_bold0".
+220304-13:24:08,156 nipype.workflow INFO:
+	 [Node] Running "_val_bold0" ("niworkflows.interfaces.images.ValidateImage")
+220304-13:24:08,236 nipype.workflow INFO:
+	 [Node] Finished "_val_bold0".
+220304-13:24:08,241 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.val_bold".
+220304-13:24:08,298 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.bidssrc" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/bidssrc".
+220304-13:24:08,312 nipype.workflow INFO:
+	 [Node] Running "bidssrc" ("niworkflows.interfaces.bids.BIDSDataGrabber")
+220304-13:24:08,312 nipype.interface INFO:
+	 No "t2w" images found for sub-0050660
+220304-13:24:08,312 nipype.interface INFO:
+	 No "flair" images found for sub-0050660
+220304-13:24:08,312 nipype.interface INFO:
+	 No "fmap" images found for sub-0050660
+220304-13:24:08,312 nipype.interface INFO:
+	 No "sbref" images found for sub-0050660
+220304-13:24:08,313 nipype.interface INFO:
+	 No "roi" images found for sub-0050660
+220304-13:24:08,317 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.bidssrc".
+220304-13:24:09,403 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.res_tmpl".
+220304-13:24:11,220 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_split" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_split".
+220304-13:24:11,230 nipype.workflow INFO:
+	 [Node] Running "bold_split" ("nipype.interfaces.fsl.utils.Split"), a CommandLine Interface with command:
+fslsplit /data/aglinska/data/ABIDE/RawDataBIDS/CMU_a/sub-0050660/func/sub-0050660_task-rest_run-1_bold.nii.gz -t
+220304-13:24:11,554 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.lap_tmpl".
+220304-13:24:11,883 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.gen_ref" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/gen_ref".
+220304-13:24:11,903 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_template_wf.t1w_ref_dimensions" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_template_wf/t1w_ref_dimensions".
+220304-13:24:11,913 nipype.workflow INFO:
+	 [Node] Running "gen_ref" ("niworkflows.interfaces.registration.EstimateReferenceImage")
+220304-13:24:12,131 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.bids_info" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/bids_info".
+220304-13:24:12,166 nipype.workflow INFO:
+	 [Node] Running "t1w_ref_dimensions" ("niworkflows.interfaces.images.TemplateDimensions")
+220304-13:24:12,168 nipype.workflow INFO:
+	 [Node] Running "bids_info" ("niworkflows.interfaces.bids.BIDSInfo")
+220304-13:24:12,180 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.bids_info".
+220304-13:24:12,471 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_template_wf.t1w_ref_dimensions".
+220304-13:24:13,61 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.mrg_tmpl" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/mrg_tmpl".
+220304-13:24:13,63 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.raw_sources" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/raw_sources".
+220304-13:24:13,88 nipype.interface INFO:
+	 stderr 2022-03-04T13:24:13.088731:++ 3dvolreg: AFNI version=Debian-16.2.07~dfsg.1-5~nd16.04+1 (Jun 12 2017) [64-bit]
+220304-13:24:13,89 nipype.interface INFO:
+	 stderr 2022-03-04T13:24:13.088731:++ Authored by: RW Cox
+220304-13:24:13,90 nipype.interface INFO:
+	 stderr 2022-03-04T13:24:13.090150:** AFNI converts NIFTI_datatype=4 (INT16) in file /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/gen_ref/slice.nii.gz to FLOAT32
+220304-13:24:13,90 nipype.interface INFO:
+	 stderr 2022-03-04T13:24:13.090150:     Warnings of this type will be muted for this session.
+220304-13:24:13,90 nipype.interface INFO:
+	 stderr 2022-03-04T13:24:13.090150:     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+220304-13:24:13,90 nipype.interface INFO:
+	 stderr 2022-03-04T13:24:13.090684:++ Coarse del was 10, replaced with 3
+220304-13:24:13,154 nipype.workflow INFO:
+	 [Node] Running "mrg_tmpl" ("nipype.interfaces.utility.base.Merge")
+220304-13:24:13,160 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.mrg_tmpl".
+220304-13:24:15,982 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_template_wf.t1w_conform" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_template_wf/t1w_conform".
+220304-13:24:15,992 nipype.workflow INFO:
+	 [Node] Running "raw_sources" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:24:15,994 nipype.workflow INFO:
+	 [Node] Setting-up "_t1w_conform0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_template_wf/t1w_conform/mapflow/_t1w_conform0".
+220304-13:24:15,997 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.raw_sources".
+220304-13:24:16,4 nipype.workflow INFO:
+	 [Node] Running "_t1w_conform0" ("niworkflows.interfaces.images.Conform")
+220304-13:24:16,170 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_split".
+220304-13:24:16,460 nipype.workflow INFO:
+	 [Node] Finished "_t1w_conform0".
+220304-13:24:16,466 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_template_wf.t1w_conform".
+220304-13:24:17,62 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_template_wf.get1st" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_template_wf/get1st".
+220304-13:24:20,304 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.gen_ref" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/_std_target_MNI152NLin2009cAsym.resnative/gen_ref".
+220304-13:24:20,362 nipype.workflow INFO:
+	 [Node] Running "get1st" ("nipype.interfaces.utility.base.Select")
+220304-13:24:20,370 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_template_wf.get1st".
+220304-13:24:20,572 nipype.workflow INFO:
+	 [Node] Running "gen_ref" ("niworkflows.interfaces.utils.GenerateSamplingReference")
+220304-13:24:20,778 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.gen_ref".
+220304-13:24:23,216 nipype.interface INFO:
+	 stderr 2022-03-04T13:24:23.216059:++ Max displacement in automask = 0.22 (mm) at sub-brick 1
+220304-13:24:23,216 nipype.interface INFO:
+	 stderr 2022-03-04T13:24:23.216059:++ Max delta displ  in automask = 0.22 (mm) at sub-brick 1
+220304-13:24:23,422 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.truncate_images" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/truncate_images".
+220304-13:24:23,435 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+220304-13:24:23,446 nipype.workflow INFO:
+	 [Node] Running "_truncate_images0" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-0050660_T1w_ras_valid_maths.nii.gz TruncateImageIntensity /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_validate/sub-0050660_T1w_ras_valid.nii.gz 0.01 0.999 256
+220304-13:24:23,861 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.gen_ref".
+220304-13:24:25,125 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.init_aff" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/init_aff".
+220304-13:24:25,189 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_hmc_wf.mcflirt" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_hmc_wf/mcflirt".
+220304-13:24:26,864 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0".
+220304-13:24:26,868 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.truncate_images".
+220304-13:24:27,115 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.inu_n4" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/inu_n4".
+220304-13:24:27,126 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+220304-13:24:27,162 nipype.workflow INFO:
+	 [Node] Running "_inu_n40" ("nipype.interfaces.ants.segmentation.N4BiasFieldCorrection"), a CommandLine Interface with command:
+N4BiasFieldCorrection --bspline-fitting [ 200 ] -d 3 --input-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0/sub-0050660_T1w_ras_valid_maths.nii.gz --convergence [ 50x50x50x50, 1e-07 ] --output sub-0050660_T1w_ras_valid_maths_corrected.nii.gz --shrink-factor 4
+220304-13:24:29,751 nipype.workflow INFO:
+	 [Node] Running "init_aff" ("nipype.interfaces.ants.utils.AI"), a CommandLine Interface with command:
+antsAI -c [10,1e-06,10] -d 3 -x /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-02_desc-brain_mask.nii.gz -m Mattes[/data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-02_desc-fMRIPrep_boldref.nii.gz,/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/gen_ref/ref_bold.nii.gz,32,Regular,0.2] -o initialization.mat -p 0 -s [20,0.12] -g [40.0,0x40x40] -t Affine[0.1] -v 1
+220304-13:24:29,761 nipype.workflow INFO:
+	 [Node] Running "mcflirt" ("nipype.interfaces.fsl.preprocess.MCFLIRT"), a CommandLine Interface with command:
+mcflirt -in /data/aglinska/data/ABIDE/RawDataBIDS/CMU_a/sub-0050660/func/sub-0050660_task-rest_run-1_bold.nii.gz -out /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_hmc_wf/mcflirt/sub-0050660_task-rest_run-1_bold_mcf.nii.gz -reffile /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/gen_ref/ref_bold.nii.gz -mats -plots -rmsabs -rmsrel
+220304-13:24:47,375 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40".
+220304-13:24:47,387 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.inu_n4".
+220304-13:24:49,216 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.lap_target" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/lap_target".
+220304-13:24:49,232 nipype.workflow INFO:
+	 [Node] Running "lap_target" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-0050660_T1w_ras_valid_maths_corrected_maths.nii.gz Laplacian /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-0050660_T1w_ras_valid_maths_corrected.nii.gz 1.5 1
+220304-13:24:52,786 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.res_target" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/res_target".
+220304-13:24:52,807 nipype.workflow INFO:
+	 [Node] Running "res_target" ("niworkflows.interfaces.images.RegridToZooms")
+220304-13:24:53,974 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.res_target".
+220304-13:24:54,916 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.lap_target".
+220304-13:24:55,105 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.mrg_target" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/mrg_target".
+220304-13:24:55,341 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_hmc_wf.mcflirt".
+220304-13:24:55,355 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.init_aff" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/init_aff".
+220304-13:24:55,366 nipype.workflow INFO:
+	 [Node] Running "mrg_target" ("nipype.interfaces.utility.base.Merge")
+220304-13:24:55,374 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.mrg_target".
+220304-13:25:00,232 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_hmc_wf.normalize_motion" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_hmc_wf/normalize_motion".
+220304-13:25:00,245 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_hmc_wf.fsl2itk" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_hmc_wf/fsl2itk".
+220304-13:25:00,344 nipype.workflow INFO:
+	 [Node] Running "init_aff" ("nipype.interfaces.ants.utils.AI"), a CommandLine Interface with command:
+antsAI -c [10,1e-06,10] -d 3 -x /data/aglinska/.cache/templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_desc-BrainCerebellumExtraction_mask.nii.gz -m Mattes[/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/res_tmpl/tpl-OASIS30ANTs_res-01_T1w_regrid.nii.gz,/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/res_target/sub-0050660_T1w_ras_valid_maths_corrected_regrid.nii.gz,32,Regular,0.25] -o initialization.mat -p 0 -s [15,0.1] -g [40.0,0x40x40] -t Affine[0.1] -v 1
+220304-13:25:00,401 nipype.workflow INFO:
+	 [Node] Running "normalize_motion" ("niworkflows.interfaces.utils.NormalizeMotionParams")
+220304-13:25:00,416 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_hmc_wf.normalize_motion".
+220304-13:25:00,436 nipype.workflow INFO:
+	 [Node] Running "fsl2itk" ("niworkflows.interfaces.itk.MCFLIRT2ITK")
+220304-13:25:01,408 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.fdisp" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/fdisp".
+220304-13:25:01,659 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.init_aff".
+220304-13:25:06,145 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.norm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/norm".
+220304-13:25:06,157 nipype.workflow INFO:
+	 [Node] Running "fdisp" ("nipype.algorithms.confounds.FramewiseDisplacement")
+220304-13:25:06,164 nipype.workflow INFO:
+	 [Node] Running "norm" ("niworkflows.interfaces.fixes.FixHeaderRegistration"), a CommandLine Interface with command:
+antsRegistration --collapse-output-transforms 1 --dimensionality 3 --float 1 --initial-moving-transform [ /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/init_aff/initialization.mat, 0 ] --initialize-transforms-per-stage 0 --interpolation Linear --output transform --transform Affine[ 0.1 ] --metric Mattes[ /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-02_desc-fMRIPrep_boldref.nii.gz, /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/gen_ref/ref_bold.nii.gz, 1, 64, Random, 0.2 ] --convergence [ 200, 1e-09, 10 ] --smoothing-sigmas 2.0mm --shrink-factors 2 --use-estimate-learning-rate-once 1 --use-histogram-matching 1 --winsorize-image-intensities [ 0.05, 0.98 ]  --write-composite-transform 0
+220304-13:25:06,172 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.fdisp".
+220304-13:25:06,668 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.norm".
+220304-13:25:09,824 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.map_brainmask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/map_brainmask".
+220304-13:25:09,847 nipype.workflow INFO:
+	 [Node] Running "map_brainmask" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 1 --input /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_label-brain_probseg.nii.gz --interpolation BSpline --output tpl-MNI152NLin2009cAsym_res-01_label-brain_probseg_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/gen_ref/ref_bold.nii.gz --transform [ /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/norm/transform0GenericAffine.mat, 1 ]
+220304-13:25:10,667 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.map_brainmask".
+220304-13:25:14,531 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_hmc_wf.fsl2itk".
+220304-13:25:15,453 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.binarize_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/binarize_mask".
+220304-13:25:15,475 nipype.workflow INFO:
+	 [Node] Running "binarize_mask" ("niworkflows.interfaces.nibabel.Binarize")
+220304-13:25:15,505 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.binarize_mask".
+220304-13:25:17,578 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.pre_mask_dilate" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/pre_mask_dilate".
+220304-13:25:21,726 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_bold_trans_wf.bold_transform" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_bold_trans_wf/bold_transform".
+220304-13:25:21,733 nipype.workflow INFO:
+	 [Node] Running "pre_mask_dilate" ("nipype.interfaces.fsl.maths.DilateImage"), a CommandLine Interface with command:
+fslmaths -dt char /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/binarize_mask/tpl-MNI152NLin2009cAsym_res-01_label-brain_probseg_trans_mask.nii.gz -kernel sphere 3.0000 -dilF /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/pre_mask_dilate/tpl-MNI152NLin2009cAsym_res-01_label-brain_probseg_trans_mask_dil.nii.gz
+220304-13:25:21,939 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.pre_mask_dilate".
+220304-13:25:22,170 nipype.workflow INFO:
+	 [Node] Running "bold_transform" ("niworkflows.interfaces.itk.MultiApplyTransforms")
+220304-13:25:23,743 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.init_aff".
+220304-13:25:30,242 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.n4_correct" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/n4_correct".
+220304-13:25:30,242 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.norm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/norm".
+220304-13:25:30,286 nipype.workflow INFO:
+	 [Node] Running "norm" ("niworkflows.interfaces.fixes.FixHeaderRegistration"), a CommandLine Interface with command:
+antsRegistration --collapse-output-transforms 1 --dimensionality 3 --float 1 --initial-moving-transform [ /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/init_aff/initialization.mat, 0 ] --initialize-transforms-per-stage 0 --interpolation LanczosWindowedSinc --output [ anat_to_template, anat_to_template_Warped.nii.gz ] --transform Rigid[ 0.1 ] --metric MI[ /data/aglinska/.cache/templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_T1w.nii.gz, /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-0050660_T1w_ras_valid_maths_corrected.nii.gz, 1, 32, Regular, 0.25 ] --convergence [ 1000x500x250x100, 1e-08, 10 ] --smoothing-sigmas 4.0x2.0x1.0x0.0vox --shrink-factors 8x4x2x1 --use-histogram-matching 1 --masks [ /data/aglinska/.cache/templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_desc-BrainCerebellumExtraction_mask.nii.gz, NULL ] --transform Affine[ 0.1 ] --metric MI[ /data/aglinska/.cache/templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_T1w.nii.gz, /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-0050660_T1w_ras_valid_maths_corrected.nii.gz, 1, 32, Regular, 0.25 ] --convergence [ 1000x500x250x100, 1e-08, 10 ] --smoothing-sigmas 4.0x2.0x1.0x0.0vox --shrink-factors 8x4x2x1 --use-histogram-matching 1 --masks [ /data/aglinska/.cache/templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_desc-BrainCerebellumExtraction_mask.nii.gz, NULL ] --transform SyN[ 0.1, 3.0, 0.0 ] --metric CC[ /data/aglinska/.cache/templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_T1w.nii.gz, /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40/sub-0050660_T1w_ras_valid_maths_corrected.nii.gz, 0.5, 4, None, 1 ] --metric CC[ /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/lap_tmpl/tpl-OASIS30ANTs_res-01_T1w_maths.nii.gz, /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/lap_target/sub-0050660_T1w_ras_valid_maths_corrected_maths.nii.gz, 0.5, 4, None, 1 ] --convergence [ 50x10x0, 1e-09, 15 ] --smoothing-sigmas 2.0x1.0x0.0vox --shrink-factors 4x2x1 --use-histogram-matching 1 --masks [ /data/aglinska/.cache/templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_desc-BrainCerebellumExtraction_mask.nii.gz, NULL ] -v --winsorize-image-intensities [ 0.025, 0.975 ]  --write-composite-transform 0
+220304-13:25:30,510 nipype.workflow INFO:
+	 [Node] Running "n4_correct" ("niworkflows.interfaces.fixes.FixN4BiasFieldCorrection"), a CommandLine Interface with command:
+N4BiasFieldCorrection --bspline-fitting [ 200 ] -d 3 --input-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/gen_ref/ref_bold.nii.gz --mask-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/check_hdr/tpl-MNI152NLin2009cAsym_res-01_label-brain_probseg_trans_mask_dil_hdr.nii.gz --output ref_bold_corrected.nii.gz -r
+220304-13:25:31,5 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.n4_correct".
+220304-13:25:31,419 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_pass" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass".
+220304-13:25:34,856 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_pass" ("nipype.interfaces.fsl.preprocess.BET"), a CommandLine Interface with command:
+bet /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/n4_correct/ref_bold_corrected.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain.nii.gz -f 0.20 -m
+220304-13:25:35,996 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_pass".
+220304-13:25:37,439 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_dilate" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_dilate".
+220304-13:25:37,457 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_dilate" ("nipype.interfaces.fsl.maths.DilateImage"), a CommandLine Interface with command:
+fslmaths -dt char /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain_mask.nii.gz -kernel sphere 6.0000 -dilF /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_dilate/ref_bold_corrected_brain_mask_dil.nii.gz
+220304-13:25:37,639 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_dilate".
+220304-13:25:39,247 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_mask".
+220304-13:25:39,267 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_mask" ("nipype.interfaces.fsl.maths.ApplyMask"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain.nii.gz -mas /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_dilate/ref_bold_corrected_brain_mask_dil.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_mask/ref_bold_corrected_brain_masked.nii.gz
+220304-13:25:39,338 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_mask".
+220304-13:25:41,199 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.unifize" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/unifize".
+220304-13:25:41,348 nipype.workflow INFO:
+	 [Node] Running "unifize" ("nipype.interfaces.afni.utils.Unifize"), a CommandLine Interface with command:
+3dUnifize -clfrac 0.2 -rbt 18.3 65.0 90.0 -prefix uni.nii.gz -T2 -input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/unifize/ref_bold_corrected_brain_masked.nii.gz
+220304-13:25:42,614 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.unifize".
+220304-13:25:49,647 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.fixhdr_unifize" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/fixhdr_unifize".
+220304-13:25:49,677 nipype.workflow INFO:
+	 [Node] Running "fixhdr_unifize" ("niworkflows.interfaces.utils.CopyXForm")
+220304-13:25:49,912 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.fixhdr_unifize".
+220304-13:25:51,195 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_second_pass" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_second_pass".
+220304-13:25:52,399 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_bold_trans_wf.bold_transform".
+220304-13:25:56,456 nipype.workflow INFO:
+	 [Node] Running "skullstrip_second_pass" ("nipype.interfaces.afni.preprocess.Automask"), a CommandLine Interface with command:
+3dAutomask -apply_prefix uni_xform_masked.nii.gz -dilate 1 -prefix uni_xform_mask.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_second_pass/uni_xform.nii.gz
+220304-13:25:57,65 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_second_pass".
+220304-13:25:57,423 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_bold_trans_wf.merge" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_bold_trans_wf/merge".
+220304-13:25:57,787 nipype.workflow INFO:
+	 [Node] Running "merge" ("niworkflows.interfaces.nilearn.Merge")
+220304-13:26:00,831 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.fixhdr_skullstrip2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/fixhdr_skullstrip2".
+220304-13:26:00,852 nipype.workflow INFO:
+	 [Node] Running "fixhdr_skullstrip2" ("niworkflows.interfaces.utils.CopyXForm")
+220304-13:26:01,59 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.fixhdr_skullstrip2".
+220304-13:26:01,366 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.combine_masks" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks".
+220304-13:26:04,253 nipype.workflow INFO:
+	 [Node] Running "combine_masks" ("nipype.interfaces.fsl.maths.BinaryMaths"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain_mask.nii.gz -mul /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/fixhdr_skullstrip2/uni_xform_mask_xform.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz
+220304-13:26:04,400 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.combine_masks".
+220304-13:26:05,357 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.apply_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/apply_mask".
+220304-13:26:06,576 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_bold_trans_wf.merge".
+220304-13:26:06,806 nipype.workflow INFO:
+	 [Node] Running "apply_mask" ("nipype.interfaces.fsl.maths.ApplyMask"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/fixhdr_unifize/uni_xform.nii.gz -mas /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/apply_mask/uni_xform_masked.nii.gz
+220304-13:26:06,908 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.apply_mask".
+220304-13:26:08,601 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.val_bold" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/val_bold".
+220304-13:26:08,619 nipype.workflow INFO:
+	 [Node] Setting-up "_val_bold0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/val_bold/mapflow/_val_bold0".
+220304-13:26:08,630 nipype.workflow INFO:
+	 [Node] Running "_val_bold0" ("niworkflows.interfaces.images.ValidateImage")
+220304-13:26:08,659 nipype.workflow INFO:
+	 [Node] Finished "_val_bold0".
+220304-13:26:08,665 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.val_bold".
+220304-13:26:10,419 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.gen_ref" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/gen_ref".
+220304-13:26:10,437 nipype.workflow INFO:
+	 [Node] Running "gen_ref" ("niworkflows.interfaces.registration.EstimateReferenceImage")
+220304-13:26:11,836 nipype.interface INFO:
+	 stderr 2022-03-04T13:26:11.836402:++ 3dvolreg: AFNI version=Debian-16.2.07~dfsg.1-5~nd16.04+1 (Jun 12 2017) [64-bit]
+220304-13:26:11,836 nipype.interface INFO:
+	 stderr 2022-03-04T13:26:11.836402:++ Authored by: RW Cox
+220304-13:26:11,838 nipype.interface INFO:
+	 stderr 2022-03-04T13:26:11.838662:** AFNI converts NIFTI_datatype=4 (INT16) in file /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/gen_ref/slice.nii.gz to FLOAT32
+220304-13:26:11,838 nipype.interface INFO:
+	 stderr 2022-03-04T13:26:11.838662:     Warnings of this type will be muted for this session.
+220304-13:26:11,838 nipype.interface INFO:
+	 stderr 2022-03-04T13:26:11.838662:     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+220304-13:26:11,839 nipype.interface INFO:
+	 stderr 2022-03-04T13:26:11.839128:++ Coarse del was 10, replaced with 3
+220304-13:26:21,975 nipype.interface INFO:
+	 stderr 2022-03-04T13:26:21.975735:++ Max displacement in automask = 0.09 (mm) at sub-brick 18
+220304-13:26:21,976 nipype.interface INFO:
+	 stderr 2022-03-04T13:26:21.975735:++ Max delta displ  in automask = 0.07 (mm) at sub-brick 7
+220304-13:26:22,688 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.gen_ref".
+220304-13:26:23,593 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.init_aff" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/init_aff".
+220304-13:26:28,732 nipype.workflow INFO:
+	 [Node] Running "init_aff" ("nipype.interfaces.ants.utils.AI"), a CommandLine Interface with command:
+antsAI -c [10,1e-06,10] -d 3 -x /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-02_desc-brain_mask.nii.gz -m Mattes[/data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-02_desc-fMRIPrep_boldref.nii.gz,/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/gen_ref/ref_bold.nii.gz,32,Regular,0.2] -o initialization.mat -p 0 -s [20,0.12] -g [40.0,0x40x40] -t Affine[0.1] -v 1
+220304-13:27:05,739 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.init_aff".
+220304-13:27:27,381 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.norm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/norm".
+220304-13:27:27,753 nipype.workflow INFO:
+	 [Node] Running "norm" ("niworkflows.interfaces.fixes.FixHeaderRegistration"), a CommandLine Interface with command:
+antsRegistration --collapse-output-transforms 1 --dimensionality 3 --float 1 --initial-moving-transform [ /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/init_aff/initialization.mat, 0 ] --initialize-transforms-per-stage 0 --interpolation Linear --output transform --transform Affine[ 0.1 ] --metric Mattes[ /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-02_desc-fMRIPrep_boldref.nii.gz, /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/gen_ref/ref_bold.nii.gz, 1, 64, Random, 0.2 ] --convergence [ 200, 1e-09, 10 ] --smoothing-sigmas 2.0mm --shrink-factors 2 --use-estimate-learning-rate-once 1 --use-histogram-matching 1 --winsorize-image-intensities [ 0.05, 0.98 ]  --write-composite-transform 0
+220304-13:27:30,322 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.norm".
+220304-13:27:45,885 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.map_brainmask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/map_brainmask".
+220304-13:27:45,947 nipype.workflow INFO:
+	 [Node] Running "map_brainmask" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 1 --input /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_label-brain_probseg.nii.gz --interpolation BSpline --output tpl-MNI152NLin2009cAsym_res-01_label-brain_probseg_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/gen_ref/ref_bold.nii.gz --transform [ /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/norm/transform0GenericAffine.mat, 1 ]
+220304-13:27:47,180 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.map_brainmask".
+220304-13:27:58,745 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.binarize_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/binarize_mask".
+220304-13:27:58,803 nipype.workflow INFO:
+	 [Node] Running "binarize_mask" ("niworkflows.interfaces.nibabel.Binarize")
+220304-13:27:58,848 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.binarize_mask".
+220304-13:28:00,217 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.pre_mask_dilate" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/pre_mask_dilate".
+220304-13:28:09,936 nipype.workflow INFO:
+	 [Node] Running "pre_mask_dilate" ("nipype.interfaces.fsl.maths.DilateImage"), a CommandLine Interface with command:
+fslmaths -dt char /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/binarize_mask/tpl-MNI152NLin2009cAsym_res-01_label-brain_probseg_trans_mask.nii.gz -kernel sphere 3.0000 -dilF /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/pre_mask_dilate/tpl-MNI152NLin2009cAsym_res-01_label-brain_probseg_trans_mask_dil.nii.gz
+220304-13:28:10,231 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.pre_mask_dilate".
+220304-13:28:23,992 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.n4_correct" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/n4_correct".
+220304-13:28:24,520 nipype.workflow INFO:
+	 [Node] Running "n4_correct" ("niworkflows.interfaces.fixes.FixN4BiasFieldCorrection"), a CommandLine Interface with command:
+N4BiasFieldCorrection --bspline-fitting [ 200 ] -d 3 --input-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/n4_correct/ref_bold_scaled.nii.gz --mask-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/check_hdr/tpl-MNI152NLin2009cAsym_res-01_label-brain_probseg_trans_mask_dil_hdr.nii.gz --output ref_bold_corrected.nii.gz -r
+220304-13:28:25,487 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.n4_correct".
+220304-13:28:28,306 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_pass" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass".
+220304-13:28:37,194 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_pass" ("nipype.interfaces.fsl.preprocess.BET"), a CommandLine Interface with command:
+bet /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/n4_correct/ref_bold_corrected.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain.nii.gz -f 0.20 -m
+220304-13:28:38,555 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_pass".
+220304-13:28:40,154 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_dilate" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_dilate".
+220304-13:28:40,181 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_dilate" ("nipype.interfaces.fsl.maths.DilateImage"), a CommandLine Interface with command:
+fslmaths -dt char /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain_mask.nii.gz -kernel sphere 6.0000 -dilF /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_dilate/ref_bold_corrected_brain_mask_dil.nii.gz
+220304-13:28:40,431 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_dilate".
+220304-13:28:41,894 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_mask".
+220304-13:28:41,937 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_mask" ("nipype.interfaces.fsl.maths.ApplyMask"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain.nii.gz -mas /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_dilate/ref_bold_corrected_brain_mask_dil.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_mask/ref_bold_corrected_brain_masked.nii.gz
+220304-13:28:42,52 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_mask".
+220304-13:28:43,464 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.unifize" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/unifize".
+220304-13:28:44,148 nipype.workflow INFO:
+	 [Node] Running "unifize" ("nipype.interfaces.afni.utils.Unifize"), a CommandLine Interface with command:
+3dUnifize -clfrac 0.2 -rbt 18.3 65.0 90.0 -prefix uni.nii.gz -T2 -input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/unifize/ref_bold_corrected_brain_masked.nii.gz
+220304-13:28:45,832 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.unifize".
+220304-13:28:57,266 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.fixhdr_unifize" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/fixhdr_unifize".
+220304-13:28:57,319 nipype.workflow INFO:
+	 [Node] Running "fixhdr_unifize" ("niworkflows.interfaces.utils.CopyXForm")
+220304-13:28:57,598 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.fixhdr_unifize".
+220304-13:28:59,449 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_second_pass" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_second_pass".
+220304-13:29:08,848 nipype.workflow INFO:
+	 [Node] Running "skullstrip_second_pass" ("nipype.interfaces.afni.preprocess.Automask"), a CommandLine Interface with command:
+3dAutomask -apply_prefix uni_xform_masked.nii.gz -dilate 1 -prefix uni_xform_mask.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_second_pass/uni_xform.nii.gz
+220304-13:29:09,854 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.skullstrip_second_pass".
+220304-13:29:21,17 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.fixhdr_skullstrip2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/fixhdr_skullstrip2".
+220304-13:29:21,79 nipype.workflow INFO:
+	 [Node] Running "fixhdr_skullstrip2" ("niworkflows.interfaces.utils.CopyXForm")
+220304-13:29:21,328 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.fixhdr_skullstrip2".
+220304-13:29:24,295 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.combine_masks" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks".
+220304-13:29:34,48 nipype.workflow INFO:
+	 [Node] Running "combine_masks" ("nipype.interfaces.fsl.maths.BinaryMaths"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain_mask.nii.gz -mul /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/fixhdr_skullstrip2/uni_xform_mask_xform.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz
+220304-13:29:34,310 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.combine_masks".
+220304-13:29:36,116 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.dvars" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/dvars".
+220304-13:29:36,248 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.apply_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/apply_mask".
+220304-13:29:43,609 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.tcompcor" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/tcompcor".
+220304-13:29:43,682 nipype.workflow INFO:
+	 [Node] Running "apply_mask" ("nipype.interfaces.fsl.maths.ApplyMask"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/fixhdr_unifize/uni_xform.nii.gz -mas /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/apply_mask/uni_xform_masked.nii.gz
+220304-13:29:43,994 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.final_boldref_wf.enhance_and_skullstrip_bold_wf.apply_mask".
+220304-13:29:45,348 nipype.workflow INFO:
+	 [Node] Running "dvars" ("nipype.algorithms.confounds.ComputeDVARS")
+220304-13:29:45,360 nipype.workflow INFO:
+	 [Node] Running "tcompcor" ("niworkflows.interfaces.patches.RobustTCompCor")
+220304-13:29:46,634 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.tcompcor".
+220304-13:29:52,35 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.dvars".
+220304-13:29:56,967 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.tcc_metadata_fmt" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/tcc_metadata_fmt".
+220304-13:29:57,38 nipype.workflow INFO:
+	 [Node] Running "tcc_metadata_fmt" ("niworkflows.interfaces.utils.TSV2JSON")
+220304-13:29:57,79 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.tcc_metadata_fmt".
+220304-13:32:09,643 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.norm".
+220304-13:32:20,795 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.map_wmmask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/map_wmmask".
+220304-13:32:20,805 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.map_brainmask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/map_brainmask".
+220304-13:32:20,999 nipype.workflow INFO:
+	 [Node] Running "map_wmmask" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/full_wm/summap.nii.gz --interpolation Gaussian --output summap_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_validate/sub-0050660_T1w_ras_valid.nii.gz --transform [ /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/norm/anat_to_template0GenericAffine.mat, 1 ] --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/norm/anat_to_template1InverseWarp.nii.gz
+220304-13:32:20,999 nipype.workflow INFO:
+	 [Node] Running "map_brainmask" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/.cache/templateflow/tpl-OASIS30ANTs/tpl-OASIS30ANTs_res-01_label-brain_probseg.nii.gz --interpolation Gaussian --output tpl-OASIS30ANTs_res-01_label-brain_probseg_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_validate/sub-0050660_T1w_ras_valid.nii.gz --transform [ /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/norm/anat_to_template0GenericAffine.mat, 1 ] --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/norm/anat_to_template1InverseWarp.nii.gz
+220304-13:32:42,432 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.map_brainmask".
+220304-13:32:42,528 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.map_wmmask".
+220304-13:32:43,563 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.thr_brainmask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/thr_brainmask".
+220304-13:32:43,582 nipype.workflow INFO:
+	 [Node] Running "thr_brainmask" ("nipype.interfaces.ants.utils.ThresholdImage"), a CommandLine Interface with command:
+ThresholdImage 3 /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/map_brainmask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans.nii.gz tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled.nii.gz 0.500000 1.000000 1.000000 0.000000
+220304-13:32:43,767 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.inu_n4_final" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/inu_n4_final".
+220304-13:32:43,796 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n4_final0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/inu_n4_final/mapflow/_inu_n4_final0".
+220304-13:32:43,837 nipype.workflow INFO:
+	 [Node] Running "_inu_n4_final0" ("nipype.interfaces.ants.segmentation.N4BiasFieldCorrection"), a CommandLine Interface with command:
+N4BiasFieldCorrection --bspline-fitting [ 200 ] -d 3 --input-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_validate/sub-0050660_T1w_ras_valid.nii.gz --convergence [ 50x50x50x50x50, 1e-07 ] --output [ sub-0050660_T1w_ras_valid_corrected.nii.gz, sub-0050660_T1w_ras_valid_bias.nii.gz ] -r --shrink-factor 4 --weight-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/map_wmmask/summap_trans.nii.gz
+220304-13:32:44,793 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.thr_brainmask".
+220304-13:32:45,555 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.03_pad_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/03_pad_mask".
+220304-13:32:45,556 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.dil_brainmask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/dil_brainmask".
+220304-13:32:45,605 nipype.workflow INFO:
+	 [Node] Running "03_pad_mask" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths.nii.gz PadImage /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/thr_brainmask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled.nii.gz 10
+220304-13:32:45,608 nipype.workflow INFO:
+	 [Node] Running "dil_brainmask" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths.nii.gz MD /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/thr_brainmask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled.nii.gz 2
+220304-13:32:46,432 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.03_pad_mask".
+220304-13:32:46,858 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.dil_brainmask".
+220304-13:32:47,560 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.get_brainmask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/get_brainmask".
+220304-13:32:47,586 nipype.workflow INFO:
+	 [Node] Running "get_brainmask" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths_maths.nii.gz GetLargestComponent /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/dil_brainmask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths.nii.gz
+220304-13:32:48,618 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.get_brainmask".
+220304-13:32:55,331 nipype.workflow INFO:
+	 [Node] Finished "_inu_n4_final0".
+220304-13:32:55,353 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.inu_n4_final".
+220304-13:32:55,562 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.01_atropos" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/01_atropos".
+220304-13:32:55,620 nipype.workflow INFO:
+	 [Node] Running "01_atropos" ("nipype.interfaces.ants.segmentation.Atropos"), a CommandLine Interface with command:
+Atropos --image-dimensionality 3 --initialization KMeans[3] --intensity-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/inu_n4_final/mapflow/_inu_n4_final0/sub-0050660_T1w_ras_valid_corrected.nii.gz --likelihood-model Gaussian --mask-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/get_brainmask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths_maths.nii.gz --mrf [0.1,1x1x1] --convergence [3,0] --output [sub-0050660_T1w_ras_valid_corrected_labeled.nii.gz,POSTERIOR_%02d.nii.gz] --use-random-seed 1
+220304-13:32:55,633 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.apply_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/apply_mask".
+220304-13:32:55,665 nipype.workflow INFO:
+	 [Node] Setting-up "_apply_mask0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/apply_mask/mapflow/_apply_mask0".
+220304-13:32:55,692 nipype.workflow INFO:
+	 [Node] Running "_apply_mask0" ("niworkflows.interfaces.nibabel.ApplyMask")
+220304-13:32:56,116 nipype.workflow INFO:
+	 [Node] Finished "_apply_mask0".
+220304-13:32:56,130 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.apply_mask".
+220304-13:33:30,778 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.01_atropos".
+220304-13:33:31,752 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.02_pad_segm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/02_pad_segm".
+220304-13:33:31,767 nipype.workflow INFO:
+	 [Node] Running "02_pad_segm" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-0050660_T1w_ras_valid_corrected_labeled_maths.nii.gz PadImage /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/01_atropos/sub-0050660_T1w_ras_valid_corrected_labeled.nii.gz 10
+220304-13:33:32,967 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.02_pad_segm".
+220304-13:33:35,733 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.04_sel_labels" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/04_sel_labels".
+220304-13:33:35,761 nipype.workflow INFO:
+	 [Node] Running "04_sel_labels" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:33:36,92 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.04_sel_labels".
+220304-13:33:38,446 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.10_me_csf" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/10_me_csf".
+220304-13:33:38,447 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.06_get_gm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/06_get_gm".
+220304-13:33:38,447 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.05_get_wm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/05_get_wm".
+220304-13:33:38,484 nipype.workflow INFO:
+	 [Node] Running "10_me_csf" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-01_maths.nii.gz ME /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/04_sel_labels/sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-01.nii.gz 10
+220304-13:33:38,489 nipype.workflow INFO:
+	 [Node] Running "05_get_wm" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-03_maths.nii.gz GetLargestComponent /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/04_sel_labels/sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-03.nii.gz
+220304-13:33:38,490 nipype.workflow INFO:
+	 [Node] Running "06_get_gm" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-02_maths.nii.gz GetLargestComponent /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/04_sel_labels/sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-02.nii.gz
+220304-13:33:38,594 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.27_depad_csf" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/27_depad_csf".
+220304-13:33:38,625 nipype.workflow INFO:
+	 [Node] Running "27_depad_csf" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-01_maths.nii.gz PadImage /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/04_sel_labels/sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-01.nii.gz -10
+220304-13:33:39,393 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.27_depad_csf".
+220304-13:33:39,809 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.apply_wm_prior" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/apply_wm_prior".
+220304-13:33:39,885 nipype.workflow INFO:
+	 [Node] Running "apply_wm_prior" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:33:40,146 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.05_get_wm".
+220304-13:33:40,191 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.06_get_gm".
+220304-13:33:40,585 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.apply_wm_prior".
+220304-13:33:41,613 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.10_me_csf".
+220304-13:33:41,833 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.07_fill_gm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/07_fill_gm".
+220304-13:33:41,833 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.09_relabel_wm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/09_relabel_wm".
+220304-13:33:41,833 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.inu_n4_final" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/inu_n4_final".
+220304-13:33:41,862 nipype.workflow INFO:
+	 [Node] Running "09_relabel_wm" ("nipype.interfaces.ants.utils.MultiplyImages"), a CommandLine Interface with command:
+MultiplyImages 3 /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/05_get_wm/sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-03_maths.nii.gz 3.0 09_relabel_wm.nii.gz
+220304-13:33:41,862 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n4_final0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/inu_n4_final/mapflow/_inu_n4_final0".
+220304-13:33:41,886 nipype.workflow INFO:
+	 [Node] Running "07_fill_gm" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-02_maths_maths.nii.gz FillHoles /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/06_get_gm/sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-02_maths.nii.gz 2
+220304-13:33:41,891 nipype.workflow INFO:
+	 [Node] Running "_inu_n4_final0" ("nipype.interfaces.ants.segmentation.N4BiasFieldCorrection"), a CommandLine Interface with command:
+N4BiasFieldCorrection --bspline-fitting [ 200 ] -d 3 --input-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_validate/sub-0050660_T1w_ras_valid.nii.gz --convergence [ 50x50x50x50x50, 1e-07 ] --output [ sub-0050660_T1w_ras_valid_corrected.nii.gz, sub-0050660_T1w_ras_valid_bias.nii.gz ] -r --shrink-factor 4 --weight-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/apply_wm_prior/prodmap.nii.gz
+220304-13:33:42,880 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.09_relabel_wm".
+220304-13:33:43,812 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.26_depad_wm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/26_depad_wm".
+220304-13:33:43,852 nipype.workflow INFO:
+	 [Node] Running "26_depad_wm" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths.nii.gz PadImage /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/09_relabel_wm/09_relabel_wm.nii.gz -10
+220304-13:33:44,533 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.26_depad_wm".
+220304-13:33:51,22 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.07_fill_gm".
+220304-13:33:51,815 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.08_mult_gm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/08_mult_gm".
+220304-13:33:51,849 nipype.workflow INFO:
+	 [Node] Running "08_mult_gm" ("nipype.interfaces.ants.utils.MultiplyImages"), a CommandLine Interface with command:
+MultiplyImages 3 /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/06_get_gm/sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-02_maths.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/07_fill_gm/sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-02_maths_maths.nii.gz 08_mult_gm.nii.gz
+220304-13:33:53,29 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.08_mult_gm".
+220304-13:33:53,287 nipype.workflow INFO:
+	 [Node] Finished "_inu_n4_final0".
+220304-13:33:53,302 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.inu_n4_final".
+220304-13:33:53,819 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.11_add_gm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/11_add_gm".
+220304-13:33:53,842 nipype.workflow INFO:
+	 [Node] Running "11_add_gm" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 08_mult_gm_maths.nii.gz addtozero /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/08_mult_gm/08_mult_gm.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/10_me_csf/sub-0050660_T1w_ras_valid_corrected_labeled_maths_class-01_maths.nii.gz
+220304-13:33:57,644 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.11_add_gm".
+220304-13:33:57,821 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.12_relabel_gm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/12_relabel_gm".
+220304-13:33:57,831 nipype.workflow INFO:
+	 [Node] Running "12_relabel_gm" ("nipype.interfaces.ants.utils.MultiplyImages"), a CommandLine Interface with command:
+MultiplyImages 3 /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/11_add_gm/08_mult_gm_maths.nii.gz 2.0 12_relabel_gm.nii.gz
+220304-13:33:58,774 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.12_relabel_gm".
+220304-13:33:59,833 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.25_depad_gm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/25_depad_gm".
+220304-13:33:59,834 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.13_add_gm_wm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/13_add_gm_wm".
+220304-13:33:59,855 nipype.workflow INFO:
+	 [Node] Running "25_depad_gm" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 12_relabel_gm_maths.nii.gz PadImage /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/12_relabel_gm/12_relabel_gm.nii.gz -10
+220304-13:33:59,863 nipype.workflow INFO:
+	 [Node] Running "13_add_gm_wm" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths.nii.gz addtozero /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/09_relabel_wm/09_relabel_wm.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/12_relabel_gm/12_relabel_gm.nii.gz
+220304-13:34:00,590 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.25_depad_gm".
+220304-13:34:01,823 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.merge_tpms" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/merge_tpms".
+220304-13:34:01,876 nipype.workflow INFO:
+	 [Node] Running "merge_tpms" ("nipype.interfaces.utility.base.Merge")
+220304-13:34:01,891 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.merge_tpms".
+220304-13:34:03,795 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.13_add_gm_wm".
+220304-13:34:05,825 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.24_depad_segm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/24_depad_segm".
+220304-13:34:05,825 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.14_sel_labels2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/14_sel_labels2".
+220304-13:34:05,842 nipype.workflow INFO:
+	 [Node] Running "14_sel_labels2" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:34:05,847 nipype.workflow INFO:
+	 [Node] Running "24_depad_segm" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_maths.nii.gz PadImage /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/13_add_gm_wm/09_relabel_wm_maths.nii.gz -10
+220304-13:34:06,32 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.14_sel_labels2".
+220304-13:34:06,566 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.24_depad_segm".
+220304-13:34:07,829 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.15_add_7" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/15_add_7".
+220304-13:34:07,878 nipype.workflow INFO:
+	 [Node] Running "15_add_7" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths.nii.gz addtozero /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/14_sel_labels2/09_relabel_wm_maths_class-03.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/14_sel_labels2/09_relabel_wm_maths_class-02.nii.gz
+220304-13:34:11,486 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.15_add_7".
+220304-13:34:11,832 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.16_me_7" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/16_me_7".
+220304-13:34:11,851 nipype.workflow INFO:
+	 [Node] Running "16_me_7" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths.nii.gz ME /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/15_add_7/09_relabel_wm_maths_class-03_maths.nii.gz 2
+220304-13:34:13,972 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.16_me_7".
+220304-13:34:15,837 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.17_comp_7" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/17_comp_7".
+220304-13:34:15,856 nipype.workflow INFO:
+	 [Node] Running "17_comp_7" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths.nii.gz GetLargestComponent /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/16_me_7/09_relabel_wm_maths_class-03_maths_maths.nii.gz
+220304-13:34:17,175 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.17_comp_7".
+220304-13:34:17,846 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.18_md_7" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/18_md_7".
+220304-13:34:17,871 nipype.workflow INFO:
+	 [Node] Running "18_md_7" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths.nii.gz MD /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/17_comp_7/09_relabel_wm_maths_class-03_maths_maths_maths.nii.gz 4
+220304-13:34:19,146 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.18_md_7".
+220304-13:34:19,840 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.19_fill_7" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/19_fill_7".
+220304-13:34:19,855 nipype.workflow INFO:
+	 [Node] Running "19_fill_7" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths.nii.gz FillHoles /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/18_md_7/09_relabel_wm_maths_class-03_maths_maths_maths_maths.nii.gz 2
+220304-13:34:28,670 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.19_fill_7".
+220304-13:34:29,957 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.20_add_7_2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/20_add_7_2".
+220304-13:34:29,978 nipype.workflow INFO:
+	 [Node] Running "20_add_7_2" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths.nii.gz addtozero /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/19_fill_7/09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/03_pad_mask/tpl-OASIS30ANTs_res-01_label-brain_probseg_trans_resampled_maths.nii.gz
+220304-13:34:33,751 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.20_add_7_2".
+220304-13:34:33,947 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.21_md_7_2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/21_md_7_2".
+220304-13:34:33,959 nipype.workflow INFO:
+	 [Node] Running "21_md_7_2" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths_maths.nii.gz MD /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/20_add_7_2/09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths.nii.gz 5
+220304-13:34:35,359 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.21_md_7_2".
+220304-13:34:35,953 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.22_me_7_2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/22_me_7_2".
+220304-13:34:35,968 nipype.workflow INFO:
+	 [Node] Running "22_me_7_2" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths_maths_maths.nii.gz ME /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/21_md_7_2/09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths_maths.nii.gz 5
+220304-13:34:38,4 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.22_me_7_2".
+220304-13:34:39,864 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.23_depad_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/23_depad_mask".
+220304-13:34:39,890 nipype.workflow INFO:
+	 [Node] Running "23_depad_mask" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths_maths_maths_maths.nii.gz PadImage /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/22_me_7_2/09_relabel_wm_maths_class-03_maths_maths_maths_maths_maths_maths_maths_maths.nii.gz -10
+220304-13:34:40,818 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.23_depad_mask".
+220304-13:34:41,865 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.msk_conform" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/msk_conform".
+220304-13:34:42,22 nipype.workflow INFO:
+	 [Node] Running "msk_conform" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:34:42,221 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.msk_conform".
+220304-13:34:47,567 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.trunc_mov" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/trunc_mov".
+220304-13:34:47,571 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.gen_ref" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_ref".
+220304-13:34:47,595 nipype.workflow INFO:
+	 [Node] Running "trunc_mov" ("nipype.interfaces.ants.utils.ImageMath"), a CommandLine Interface with command:
+ImageMath 3 sub-0050660_T1w_ras_valid_corrected_xform_maths.nii.gz TruncateImageIntensity /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/copy_xform/sub-0050660_T1w_ras_valid_corrected_xform.nii.gz 0.01 0.999 256
+220304-13:34:47,962 nipype.workflow INFO:
+	 [Node] Running "gen_ref" ("niworkflows.interfaces.utils.GenerateSamplingReference")
+220304-13:34:48,199 nipype.interface WARNING:
+	 Changing /data/aglinska/data/ABIDE/Derivatives/fmriprep/fmriprep/sub-0050660/anat/sub-0050660_desc-brain_mask.nii.gz dtype from int16 to uint8
+220304-13:34:49,35 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.gen_ref".
+220304-13:34:49,889 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.t1w_brain" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/t1w_brain".
+220304-13:34:49,899 nipype.workflow INFO:
+	 [Node] Running "t1w_brain" ("niworkflows.interfaces.nibabel.ApplyMask")
+220304-13:34:49,945 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.apply_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/apply_mask".
+220304-13:34:49,959 nipype.workflow INFO:
+	 [Node] Setting-up "_apply_mask0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/apply_mask/mapflow/_apply_mask0".
+220304-13:34:49,967 nipype.workflow INFO:
+	 [Node] Running "_apply_mask0" ("niworkflows.interfaces.nibabel.ApplyMask")
+220304-13:34:50,137 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.trunc_mov".
+220304-13:34:50,357 nipype.workflow INFO:
+	 [Node] Finished "_apply_mask0".
+220304-13:34:50,361 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.brain_extraction_wf.atropos_wf.apply_mask".
+220304-13:34:50,397 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.t1w_brain".
+220304-13:34:51,951 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.registration" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration".
+220304-13:34:51,953 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.gen_ref" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/gen_ref".
+220304-13:34:51,953 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.flt_bbr_init" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr_init".
+220304-13:34:51,953 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.t1w_dseg" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/t1w_dseg".
+220304-13:34:51,989 nipype.workflow INFO:
+	 [Node] Running "gen_ref" ("niworkflows.interfaces.utils.GenerateSamplingReference")
+220304-13:34:51,989 nipype.workflow INFO:
+	 [Node] Running "t1w_dseg" ("nipype.interfaces.fsl.preprocess.FAST"), a CommandLine Interface with command:
+fast -N -p -g -S 1 /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/t1w_dseg/sub-0050660_T1w_ras_valid_corrected_xform_masked.nii.gz
+220304-13:34:51,990 nipype.workflow INFO:
+	 [Node] Running "flt_bbr_init" ("niworkflows.interfaces.registration.FLIRTRPT"), a CommandLine Interface with command:
+flirt -in /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/apply_mask/uni_xform_masked.nii.gz -ref /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/t1w_brain/sub-0050660_T1w_ras_valid_corrected_xform_masked.nii.gz -out uni_xform_masked_flirt.nii.gz -omat uni_xform_masked_flirt.mat -dof 6 -usesqform
+220304-13:34:52,213 nipype.workflow INFO:
+	 [Node] Running "registration" ("niworkflows.interfaces.mni.RobustMNINormalization")
+220304-13:34:52,480 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.gen_ref".
+220304-13:35:03,736 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.flt_bbr_init".
+220304-13:36:32,646 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.t1w_dseg".
+220304-13:36:34,144 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.lut_t1w_dseg" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/lut_t1w_dseg".
+220304-13:36:34,157 nipype.workflow INFO:
+	 [Node] Running "lut_t1w_dseg" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:36:34,533 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.lut_t1w_dseg".
+220304-13:36:42,1 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acc_masks" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_masks".
+220304-13:36:42,126 nipype.workflow INFO:
+	 [Node] Running "acc_masks" ("fmriprep.interfaces.confounds.aCompCorMasks")
+220304-13:36:42,393 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_reports_wf.seg_rpt" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_reports_wf/seg_rpt".
+220304-13:36:42,397 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.wm_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/wm_mask".
+220304-13:36:42,417 nipype.workflow INFO:
+	 [Node] Running "wm_mask" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:36:42,420 nipype.workflow INFO:
+	 [Node] Running "seg_rpt" ("niworkflows.interfaces.masks.ROIsPlot")
+220304-13:36:42,509 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.wm_mask".
+220304-13:36:44,20 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acc_masks".
+220304-13:36:44,486 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.flt_bbr" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr".
+220304-13:36:44,555 nipype.workflow INFO:
+	 [Node] Running "flt_bbr" ("niworkflows.interfaces.registration.FLIRTRPT"), a CommandLine Interface with command:
+flirt -in /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/apply_mask/uni_xform_masked.nii.gz -ref /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/t1w_brain/sub-0050660_T1w_ras_valid_corrected_xform_masked.nii.gz -out uni_xform_masked_flirt.nii.gz -omat uni_xform_masked_flirt.mat -searchcost bbr -dof 6 -init /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr_init/uni_xform_masked_flirt.mat -schedule /usr/share/fsl/5.0/etc/flirtsch/bbr.sch -wmseg /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/wm_mask/sub-0050660_T1w_ras_valid_corrected_xform_masked_pveseg_dseg_mask.nii.gz
+220304-13:36:47,532 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_reports_wf.seg_rpt".
+220304-13:39:31,80 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.flt_bbr".
+220304-13:39:37,863 nipype.workflow INFO:
+	 [Node] Setting-up "_fsl_to_lta0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+220304-13:39:37,884 nipype.workflow INFO:
+	 [Node] Running "_fsl_to_lta0" ("niworkflows.interfaces.freesurfer.PatchedLTAConvert"), a CommandLine Interface with command:
+lta_convert --infsl /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr/uni_xform_masked_flirt.mat --outlta /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0/out.lta --src /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/apply_mask/uni_xform_masked.nii.gz --trg /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/t1w_brain/sub-0050660_T1w_ras_valid_corrected_xform_masked.nii.gz
+220304-13:39:38,73 nipype.workflow INFO:
+	 [Node] Finished "_fsl_to_lta0".
+220304-13:39:42,914 nipype.workflow INFO:
+	 [Node] Setting-up "_fsl_to_lta1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+220304-13:39:42,926 nipype.workflow INFO:
+	 [Node] Running "_fsl_to_lta1" ("niworkflows.interfaces.freesurfer.PatchedLTAConvert"), a CommandLine Interface with command:
+lta_convert --infsl /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr_init/uni_xform_masked_flirt.mat --outlta /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1/out.lta --src /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/apply_mask/uni_xform_masked.nii.gz --trg /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/t1w_brain/sub-0050660_T1w_ras_valid_corrected_xform_masked.nii.gz
+220304-13:39:43,125 nipype.workflow INFO:
+	 [Node] Finished "_fsl_to_lta1".
+220304-13:39:48,645 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.fsl_to_lta" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta".
+220304-13:39:48,662 nipype.workflow INFO:
+	 [Node] Setting-up "_fsl_to_lta0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta0".
+220304-13:39:48,665 nipype.workflow INFO:
+	 [Node] Cached "_fsl_to_lta0" - collecting precomputed outputs
+220304-13:39:48,665 nipype.workflow INFO:
+	 [Node] "_fsl_to_lta0" found cached.
+220304-13:39:48,666 nipype.workflow INFO:
+	 [Node] Setting-up "_fsl_to_lta1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl_to_lta/mapflow/_fsl_to_lta1".
+220304-13:39:48,669 nipype.workflow INFO:
+	 [Node] Cached "_fsl_to_lta1" - collecting precomputed outputs
+220304-13:39:48,669 nipype.workflow INFO:
+	 [Node] "_fsl_to_lta1" found cached.
+220304-13:39:48,671 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.fsl_to_lta".
+220304-13:39:50,650 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.compare_transforms" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/compare_transforms".
+220304-13:39:53,937 nipype.workflow INFO:
+	 [Node] Running "compare_transforms" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:39:53,963 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.compare_transforms".
+220304-13:39:56,783 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.invt_bbr" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/invt_bbr".
+220304-13:39:56,789 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_fwd" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_fwd".
+220304-13:39:56,790 nipype.workflow INFO:
+	 [Node] Running "invt_bbr" ("nipype.interfaces.fsl.utils.ConvertXFM"), a CommandLine Interface with command:
+convert_xfm -omat /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/invt_bbr/uni_xform_masked_flirt_inv.mat -inverse /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr_init/uni_xform_masked_flirt.mat
+220304-13:39:56,817 nipype.workflow INFO:
+	 [Node] Running "fsl2itk_fwd" ("nipype.interfaces.c3.C3dAffineTool"), a CommandLine Interface with command:
+c3d_affine_tool -ref /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/t1w_brain/sub-0050660_T1w_ras_valid_corrected_xform_masked.nii.gz -src /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/apply_mask/uni_xform_masked.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/flt_bbr_init/uni_xform_masked_flirt.mat -fsl2ras -oitk /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_fwd/affine.txt
+220304-13:39:56,920 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.invt_bbr".
+220304-13:39:57,321 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_fwd".
+220304-13:39:58,836 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.mask_t1w_tfm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/mask_t1w_tfm".
+220304-13:39:58,839 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_inv" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_inv".
+220304-13:39:58,860 nipype.workflow INFO:
+	 [Node] Running "fsl2itk_inv" ("nipype.interfaces.c3.C3dAffineTool"), a CommandLine Interface with command:
+c3d_affine_tool -ref /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/apply_mask/uni_xform_masked.nii.gz -src /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/t1w_brain/sub-0050660_T1w_ras_valid_corrected_xform_masked.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/invt_bbr/uni_xform_masked_flirt_inv.mat -fsl2ras -oitk /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_inv/affine.txt
+220304-13:39:58,872 nipype.workflow INFO:
+	 [Node] Running "mask_t1w_tfm" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz --interpolation MultiLabel --output ref_bold_corrected_brain_mask_maths_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/gen_ref/sub-0050660_T1w_ras_valid_corrected_xform_masked_reference.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_fwd/affine.txt
+220304-13:39:59,243 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_reg_wf.fsl_bbr_wf.fsl2itk_inv".
+220304-13:40:00,4 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.mask_t1w_tfm".
+220304-13:40:00,640 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.pre_mask_dilate" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/pre_mask_dilate".
+220304-13:40:00,655 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_to_t1w_transform" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_to_t1w_transform".
+220304-13:40:00,664 nipype.workflow INFO:
+	 [Node] Running "pre_mask_dilate" ("nipype.interfaces.fsl.maths.DilateImage"), a CommandLine Interface with command:
+fslmaths -dt char /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/mask_t1w_tfm/ref_bold_corrected_brain_mask_maths_trans.nii.gz -kernel sphere 3.0000 -dilF /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/pre_mask_dilate/ref_bold_corrected_brain_mask_maths_trans_dil.nii.gz
+220304-13:40:00,893 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.pre_mask_dilate".
+220304-13:40:00,908 nipype.workflow INFO:
+	 [Node] Running "bold_to_t1w_transform" ("niworkflows.interfaces.itk.MultiApplyTransforms")
+220304-13:40:02,646 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm0".
+220304-13:40:02,646 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm1".
+220304-13:40:02,649 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm2".
+220304-13:40:02,658 nipype.workflow INFO:
+	 [Node] Running "_acc_msk_tfm1" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_masks/acompcor_wm.nii.gz --interpolation Gaussian --output acompcor_wm_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_inv/affine.txt
+220304-13:40:02,662 nipype.workflow INFO:
+	 [Node] Running "_acc_msk_tfm2" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_masks/acompcor_wmcsf.nii.gz --interpolation Gaussian --output acompcor_wmcsf_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_inv/affine.txt
+220304-13:40:02,665 nipype.workflow INFO:
+	 [Node] Running "_acc_msk_tfm0" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/t1w_dseg/sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_0.nii.gz --interpolation Gaussian --output sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_0_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_inv/affine.txt
+220304-13:40:03,186 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_tfm2".
+220304-13:40:03,404 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_tfm0".
+220304-13:40:03,483 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_tfm1".
+220304-13:40:04,657 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acc_msk_tfm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_tfm".
+220304-13:40:04,670 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm0".
+220304-13:40:04,675 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_tfm0" - collecting precomputed outputs
+220304-13:40:04,675 nipype.workflow INFO:
+	 [Node] "_acc_msk_tfm0" found cached.
+220304-13:40:04,676 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm1".
+220304-13:40:04,678 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_tfm1" - collecting precomputed outputs
+220304-13:40:04,679 nipype.workflow INFO:
+	 [Node] "_acc_msk_tfm1" found cached.
+220304-13:40:04,679 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_tfm2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_tfm/mapflow/_acc_msk_tfm2".
+220304-13:40:04,682 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_tfm2" - collecting precomputed outputs
+220304-13:40:04,682 nipype.workflow INFO:
+	 [Node] "_acc_msk_tfm2" found cached.
+220304-13:40:04,685 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acc_msk_tfm".
+220304-13:40:08,667 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain1".
+220304-13:40:08,667 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain0".
+220304-13:40:08,668 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain2".
+220304-13:40:08,675 nipype.workflow INFO:
+	 [Node] Running "_acc_msk_brain1" ("niworkflows.interfaces.nibabel.ApplyMask")
+220304-13:40:08,676 nipype.workflow INFO:
+	 [Node] Running "_acc_msk_brain0" ("niworkflows.interfaces.nibabel.ApplyMask")
+220304-13:40:08,677 nipype.workflow INFO:
+	 [Node] Running "_acc_msk_brain2" ("niworkflows.interfaces.nibabel.ApplyMask")
+220304-13:40:08,711 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_brain2".
+220304-13:40:08,712 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_brain0".
+220304-13:40:08,725 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_brain1".
+220304-13:40:10,660 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acc_msk_brain" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_brain".
+220304-13:40:10,669 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain0".
+220304-13:40:10,673 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_brain0" - collecting precomputed outputs
+220304-13:40:10,673 nipype.workflow INFO:
+	 [Node] "_acc_msk_brain0" found cached.
+220304-13:40:10,674 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain1".
+220304-13:40:10,676 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_brain1" - collecting precomputed outputs
+220304-13:40:10,677 nipype.workflow INFO:
+	 [Node] "_acc_msk_brain1" found cached.
+220304-13:40:10,678 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_brain2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_brain/mapflow/_acc_msk_brain2".
+220304-13:40:10,682 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_brain2" - collecting precomputed outputs
+220304-13:40:10,682 nipype.workflow INFO:
+	 [Node] "_acc_msk_brain2" found cached.
+220304-13:40:10,685 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acc_msk_brain".
+220304-13:40:14,655 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin2".
+220304-13:40:14,660 nipype.workflow INFO:
+	 [Node] Running "_acc_msk_bin2" ("niworkflows.interfaces.nibabel.Binarize")
+220304-13:40:14,684 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_bin2".
+220304-13:40:18,538 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin1".
+220304-13:40:18,539 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin0".
+220304-13:40:18,545 nipype.workflow INFO:
+	 [Node] Running "_acc_msk_bin1" ("niworkflows.interfaces.nibabel.Binarize")
+220304-13:40:18,547 nipype.workflow INFO:
+	 [Node] Running "_acc_msk_bin0" ("niworkflows.interfaces.nibabel.Binarize")
+220304-13:40:18,573 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_bin1".
+220304-13:40:18,594 nipype.workflow INFO:
+	 [Node] Finished "_acc_msk_bin0".
+220304-13:40:20,703 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acc_msk_bin" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_bin".
+220304-13:40:20,719 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin0".
+220304-13:40:20,724 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_bin0" - collecting precomputed outputs
+220304-13:40:20,724 nipype.workflow INFO:
+	 [Node] "_acc_msk_bin0" found cached.
+220304-13:40:20,724 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin1".
+220304-13:40:20,727 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_bin1" - collecting precomputed outputs
+220304-13:40:20,727 nipype.workflow INFO:
+	 [Node] "_acc_msk_bin1" found cached.
+220304-13:40:20,729 nipype.workflow INFO:
+	 [Node] Setting-up "_acc_msk_bin2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_msk_bin/mapflow/_acc_msk_bin2".
+220304-13:40:20,738 nipype.workflow INFO:
+	 [Node] Cached "_acc_msk_bin2" - collecting precomputed outputs
+220304-13:40:20,738 nipype.workflow INFO:
+	 [Node] "_acc_msk_bin2" found cached.
+220304-13:40:20,759 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acc_msk_bin".
+220304-13:40:24,686 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.rois_plot" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/rois_plot".
+220304-13:40:25,943 nipype.workflow INFO:
+	 [Node] Running "rois_plot" ("niworkflows.interfaces.masks.ROIsPlot")
+220304-13:40:28,3 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acompcor" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acompcor".
+220304-13:40:28,78 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.signals" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/signals".
+220304-13:40:28,849 nipype.workflow INFO:
+	 [Node] Running "signals" ("niworkflows.interfaces.images.SignalExtraction")
+220304-13:40:28,859 nipype.workflow INFO:
+	 [Node] Running "acompcor" ("niworkflows.interfaces.patches.RobustACompCor")
+220304-13:40:29,560 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acompcor".
+220304-13:40:29,584 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.signals".
+220304-13:40:29,950 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.rois_plot".
+220304-13:40:30,755 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_to_t1w_transform".
+220304-13:40:30,969 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acc_metadata_fmt" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/acc_metadata_fmt".
+220304-13:40:30,988 nipype.workflow INFO:
+	 [Node] Running "acc_metadata_fmt" ("niworkflows.interfaces.utils.TSV2JSON")
+220304-13:40:31,48 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.acc_metadata_fmt".
+220304-13:40:32,701 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.compcor_plot" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/compcor_plot".
+220304-13:40:32,718 nipype.workflow INFO:
+	 [Node] Running "compcor_plot" ("niworkflows.interfaces.plotting.CompCorVariancePlot")
+220304-13:40:33,66 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.compcor_plot".
+220304-13:40:33,112 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.model_expansion" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/model_expansion".
+220304-13:40:33,112 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.conf_corr_plot" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/conf_corr_plot".
+220304-13:40:33,689 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.merge" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/merge".
+220304-13:40:33,778 nipype.workflow INFO:
+	 [Node] Running "model_expansion" ("niworkflows.interfaces.confounds.ExpandModel")
+220304-13:40:33,801 nipype.workflow INFO:
+	 [Node] Running "conf_corr_plot" ("niworkflows.interfaces.plotting.ConfoundsCorrelationPlot")
+220304-13:40:33,877 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.model_expansion".
+220304-13:40:34,73 nipype.workflow INFO:
+	 [Node] Running "merge" ("niworkflows.interfaces.nilearn.Merge")
+220304-13:40:34,469 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.conf_corr_plot".
+220304-13:40:41,546 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.spike_regressors" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/spike_regressors".
+220304-13:40:41,579 nipype.workflow INFO:
+	 [Node] Running "spike_regressors" ("niworkflows.interfaces.confounds.SpikeRegressors")
+220304-13:40:41,657 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.spike_regressors".
+220304-13:40:42,663 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.merge".
+220304-13:40:49,662 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.val_bold" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/val_bold".
+220304-13:40:49,687 nipype.workflow INFO:
+	 [Node] Setting-up "_val_bold0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/val_bold/mapflow/_val_bold0".
+220304-13:40:49,699 nipype.workflow INFO:
+	 [Node] Running "_val_bold0" ("niworkflows.interfaces.images.ValidateImage")
+220304-13:40:49,723 nipype.workflow INFO:
+	 [Node] Finished "_val_bold0".
+220304-13:40:49,726 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.val_bold".
+220304-13:40:50,904 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.gen_ref" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/gen_ref".
+220304-13:40:50,954 nipype.workflow INFO:
+	 [Node] Running "gen_ref" ("niworkflows.interfaces.registration.EstimateReferenceImage")
+220304-13:40:52,573 nipype.interface INFO:
+	 stderr 2022-03-04T13:40:52.572963:++ 3dvolreg: AFNI version=Debian-16.2.07~dfsg.1-5~nd16.04+1 (Jun 12 2017) [64-bit]
+220304-13:40:52,573 nipype.interface INFO:
+	 stderr 2022-03-04T13:40:52.572963:++ Authored by: RW Cox
+220304-13:40:52,611 nipype.interface INFO:
+	 stderr 2022-03-04T13:40:52.611130:** AFNI converts NIFTI_datatype=4 (INT16) in file /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/gen_ref/slice.nii.gz to FLOAT32
+220304-13:40:52,611 nipype.interface INFO:
+	 stderr 2022-03-04T13:40:52.611130:     Warnings of this type will be muted for this session.
+220304-13:40:52,611 nipype.interface INFO:
+	 stderr 2022-03-04T13:40:52.611130:     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+220304-13:40:52,615 nipype.interface INFO:
+	 stderr 2022-03-04T13:40:52.615574:++ Coarse del was 10, replaced with 3
+220304-13:41:04,733 nipype.interface INFO:
+	 stderr 2022-03-04T13:41:04.733376:++ Max displacement in automask = 0.09 (mm) at sub-brick 9
+220304-13:41:04,733 nipype.interface INFO:
+	 stderr 2022-03-04T13:41:04.733376:++ Max delta displ  in automask = 0.07 (mm) at sub-brick 10
+220304-13:41:05,547 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.gen_ref".
+220304-13:41:12,240 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.n4_correct" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/n4_correct".
+220304-13:41:12,323 nipype.workflow INFO:
+	 [Node] Running "n4_correct" ("niworkflows.interfaces.fixes.FixN4BiasFieldCorrection"), a CommandLine Interface with command:
+N4BiasFieldCorrection --bspline-fitting [ 200 ] -d 3 --input-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/n4_correct/ref_bold_scaled.nii.gz --mask-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/check_hdr/ref_bold_corrected_brain_mask_maths_trans_dil_hdr.nii.gz --output ref_bold_corrected.nii.gz -r
+220304-13:41:13,132 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.n4_correct".
+220304-13:41:14,877 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_pass" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass".
+220304-13:41:18,357 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_pass" ("nipype.interfaces.fsl.preprocess.BET"), a CommandLine Interface with command:
+bet /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/n4_correct/ref_bold_corrected.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain.nii.gz -f 0.20 -m
+220304-13:41:19,797 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_pass".
+220304-13:41:20,710 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_dilate" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_dilate".
+220304-13:41:20,731 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_dilate" ("nipype.interfaces.fsl.maths.DilateImage"), a CommandLine Interface with command:
+fslmaths -dt char /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain_mask.nii.gz -kernel sphere 6.0000 -dilF /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_dilate/ref_bold_corrected_brain_mask_dil.nii.gz
+220304-13:41:21,14 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_dilate".
+220304-13:41:22,706 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_mask".
+220304-13:41:22,731 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_mask" ("nipype.interfaces.fsl.maths.ApplyMask"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain.nii.gz -mas /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_dilate/ref_bold_corrected_brain_mask_dil.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_mask/ref_bold_corrected_brain_masked.nii.gz
+220304-13:41:22,906 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_mask".
+220304-13:41:24,707 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.unifize" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/unifize".
+220304-13:41:24,726 nipype.workflow INFO:
+	 [Node] Running "unifize" ("nipype.interfaces.afni.utils.Unifize"), a CommandLine Interface with command:
+3dUnifize -clfrac 0.2 -rbt 18.3 65.0 90.0 -prefix uni.nii.gz -T2 -input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/unifize/ref_bold_corrected_brain_masked.nii.gz
+220304-13:41:26,217 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.unifize".
+220304-13:41:26,705 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.fixhdr_unifize" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/fixhdr_unifize".
+220304-13:41:26,724 nipype.workflow INFO:
+	 [Node] Running "fixhdr_unifize" ("niworkflows.interfaces.utils.CopyXForm")
+220304-13:41:26,832 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.fixhdr_unifize".
+220304-13:41:28,704 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_second_pass" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_second_pass".
+220304-13:41:28,710 nipype.workflow INFO:
+	 [Node] Running "skullstrip_second_pass" ("nipype.interfaces.afni.preprocess.Automask"), a CommandLine Interface with command:
+3dAutomask -apply_prefix uni_xform_masked.nii.gz -dilate 1 -prefix uni_xform_mask.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_second_pass/uni_xform.nii.gz
+220304-13:41:29,73 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_second_pass".
+220304-13:41:30,714 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.fixhdr_skullstrip2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/fixhdr_skullstrip2".
+220304-13:41:30,738 nipype.workflow INFO:
+	 [Node] Running "fixhdr_skullstrip2" ("niworkflows.interfaces.utils.CopyXForm")
+220304-13:41:30,767 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.fixhdr_skullstrip2".
+220304-13:41:32,729 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.combine_masks" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/combine_masks".
+220304-13:41:32,740 nipype.workflow INFO:
+	 [Node] Running "combine_masks" ("nipype.interfaces.fsl.maths.BinaryMaths"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/skullstrip_first_pass/ref_bold_corrected_brain_mask.nii.gz -mul /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/fixhdr_skullstrip2/uni_xform_mask_xform.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz
+220304-13:41:32,888 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.combine_masks".
+220304-13:41:34,722 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.apply_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/apply_mask".
+220304-13:41:34,737 nipype.workflow INFO:
+	 [Node] Running "apply_mask" ("nipype.interfaces.fsl.maths.ApplyMask"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/fixhdr_unifize/uni_xform.nii.gz -mas /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_t1_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/apply_mask/uni_xform_masked.nii.gz
+220304-13:41:34,902 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_t1_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.apply_mask".
+220304-13:58:39,892 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.registration".
+220304-13:58:41,693 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.std_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_mask".
+220304-13:58:41,693 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.tpl_moving" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/tpl_moving".
+220304-13:58:41,719 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.std_dseg" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_dseg".
+220304-13:58:41,980 nipype.workflow INFO:
+	 [Node] Running "std_dseg" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/lut_t1w_dseg/sub-0050660_T1w_ras_valid_corrected_xform_masked_pveseg_dseg.nii.gz --interpolation MultiLabel --output sub-0050660_T1w_ras_valid_corrected_xform_masked_pveseg_dseg_trans.nii.gz --reference-image /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:58:41,982 nipype.workflow INFO:
+	 [Node] Running "std_mask" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/copy_xform/09_relabel_wm_mask_xform.nii.gz --interpolation MultiLabel --output 09_relabel_wm_mask_xform_trans.nii.gz --reference-image /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:58:41,982 nipype.workflow INFO:
+	 [Node] Running "tpl_moving" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/copy_xform/sub-0050660_T1w_ras_valid_corrected_xform.nii.gz --interpolation LanczosWindowedSinc --output sub-0050660_T1w_ras_valid_corrected_xform_trans.nii.gz --reference-image /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:58:49,208 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms2".
+220304-13:58:49,222 nipype.workflow INFO:
+	 [Node] Running "_std_tpms2" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/t1w_dseg/sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_0.nii.gz --interpolation Gaussian --output sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_0_trans.nii.gz --reference-image /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:58:49,264 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms0".
+220304-13:58:49,265 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms1".
+220304-13:58:49,280 nipype.workflow INFO:
+	 [Node] Running "_std_tpms0" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/t1w_dseg/sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_1.nii.gz --interpolation Gaussian --output sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_1_trans.nii.gz --reference-image /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:58:49,283 nipype.workflow INFO:
+	 [Node] Running "_std_tpms1" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/t1w_dseg/sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_2.nii.gz --interpolation Gaussian --output sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_2_trans.nii.gz --reference-image /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_T1w.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:59:05,532 nipype.workflow INFO:
+	 [Node] Finished "_std_tpms2".
+220304-13:59:05,569 nipype.workflow INFO:
+	 [Node] Finished "_std_tpms1".
+220304-13:59:05,653 nipype.workflow INFO:
+	 [Node] Finished "_std_tpms0".
+220304-13:59:07,714 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.std_tpms" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms".
+220304-13:59:07,730 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms0".
+220304-13:59:07,731 nipype.workflow INFO:
+	 [Node] Cached "_std_tpms0" - collecting precomputed outputs
+220304-13:59:07,731 nipype.workflow INFO:
+	 [Node] "_std_tpms0" found cached.
+220304-13:59:07,732 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms1".
+220304-13:59:07,732 nipype.workflow INFO:
+	 [Node] Cached "_std_tpms1" - collecting precomputed outputs
+220304-13:59:07,732 nipype.workflow INFO:
+	 [Node] "_std_tpms1" found cached.
+220304-13:59:07,733 nipype.workflow INFO:
+	 [Node] Setting-up "_std_tpms2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/std_tpms/mapflow/_std_tpms2".
+220304-13:59:07,734 nipype.workflow INFO:
+	 [Node] Cached "_std_tpms2" - collecting precomputed outputs
+220304-13:59:07,734 nipype.workflow INFO:
+	 [Node] "_std_tpms2" found cached.
+220304-13:59:07,739 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.std_tpms".
+220304-13:59:09,489 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.tpl_moving".
+220304-13:59:46,140 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.std_mask".
+220304-13:59:47,756 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_reports_wf.norm_msk" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_reports_wf/_template_MNI152NLin2009cAsym/norm_msk".
+220304-13:59:48,2 nipype.workflow INFO:
+	 [Node] Running "norm_msk" ("nipype.interfaces.utility.wrappers.Function")
+220304-13:59:49,111 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_reports_wf.norm_msk".
+220304-13:59:49,756 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_reports_wf.norm_rpt" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_reports_wf/_template_MNI152NLin2009cAsym/norm_rpt".
+220304-13:59:49,766 nipype.workflow INFO:
+	 [Node] Running "norm_rpt" ("niworkflows.interfaces.registration.SimpleBeforeAfterRPT")
+220304-13:59:51,955 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.std_dseg".
+220304-13:59:53,761 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.outputnode" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/outputnode".
+220304-13:59:53,963 nipype.workflow INFO:
+	 [Node] Running "outputnode" ("nipype.interfaces.utility.base.IdentityInterface")
+220304-13:59:53,968 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_norm_wf.outputnode".
+220304-13:59:55,551 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_reports_wf.norm_rpt".
+220304-13:59:57,796 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.anat2std_dseg" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/anat2std_dseg".
+220304-13:59:57,796 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.anat2std_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/anat2std_mask".
+220304-13:59:57,797 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.anat2std_t1w" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/anat2std_t1w".
+220304-13:59:57,828 nipype.workflow INFO:
+	 [Node] Running "anat2std_dseg" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/lut_t1w_dseg/sub-0050660_T1w_ras_valid_corrected_xform_masked_pveseg_dseg.nii.gz --interpolation MultiLabel --output sub-0050660_T1w_ras_valid_corrected_xform_masked_pveseg_dseg_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_ref/tpl-MNI152NLin2009cAsym_res-01_T1w_reference.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:59:57,833 nipype.workflow INFO:
+	 [Node] Running "anat2std_mask" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/copy_xform/09_relabel_wm_mask_xform.nii.gz --interpolation MultiLabel --output 09_relabel_wm_mask_xform_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_ref/tpl-MNI152NLin2009cAsym_res-01_T1w_reference.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:59:57,834 nipype.workflow INFO:
+	 [Node] Running "anat2std_t1w" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/brain_extraction_wf/atropos_wf/copy_xform/sub-0050660_T1w_ras_valid_corrected_xform.nii.gz --interpolation LanczosWindowedSinc --output sub-0050660_T1w_ras_valid_corrected_xform_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_ref/tpl-MNI152NLin2009cAsym_res-01_T1w_reference.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:59:58,15 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.carpetplot_wf.mrg_xfms" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/carpetplot_wf/mrg_xfms".
+220304-13:59:58,44 nipype.workflow INFO:
+	 [Node] Running "mrg_xfms" ("nipype.interfaces.utility.base.Merge")
+220304-13:59:58,50 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.carpetplot_wf.mrg_xfms".
+220304-13:59:59,775 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.mask_std_tfm" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/_std_target_MNI152NLin2009cAsym.resnative/mask_std_tfm".
+220304-13:59:59,781 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.carpetplot_wf.resample_parc" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/carpetplot_wf/resample_parc".
+220304-13:59:59,781 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/anat2std_tpms/mapflow/_anat2std_tpms0".
+220304-13:59:59,781 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/anat2std_tpms/mapflow/_anat2std_tpms1".
+220304-13:59:59,782 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/anat2std_tpms/mapflow/_anat2std_tpms2".
+220304-13:59:59,790 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_to_std_transform" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/_std_target_MNI152NLin2009cAsym.resnative/bold_to_std_transform".
+220304-13:59:59,797 nipype.workflow INFO:
+	 [Node] Running "_anat2std_tpms0" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/t1w_dseg/sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_1.nii.gz --interpolation Gaussian --output sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_1_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_ref/tpl-MNI152NLin2009cAsym_res-01_T1w_reference.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:59:59,797 nipype.workflow INFO:
+	 [Node] Running "_anat2std_tpms1" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/t1w_dseg/sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_2.nii.gz --interpolation Gaussian --output sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_2_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_ref/tpl-MNI152NLin2009cAsym_res-01_T1w_reference.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:59:59,799 nipype.workflow INFO:
+	 [Node] Running "_anat2std_tpms2" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 1 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/t1w_dseg/sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_0.nii.gz --interpolation Gaussian --output sub-0050660_T1w_ras_valid_corrected_xform_masked_pve_0_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/gen_ref/tpl-MNI152NLin2009cAsym_res-01_T1w_reference.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5
+220304-13:59:59,808 nipype.workflow INFO:
+	 [Node] Running "resample_parc" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --dimensionality 3 --float 0 --input /data/aglinska/.cache/templateflow/tpl-MNI152NLin2009cAsym/tpl-MNI152NLin2009cAsym_res-01_desc-carpet_dseg.nii.gz --interpolation MultiLabel --output tpl-MNI152NLin2009cAsym_res-01_desc-carpet_dseg_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_inv/affine.txt --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniInverseComposite.h5
+220304-13:59:59,808 nipype.workflow INFO:
+	 [Node] Running "mask_std_tfm" ("niworkflows.interfaces.fixes.FixHeaderApplyTransforms"), a CommandLine Interface with command:
+antsApplyTransforms --default-value 0 --float 0 --input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/final_boldref_wf/enhance_and_skullstrip_bold_wf/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz --interpolation MultiLabel --output ref_bold_corrected_brain_mask_maths_trans.nii.gz --reference-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/_std_target_MNI152NLin2009cAsym.resnative/gen_ref/tpl-MNI152NLin2009cAsym_res-02_T1w_reference.nii.gz --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_norm_wf/_template_MNI152NLin2009cAsym/registration/ants_t1_to_mniComposite.h5 --transform /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_reg_wf/fsl_bbr_wf/fsl2itk_fwd/affine.txt
+220304-14:00:00,94 nipype.workflow INFO:
+	 [Node] Running "bold_to_std_transform" ("niworkflows.interfaces.itk.MultiApplyTransforms")
+220304-14:00:02,214 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.mask_std_tfm".
+220304-14:00:02,255 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.carpetplot_wf.resample_parc".
+220304-14:00:03,786 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.pre_mask_dilate" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/pre_mask_dilate".
+220304-14:00:03,803 nipype.workflow INFO:
+	 [Node] Running "pre_mask_dilate" ("nipype.interfaces.fsl.maths.DilateImage"), a CommandLine Interface with command:
+fslmaths -dt char /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/_std_target_MNI152NLin2009cAsym.resnative/mask_std_tfm/ref_bold_corrected_brain_mask_maths_trans.nii.gz -kernel sphere 3.0000 -dilF /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/pre_mask_dilate/ref_bold_corrected_brain_mask_maths_trans_dil.nii.gz
+220304-14:00:04,58 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.pre_mask_dilate".
+220304-14:00:04,120 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.carpetplot_wf.conf_plot" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/carpetplot_wf/conf_plot".
+220304-14:00:04,140 nipype.workflow INFO:
+	 [Node] Running "conf_plot" ("fmriprep.interfaces.confounds.FMRISummary")
+220304-14:00:05,575 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.carpetplot_wf.conf_plot".
+220304-14:00:17,622 nipype.workflow INFO:
+	 [Node] Finished "_anat2std_tpms2".
+220304-14:00:17,923 nipype.workflow INFO:
+	 [Node] Finished "_anat2std_tpms1".
+220304-14:00:17,938 nipype.workflow INFO:
+	 [Node] Finished "_anat2std_tpms0".
+220304-14:00:19,803 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.anat2std_tpms" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/anat2std_tpms".
+220304-14:00:19,818 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/anat2std_tpms/mapflow/_anat2std_tpms0".
+220304-14:00:19,819 nipype.workflow INFO:
+	 [Node] Cached "_anat2std_tpms0" - collecting precomputed outputs
+220304-14:00:19,819 nipype.workflow INFO:
+	 [Node] "_anat2std_tpms0" found cached.
+220304-14:00:19,820 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms1" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/anat2std_tpms/mapflow/_anat2std_tpms1".
+220304-14:00:19,820 nipype.workflow INFO:
+	 [Node] Cached "_anat2std_tpms1" - collecting precomputed outputs
+220304-14:00:19,820 nipype.workflow INFO:
+	 [Node] "_anat2std_tpms1" found cached.
+220304-14:00:19,821 nipype.workflow INFO:
+	 [Node] Setting-up "_anat2std_tpms2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.resnative/anat2std_tpms/mapflow/_anat2std_tpms2".
+220304-14:00:19,822 nipype.workflow INFO:
+	 [Node] Cached "_anat2std_tpms2" - collecting precomputed outputs
+220304-14:00:19,822 nipype.workflow INFO:
+	 [Node] "_anat2std_tpms2" found cached.
+220304-14:00:19,827 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.anat2std_tpms".
+220304-14:00:28,48 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.anat2std_t1w".
+220304-14:00:56,848 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_to_std_transform".
+220304-14:00:57,549 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.merge" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/_std_target_MNI152NLin2009cAsym.resnative/merge".
+220304-14:00:57,594 nipype.workflow INFO:
+	 [Node] Running "merge" ("niworkflows.interfaces.nilearn.Merge")
+220304-14:01:08,432 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.anat2std_mask".
+220304-14:01:08,969 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.merge".
+220304-14:01:10,493 nipype.interface WARNING:
+	 Changing /data/aglinska/data/ABIDE/Derivatives/fmriprep/fmriprep/sub-0050660/anat/sub-0050660_space-MNI152NLin2009cAsym_desc-brain_mask.nii.gz dtype from float64 to uint8
+220304-14:01:10,710 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.val_bold" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/_std_target_MNI152NLin2009cAsym.resnative/val_bold".
+220304-14:01:10,719 nipype.workflow INFO:
+	 [Node] Setting-up "_val_bold0" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/_std_target_MNI152NLin2009cAsym.resnative/val_bold/mapflow/_val_bold0".
+220304-14:01:10,727 nipype.workflow INFO:
+	 [Node] Running "_val_bold0" ("niworkflows.interfaces.images.ValidateImage")
+220304-14:01:10,765 nipype.workflow INFO:
+	 [Node] Finished "_val_bold0".
+220304-14:01:10,770 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.val_bold".
+220304-14:01:11,747 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.gen_ref" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/_std_target_MNI152NLin2009cAsym.resnative/gen_ref".
+220304-14:01:11,763 nipype.workflow INFO:
+	 [Node] Running "gen_ref" ("niworkflows.interfaces.registration.EstimateReferenceImage")
+220304-14:01:12,113 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.anat_preproc_wf.anat_derivatives_wf.anat2std_dseg".
+220304-14:01:13,315 nipype.interface INFO:
+	 stderr 2022-03-04T14:01:13.315327:++ 3dvolreg: AFNI version=Debian-16.2.07~dfsg.1-5~nd16.04+1 (Jun 12 2017) [64-bit]
+220304-14:01:13,315 nipype.interface INFO:
+	 stderr 2022-03-04T14:01:13.315327:++ Authored by: RW Cox
+220304-14:01:13,315 nipype.interface INFO:
+	 stderr 2022-03-04T14:01:13.315686:** AFNI converts NIFTI_datatype=4 (INT16) in file /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/_std_target_MNI152NLin2009cAsym.resnative/gen_ref/slice.nii.gz to FLOAT32
+220304-14:01:13,315 nipype.interface INFO:
+	 stderr 2022-03-04T14:01:13.315686:     Warnings of this type will be muted for this session.
+220304-14:01:13,315 nipype.interface INFO:
+	 stderr 2022-03-04T14:01:13.315686:     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+220304-14:01:13,316 nipype.interface INFO:
+	 stderr 2022-03-04T14:01:13.316142:++ Coarse del was 10, replaced with 4
+220304-14:01:15,369 nipype.interface WARNING:
+	 Changing /data/aglinska/data/ABIDE/Derivatives/fmriprep/fmriprep/sub-0050660/anat/sub-0050660_space-MNI152NLin2009cAsym_dseg.nii.gz dtype from float64 to int16
+220304-14:01:29,477 nipype.interface INFO:
+	 stderr 2022-03-04T14:01:29.477155:++ Max displacement in automask = 0.08 (mm) at sub-brick 9
+220304-14:01:29,478 nipype.interface INFO:
+	 stderr 2022-03-04T14:01:29.477155:++ Max delta displ  in automask = 0.05 (mm) at sub-brick 9
+220304-14:01:30,513 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.gen_ref".
+220304-14:01:33,675 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.n4_correct" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/n4_correct".
+220304-14:01:33,892 nipype.workflow INFO:
+	 [Node] Running "n4_correct" ("niworkflows.interfaces.fixes.FixN4BiasFieldCorrection"), a CommandLine Interface with command:
+N4BiasFieldCorrection --bspline-fitting [ 200 ] -d 3 --input-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/n4_correct/ref_bold_scaled.nii.gz --mask-image /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/check_hdr/ref_bold_corrected_brain_mask_maths_trans_dil_hdr.nii.gz --output ref_bold_corrected.nii.gz -r
+220304-14:01:34,960 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.n4_correct".
+220304-14:01:35,678 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.outputnode" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/outputnode".
+220304-14:01:35,678 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_pass" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_first_pass".
+220304-14:01:35,692 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_pass" ("nipype.interfaces.fsl.preprocess.BET"), a CommandLine Interface with command:
+bet /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/n4_correct/ref_bold_corrected.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_first_pass/ref_bold_corrected_brain.nii.gz -f 0.20 -m
+220304-14:01:36,535 nipype.workflow INFO:
+	 [Node] Running "outputnode" ("nipype.interfaces.utility.base.IdentityInterface")
+220304-14:01:36,541 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.outputnode".
+220304-14:01:36,894 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_pass".
+220304-14:01:37,759 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_dilate" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_first_dilate".
+220304-14:01:37,778 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_dilate" ("nipype.interfaces.fsl.maths.DilateImage"), a CommandLine Interface with command:
+fslmaths -dt char /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_first_pass/ref_bold_corrected_brain_mask.nii.gz -kernel sphere 6.0000 -dilF /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_first_dilate/ref_bold_corrected_brain_mask_dil.nii.gz
+220304-14:01:38,95 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_dilate".
+220304-14:01:39,764 nipype.interface WARNING:
+	 Changing /data/aglinska/data/ABIDE/Derivatives/fmriprep/fmriprep/sub-0050660/func/sub-0050660_task-rest_run-1_space-MNI152NLin2009cAsym_desc-brain_mask.nii.gz dtype from float64 to uint8
+220304-14:01:39,967 nipype.interface WARNING:
+	 Could not get data type of file ['/data/aglinska/data/ABIDE/RawDataBIDS/CMU_a/sub-0050660/func/sub-0050660_task-rest_run-1_bold.nii.gz']
+220304-14:01:47,869 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_first_mask".
+220304-14:01:47,885 nipype.workflow INFO:
+	 [Node] Running "skullstrip_first_mask" ("nipype.interfaces.fsl.maths.ApplyMask"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_first_pass/ref_bold_corrected_brain.nii.gz -mas /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_first_dilate/ref_bold_corrected_brain_mask_dil.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_first_mask/ref_bold_corrected_brain_masked.nii.gz
+220304-14:01:48,72 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_first_mask".
+220304-14:01:49,938 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.unifize" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/unifize".
+220304-14:01:49,952 nipype.workflow INFO:
+	 [Node] Running "unifize" ("nipype.interfaces.afni.utils.Unifize"), a CommandLine Interface with command:
+3dUnifize -clfrac 0.2 -rbt 18.3 65.0 90.0 -prefix uni.nii.gz -T2 -input /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/unifize/ref_bold_corrected_brain_masked.nii.gz
+220304-14:01:51,664 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.unifize".
+220304-14:01:51,938 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.fixhdr_unifize" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/fixhdr_unifize".
+220304-14:01:51,952 nipype.workflow INFO:
+	 [Node] Running "fixhdr_unifize" ("niworkflows.interfaces.utils.CopyXForm")
+220304-14:01:51,991 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.fixhdr_unifize".
+220304-14:01:53,940 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_second_pass" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_second_pass".
+220304-14:01:53,953 nipype.workflow INFO:
+	 [Node] Running "skullstrip_second_pass" ("nipype.interfaces.afni.preprocess.Automask"), a CommandLine Interface with command:
+3dAutomask -apply_prefix uni_xform_masked.nii.gz -dilate 1 -prefix uni_xform_mask.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_second_pass/uni_xform.nii.gz
+220304-14:01:54,188 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.skullstrip_second_pass".
+220304-14:01:55,944 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.fixhdr_skullstrip2" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/fixhdr_skullstrip2".
+220304-14:01:55,955 nipype.workflow INFO:
+	 [Node] Running "fixhdr_skullstrip2" ("niworkflows.interfaces.utils.CopyXForm")
+220304-14:01:55,994 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.fixhdr_skullstrip2".
+220304-14:01:57,952 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.combine_masks" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/combine_masks".
+220304-14:01:57,967 nipype.workflow INFO:
+	 [Node] Running "combine_masks" ("nipype.interfaces.fsl.maths.BinaryMaths"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/skullstrip_first_pass/ref_bold_corrected_brain_mask.nii.gz -mul /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/fixhdr_skullstrip2/uni_xform_mask_xform.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz
+220304-14:01:58,156 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.combine_masks".
+220304-14:01:59,945 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.apply_mask" in "/data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/apply_mask".
+220304-14:01:59,959 nipype.workflow INFO:
+	 [Node] Running "apply_mask" ("nipype.interfaces.fsl.maths.ApplyMask"), a CommandLine Interface with command:
+fslmaths /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/fixhdr_unifize/uni_xform.nii.gz -mas /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/combine_masks/ref_bold_corrected_brain_mask_maths.nii.gz /data/aglinska/work/fmriprep_wf/single_subject_0050660_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/bold_reference_wf/enhance_and_skullstrip_bold_wf/_std_target_MNI152NLin2009cAsym.resnative/apply_mask/uni_xform_masked.nii.gz
+220304-14:02:00,101 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050660_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.bold_reference_wf.enhance_and_skullstrip_bold_wf.apply_mask".
+220304-14:02:05,427 nipype.workflow IMPORTANT:
+	 fMRIPrep finished successfully!
+220304-14:02:05,452 nipype.workflow IMPORTANT:
+	 Works derived from this fMRIPrep execution should include the boilerplate text found in <OUTPUT_PATH>/fmriprep/logs/CITATION.md.

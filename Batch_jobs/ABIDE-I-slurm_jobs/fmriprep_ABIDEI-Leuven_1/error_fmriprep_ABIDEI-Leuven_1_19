@@ -1,0 +1,23 @@
+INFO:    Converting SIF file to temporary sandbox...
+/usr/local/miniconda/lib/python3.7/site-packages/bids/layout/validation.py:46: UserWarning: The ability to pass arguments to BIDSLayout that control indexing is likely to be removed in future; possibly as early as PyBIDS 0.14. This includes the `config_filename`, `ignore`, `force_index`, and `index_metadata` arguments. The recommended usage pattern is to initialize a new BIDSLayoutIndexer with these arguments, and pass it to the BIDSLayout via the `indexer` argument.
+  warnings.warn("The ability to pass arguments to BIDSLayout that control "
+You are using fMRIPrep-20.2.0, and a newer version of fMRIPrep is available: 21.0.1.
+Please check out our documentation about how and when to upgrade:
+https://fmriprep.readthedocs.io/en/latest/faq.html#upgrading
+WARNING: Version 20.2.0 of fMRIPrep (current) has been FLAGGED
+(reason: Functional outputs in standard space can be wrong depending on the original data's orientation headers - see https://github.com/nipreps/fmriprep/issues/2307).
+That means some severe flaw was found in it and we strongly
+discourage its usage.
+Traceback (most recent call last):
+  File "/usr/local/miniconda/bin/fmriprep", line 10, in <module>
+    sys.exit(main())
+  File "/usr/local/miniconda/lib/python3.7/site-packages/fmriprep/cli/run.py", line 17, in main
+    parse_args()
+  File "/usr/local/miniconda/lib/python3.7/site-packages/fmriprep/cli/parser.py", line 684, in parse_args
+    config.environment.exec_env, opts.bids_dir, opts.participant_label
+  File "/usr/local/miniconda/lib/python3.7/site-packages/fmriprep/utils/bids.py", line 155, in validate_input_dir
+    subprocess.check_call(['bids-validator', bids_dir, '-c', temp.name])
+  File "/usr/local/miniconda/lib/python3.7/subprocess.py", line 341, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['bids-validator', PosixPath('/data/aglinska/data/ABIDE/RawDataBIDS/Leuven_1'), '-c', '/tmp/tmpg91gkgai']' returned non-zero exit status 1.
+INFO:    Cleaning up image...

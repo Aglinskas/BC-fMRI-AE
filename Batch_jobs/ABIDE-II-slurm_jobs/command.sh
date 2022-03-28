@@ -1,0 +1,1 @@
+sbatch job_fmriprep_CMU_a.slurm

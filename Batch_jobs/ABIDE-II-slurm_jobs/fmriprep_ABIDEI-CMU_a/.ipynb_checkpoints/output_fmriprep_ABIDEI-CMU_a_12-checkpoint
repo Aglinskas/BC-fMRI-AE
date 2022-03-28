@@ -1,0 +1,84 @@
+Mon Mar 21 12:32:37 EDT 2022
+/data/aglinska
+/data/aglinska/data/ABIDE/RawDataBIDS/CMU_a/
+/data/aglinska/data/ABIDE/Derivatives/fmriprep2/
+sub-0050666
+bids-validator@1.4.0
+
+	[33m1: [WARN] The recommended file /README is missing. See Section 03 (Modality agnostic files) of the BIDS specification. (code: 101 - README_FILE_MISSING)[39m
+
+[36m	Please visit https://neurostars.org/search?q=README_FILE_MISSING for existing conversations about this issue.[39m
+
+	[33m2: [WARN] The Authors field of dataset_description.json should contain an array of fields - with one author per field. This was triggered because there are no authors, which will make DOI registration from dataset metadata impossible. (code: 113 - NO_AUTHORS)[39m
+
+[36m	Please visit https://neurostars.org/search?q=NO_AUTHORS for existing conversations about this issue.[39m
+
+
+        [34m[4mSummary:[24m[39m                 [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
+        32 Files, 525.6MB        rest                    T1w                   
+        14 - Subjects                                    bold                  
+        1 - Session                                                            
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+
+220321-12:35:01,917 nipype.workflow IMPORTANT:
+	 
+    Running fMRIPREP version 20.2.0:
+      * BIDS dataset path: /data/aglinska/data/ABIDE/RawDataBIDS/CMU_a.
+      * Participant list: ['0050666'].
+      * Run identifier: 20220321-123450_275a2159-1778-4bd8-b828-e0f2dcd82626.
+      * Output spaces: MNI152NLin2009cAsym:res-2.
+      * Pre-run FreeSurfer's SUBJECTS_DIR: /data/aglinska/data/ABIDE/Derivatives/fmriprep2/freesurfer.
+220321-12:35:03,76 nipype.workflow INFO:
+	 No single-band-reference found for sub-0050666_task-rest_run-1_bold.nii.gz.
+220321-12:35:03,656 nipype.workflow IMPORTANT:
+	 Slice-timing correction will be included.
+220321-12:35:07,260 nipype.workflow INFO:
+	 fMRIPrep workflow graph with 320 nodes built successfully.
+220321-12:35:19,623 nipype.workflow IMPORTANT:
+	 fMRIPrep started!
+220321-12:35:38,841 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_stc_wf.slice_timing_correction" in "/data/aglinska/work/fmriprep_wf/single_subject_0050666_wf/func_preproc_task_rest_run_1_wf/bold_stc_wf/slice_timing_correction".
+220321-12:35:38,900 nipype.workflow INFO:
+	 [Node] Running "slice_timing_correction" ("nipype.interfaces.afni.preprocess.TShift"), a CommandLine Interface with command:
+3dTshift -ignore 1 -prefix sub-0050666_task-rest_run-1_bold_tshift.nii.gz -tpattern @slice_timing.1D -TR 2.0s /data/aglinska/work/fmriprep_wf/single_subject_0050666_wf/func_preproc_task_rest_run_1_wf/bold_stc_wf/slice_timing_correction/sub-0050666_task-rest_run-1_bold.nii.gz
+220321-12:35:45,537 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_stc_wf.slice_timing_correction".
+220321-12:35:48,803 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_stc_wf.copy_xform" in "/data/aglinska/work/fmriprep_wf/single_subject_0050666_wf/func_preproc_task_rest_run_1_wf/bold_stc_wf/copy_xform".
+220321-12:35:48,815 nipype.workflow INFO:
+	 [Node] Running "copy_xform" ("niworkflows.interfaces.utils.CopyXForm")
+220321-12:35:50,536 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_stc_wf.copy_xform".
+220321-12:35:50,842 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_split" in "/data/aglinska/work/fmriprep_wf/single_subject_0050666_wf/func_preproc_task_rest_run_1_wf/bold_split".
+220321-12:35:50,843 nipype.workflow INFO:
+	 [Node] Outdated cache found for "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_split".
+220321-12:35:51,326 nipype.workflow INFO:
+	 [Node] Running "bold_split" ("nipype.interfaces.fsl.utils.Split"), a CommandLine Interface with command:
+fslsplit /data/aglinska/work/fmriprep_wf/single_subject_0050666_wf/func_preproc_task_rest_run_1_wf/bold_stc_wf/copy_xform/sub-0050666_task-rest_run-1_bold_tshift_xform.nii.gz -t
+220321-12:35:56,0 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_split".
+220321-12:35:59,99 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.gen_ref" in "/data/aglinska/work/fmriprep_wf/single_subject_0050666_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/_std_target_MNI152NLin2009cAsym.res2/gen_ref".
+220321-12:35:59,214 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_bold_trans_wf.bold_transform" in "/data/aglinska/work/fmriprep_wf/single_subject_0050666_wf/func_preproc_task_rest_run_1_wf/bold_bold_trans_wf/bold_transform".
+220321-12:35:59,216 nipype.workflow INFO:
+	 [Node] Outdated cache found for "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_bold_trans_wf.bold_transform".
+220321-12:35:59,224 nipype.workflow INFO:
+	 [Node] Running "gen_ref" ("niworkflows.interfaces.utils.GenerateSamplingReference")
+220321-12:35:59,234 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.gen_ref".
+220321-12:35:59,493 nipype.workflow INFO:
+	 [Node] Running "bold_transform" ("niworkflows.interfaces.itk.MultiApplyTransforms")
+220321-12:36:33,568 nipype.interface WARNING:
+	 Changing /data/aglinska/data/ABIDE/Derivatives/fmriprep2/fmriprep/sub-0050666/anat/sub-0050666_desc-brain_mask.nii.gz dtype from int16 to uint8
+220321-12:36:34,994 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_wf.single_subject_0050666_wf.anat_preproc_wf.anat_derivatives_wf.gen_ref" in "/data/aglinska/work/fmriprep_wf/single_subject_0050666_wf/anat_preproc_wf/anat_derivatives_wf/_in_tuple_MNI152NLin2009cAsym.res2/gen_ref".
+220321-12:36:35,384 nipype.workflow INFO:
+	 [Node] Running "gen_ref" ("niworkflows.interfaces.utils.GenerateSamplingReference")
+220321-12:36:35,388 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050666_wf.anat_preproc_wf.anat_derivatives_wf.gen_ref".
+220321-12:36:39,998 nipype.workflow INFO:
+	 [Node] Finished "fmriprep_wf.single_subject_0050666_wf.func_preproc_task_rest_run_1_wf.bold_bold_trans_wf.bold_transform".

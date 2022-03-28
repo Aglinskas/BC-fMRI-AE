@@ -1,1 +1,0 @@
-sbatch job_fmriprep_ABIDEII-BNI_1.slurm

@@ -1,0 +1,1 @@
+sbatch job_fmriprep_Yale.slurm

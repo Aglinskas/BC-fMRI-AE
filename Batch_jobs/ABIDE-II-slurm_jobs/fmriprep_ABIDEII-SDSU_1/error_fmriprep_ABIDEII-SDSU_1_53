@@ -1,0 +1,6 @@
+/cm/local/apps/slurm/var/spool/job270588/slurm_script: line 47: /data/aglinska/data/ABIDE2/Derivatives/test/sub-28905: No such file or directory
+/cm/local/apps/slurm/var/spool/job270588/slurm_script: line 48: /data/aglinska/data/ABIDE2/Derivatives/test/sub-28905.html: No such file or directory
+INFO:    Converting SIF file to temporary sandbox...
+WARNING: skipping mount of /data/aglinska/scratch: stat /data/aglinska/scratch: no such file or directory
+INFO:    Cleaning up image...
+FATAL:   container creation failed: mount /data/aglinska/scratch->/scratch error: while mounting /data/aglinska/scratch: mount source /data/aglinska/scratch doesn't exist
