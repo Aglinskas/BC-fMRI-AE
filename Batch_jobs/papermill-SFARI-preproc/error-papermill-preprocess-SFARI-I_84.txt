@@ -1,0 +1,10 @@
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/014-SFARI-compcorr-filter.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-preproc/84-run1-sfari-compcorr.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpog8z0_7y'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpslubv8du'
+Executing:   0%|          | 0/36 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   3%|▎         | 1/36 [00:04<02:20,  4.00s/cell]Executing:  14%|█▍        | 5/36 [00:25<02:16,  4.40s/cell]Executing:  22%|██▏       | 8/36 [00:26<01:29,  3.19s/cell]Executing:  31%|███       | 11/36 [00:26<00:56,  2.24s/cell]Executing:  39%|███▉      | 14/36 [00:26<00:34,  1.58s/cell]Executing:  44%|████▍     | 16/36 [00:28<00:26,  1.33s/cell]Executing:  50%|█████     | 18/36 [00:28<00:18,  1.04s/cell]Executing:  56%|█████▌    | 20/36 [00:34<00:25,  1.62s/cell]Executing:  58%|█████▊    | 21/36 [00:38<00:34,  2.30s/cell]Executing:  61%|██████    | 22/36 [00:38<00:23,  1.69s/cell]Executing:  64%|██████▍   | 23/36 [00:39<00:17,  1.34s/cell]Executing:  67%|██████▋   | 24/36 [00:39<00:13,  1.09s/cell]Executing:  72%|███████▏  | 26/36 [00:40<00:07,  1.29cell/s]Executing:  78%|███████▊  | 28/36 [00:50<00:16,  2.10s/cell]Executing:  83%|████████▎ | 30/36 [00:50<00:08,  1.49s/cell]Executing:  92%|█████████▏| 33/36 [00:50<00:03,  1.06s/cell]Executing: 100%|██████████| 36/36 [00:50<00:00,  1.32cell/s]Executing: 100%|██████████| 36/36 [00:51<00:00,  1.43s/cell]

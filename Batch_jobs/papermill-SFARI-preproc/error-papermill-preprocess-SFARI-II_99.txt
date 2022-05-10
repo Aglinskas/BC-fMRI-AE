@@ -1,0 +1,10 @@
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/014-SFARI-compcorr-filter.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-preproc/99-run2-sfari-compcorr.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp9mm2ic10'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp4pd45dbi'
+Executing:   0%|          | 0/36 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   3%|▎         | 1/36 [00:02<01:10,  2.02s/cell]Executing:  11%|█         | 4/36 [00:02<00:45,  1.43s/cell]Executing:  14%|█▍        | 5/36 [00:09<01:37,  3.15s/cell]Executing:  22%|██▏       | 8/36 [00:09<01:03,  2.25s/cell]Executing:  31%|███       | 11/36 [00:09<00:39,  1.59s/cell]Executing:  39%|███▉      | 14/36 [00:10<00:24,  1.13s/cell]Executing:  44%|████▍     | 16/36 [00:12<00:21,  1.08s/cell]Executing:  47%|████▋     | 17/36 [00:12<00:17,  1.07cell/s]Executing:  50%|█████     | 18/36 [00:12<00:13,  1.36cell/s]Executing:  56%|█████▌    | 20/36 [00:19<00:24,  1.53s/cell]Executing:  58%|█████▊    | 21/36 [00:27<00:50,  3.34s/cell]Executing:  61%|██████    | 22/36 [00:27<00:34,  2.43s/cell]Executing:  64%|██████▍   | 23/36 [00:28<00:26,  2.01s/cell]Executing:  67%|██████▋   | 24/36 [00:29<00:18,  1.58s/cell]Executing:  72%|███████▏  | 26/36 [00:29<00:11,  1.12s/cell]Executing:  78%|███████▊  | 28/36 [00:42<00:22,  2.76s/cell]Executing:  83%|████████▎ | 30/36 [00:42<00:11,  1.96s/cell]Executing:  89%|████████▉ | 32/36 [00:42<00:05,  1.39s/cell]Executing:  94%|█████████▍| 34/36 [00:42<00:01,  1.01cell/s]Executing: 100%|██████████| 36/36 [00:42<00:00,  1.40cell/s]Executing: 100%|██████████| 36/36 [00:44<00:00,  1.24s/cell]

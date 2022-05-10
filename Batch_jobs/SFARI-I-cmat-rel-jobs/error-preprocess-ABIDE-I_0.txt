@@ -1,0 +1,523 @@
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/016-get-split-cmats-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-extract/preproc-0-run2.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpzl9v6jxv'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpnb75qn7b'
+Executing:   0%|          | 0/29 [00:00<?, ?cell/s][IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+Executing notebook with kernel: python3
+Executing:   3%|▎         | 1/29 [00:05<02:21,  5.07s/cell]Executing:  14%|█▍        | 4/29 [00:05<01:29,  3.57s/cell][IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+Executing:  21%|██        | 6/29 [00:19<01:47,  4.69s/cell]Executing:  31%|███       | 9/29 [00:19<01:05,  3.29s/cell]Executing:  41%|████▏     | 12/29 [00:20<00:39,  2.31s/cell][IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+[IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+Executing:  48%|████▊     | 14/29 [00:28<00:42,  2.84s/cell][IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+Executing:  55%|█████▌    | 16/29 [00:29<00:27,  2.11s/cell]Executing:  59%|█████▊    | 17/29 [00:29<00:19,  1.59s/cell]Executing:  66%|██████▌   | 19/29 [00:29<00:11,  1.18s/cell][IPKernelApp] ERROR | Error in message handler
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 374, in dispatch_queue
+    yield self.process_one()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 742, in run
+    yielded = self.gen.throw(*exc_info)  # type: ignore
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 358, in process_one
+    yield gen.maybe_future(dispatch(*args))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 735, in run
+    value = future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/tornado/gen.py", line 209, in wrapper
+    yielded = next(result)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py", line 220, in dispatch_shell
+    idents, msg = self.session.feed_identities(msg, copy=False)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/session.py", line 857, in feed_identities
+    raise ValueError("DELIM not in msg_list")
+ValueError: DELIM not in msg_list
+Executing:  76%|███████▌  | 22/29 [00:29<00:05,  1.19cell/s]Executing:  86%|████████▌ | 25/29 [00:30<00:02,  1.67cell/s]Executing:  97%|█████████▋| 28/29 [00:30<00:00,  2.32cell/s]Executing: 100%|██████████| 29/29 [00:31<00:00,  1.10s/cell]

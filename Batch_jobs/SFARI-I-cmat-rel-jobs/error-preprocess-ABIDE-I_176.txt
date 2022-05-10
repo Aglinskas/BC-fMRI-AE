@@ -1,0 +1,54 @@
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/016-get-split-cmats-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-extract/preproc-176-run2.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpab4pr986'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpeo7tzdpx'
+Executing:   0%|          | 0/29 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   3%|▎         | 1/29 [00:02<01:04,  2.32s/cell]Executing:  10%|█         | 3/29 [00:02<00:42,  1.64s/cell]Executing:  14%|█▍        | 4/29 [00:02<00:30,  1.21s/cell]Executing:  21%|██        | 6/29 [00:10<00:45,  1.98s/cell]Executing:  31%|███       | 9/29 [00:10<00:27,  1.40s/cell]Executing:  41%|████▏     | 12/29 [00:10<00:16,  1.01cell/s]Executing:  45%|████▍     | 13/29 [00:13<00:16,  1.01s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [13]":
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-13-b833866fced9> in <module>
+----> 1 im = get_epi(sub)
+      2 im3 = ants.slice_image(im,axis=3,idx=0)
+
+<ipython-input-10-eacc0d563f1f> in get_epi(sub)
+      4     epi_path_temp = os.path.expanduser(epi_path_temp)
+      5     print(epi_path_temp.format(pref='sfrc',subID=sub,r=r))
+----> 6     im = ants.image_read(epi_path_temp.format(pref='sfrc',subID=sub,r=r))
+      7     im = im.resample_image(resample_params=(64,64,64,im.shape[-1]), use_voxels=True, interp_type=4)
+      8     return im
+
+~/anaconda3/lib/python3.8/site-packages/ants/core/ants_image_io.py in image_read(filename, dimension, pixeltype, reorient)
+    473         filename = os.path.expanduser(filename)
+    474         if not os.path.exists(filename):
+--> 475             raise ValueError('File %s does not exist!' % filename)
+    476 
+    477         hinfo = image_header_info(filename)
+
+ValueError: File /data/aglinska/data/sfari_bids/preprocessed/sub-192/sfrc-sub-192_run-2_bold.nii.gz does not exist!
+

@@ -1,0 +1,10 @@
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/016-get-split-cmats-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-extract/preproc-21-run2.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp9jg9jg7y'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpcq8oiqcy'
+Executing:   0%|          | 0/29 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   3%|▎         | 1/29 [00:02<01:15,  2.70s/cell]Executing:  14%|█▍        | 4/29 [00:02<00:47,  1.91s/cell]Executing:  21%|██        | 6/29 [00:11<00:59,  2.60s/cell]Executing:  31%|███       | 9/29 [00:11<00:36,  1.83s/cell]Executing:  41%|████▏     | 12/29 [00:11<00:21,  1.29s/cell]Executing:  48%|████▊     | 14/29 [00:17<00:26,  1.79s/cell]Executing:  55%|█████▌    | 16/29 [00:18<00:18,  1.43s/cell]Executing:  59%|█████▊    | 17/29 [00:19<00:13,  1.13s/cell]Executing:  66%|██████▌   | 19/29 [00:19<00:08,  1.17cell/s]Executing:  76%|███████▌  | 22/29 [00:19<00:04,  1.64cell/s]Executing:  86%|████████▌ | 25/29 [00:19<00:01,  2.28cell/s]Executing:  97%|█████████▋| 28/29 [00:19<00:00,  3.14cell/s]Executing: 100%|██████████| 29/29 [00:20<00:00,  1.39cell/s]

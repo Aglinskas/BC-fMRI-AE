@@ -1,0 +1,23 @@
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/016-get-split-cmats-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-extract/preproc-6-run2.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpebrw3km7'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmppypr6jdi'
+Executing:   0%|          | 0/29 [00:00<?, ?cell/s]Exception in thread Thread-3:
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/threading.py", line 932, in _bootstrap_inner
+    self.run()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/heartbeat.py", line 93, in run
+    self._bind_socket()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/heartbeat.py", line 74, in _bind_socket
+    self._try_bind_socket()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/heartbeat.py", line 61, in _try_bind_socket
+    return self.socket.bind('%s://%s' % (self.transport, self.ip) + c + str(self.port))
+  File "zmq/backend/cython/socket.pyx", line 550, in zmq.backend.cython.socket.Socket.bind
+  File "zmq/backend/cython/checkrc.pxd", line 26, in zmq.backend.cython.checkrc._check_rc
+zmq.error.ZMQError: Address already in use
+Executing notebook with kernel: python3
+Executing:   3%|▎         | 1/29 [00:05<02:21,  5.07s/cell]Executing:  14%|█▍        | 4/29 [00:05<01:29,  3.57s/cell]Executing:  21%|██        | 6/29 [00:19<01:47,  4.69s/cell]Executing:  31%|███       | 9/29 [00:19<01:05,  3.29s/cell]Executing:  41%|████▏     | 12/29 [00:20<00:39,  2.31s/cell]Executing:  48%|████▊     | 14/29 [00:27<00:41,  2.75s/cell]Executing:  55%|█████▌    | 16/29 [00:28<00:26,  2.05s/cell]Executing:  59%|█████▊    | 17/29 [00:28<00:18,  1.57s/cell]Executing:  66%|██████▌   | 19/29 [00:29<00:11,  1.16s/cell]Executing:  76%|███████▌  | 22/29 [00:29<00:05,  1.21cell/s]Executing:  86%|████████▌ | 25/29 [00:29<00:02,  1.69cell/s]Executing:  97%|█████████▋| 28/29 [00:29<00:00,  2.35cell/s]Executing: 100%|██████████| 29/29 [00:30<00:00,  1.06s/cell]

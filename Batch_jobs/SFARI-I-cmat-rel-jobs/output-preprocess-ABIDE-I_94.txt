@@ -1,0 +1,8 @@
+Tue Apr 26 14:53:02 EDT 2022
+94
+/data/aglinska/BC-fMRI-AE/Notebooks/016-get-split-cmats-SFARI.ipynb
+/data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-extract/preproc-94.ipynb
+Tue Apr 26 15:15:43 EDT 2022
+94
+/data/aglinska/BC-fMRI-AE/Notebooks/016-get-split-cmats-SFARI.ipynb
+/data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-extract/preproc-94-run2.ipynb
