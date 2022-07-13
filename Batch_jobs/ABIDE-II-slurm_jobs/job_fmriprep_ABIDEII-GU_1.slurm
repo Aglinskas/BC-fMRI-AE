@@ -3,48 +3,40 @@
 #SBATCH --job-name=job_fmriprep_ABIDEII-GU_1
 #SBATCH --output=./fmriprep_ABIDEII-GU_1/output_fmriprep_ABIDEII-GU_1_%a
 #SBATCH --error=./fmriprep_ABIDEII-GU_1/error_fmriprep_ABIDEII-GU_1_%a
-
 #SBATCH --ntasks=1
 #SBATCH --time=10:00:00
 #SBATCH --mem=32gb
-
 #SBATCH --array=0-106
-
-#rm -rf fmriprep_ABIDEII-GU_1.slurm;nano fmriprep_ABIDEII-GU_1.slurm
-#sbatch fmriprep_ABIDEII-GU_1.slurm
-#$SLURM_ARRAY_TASK_ID
-
-
-#rm -rf output_fmriprep_ABIDEII-GU_1_%a
-#rm -rf error_fmriprep_ABIDEII-GU_1_%a
 
 module load singularity/
 
-#this_dir=$(pwd);echo $this_dir
+date
+
+#rm -rf ./fmriprep_ABIDEII-GU_1/output_*
+#rm -rf ./fmriprep_ABIDEII-GU_1/error_*
+
 cd $HOME
 
 data_dir=$HOME'/data/ABIDE2/RawData/ABIDEII-GU_1/'
-
-sing_image=$HOME/fmriprep.simg
+sing_image=$HOME/fmriprep-22
 
 cd $data_dir
 files=(sub*)
-#cd $this_dir
 
 cd $HOME
 
-output_dir=$HOME'/data/ABIDE2/Derivatives/test/'
+output_dir=$HOME'/data/ABIDE2/Derivatives/fmriprep2/'
 
 fs_lic=$HOME'/fs_licence.txt'
 
 sub=${files[$SLURM_ARRAY_TASK_ID]} #;echo $sub
+
 
 echo $HOME
 echo $data_dir
 echo $output_dir
 echo $sub
 
-#echo ${files[$SLURM_ARRAY_TASK_ID]}
+singularity run --bind /data/aglinska/scratch:/scratch --cleanenv $sing_image $data_dir $output_dir participant --participant-label $sub --fs-no-reconall --task-id 'rest' --fs-license-file $fs_lic --ignore slicetiming --output-spaces MNI152NLin2009cAsym:res-2
 
-singularity run --bind /data/aglinska/scratch:/scratch --cleanenv $sing_image $data_dir $output_dir participant --participant-label $sub --fs-no-reconall --task-id 'rest' --fs-license-file $fs_lic
 

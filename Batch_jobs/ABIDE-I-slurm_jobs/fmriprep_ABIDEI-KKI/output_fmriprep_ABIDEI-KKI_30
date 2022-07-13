@@ -1,9 +1,9 @@
-Fri Mar  4 14:33:16 EST 2022
+Tue Jul 12 06:08:05 EDT 2022
 /data/aglinska
 /data/aglinska/data/ABIDE/RawDataBIDS/KKI/
-/data/aglinska/data/ABIDE/Derivatives/fmriprep/
+/data/aglinska/data/ABIDE/Derivatives/fmriprep3/
 sub-0050802
-bids-validator@1.4.0
+bids-validator@1.8.0
 
 	[31m1: [ERR] Files with such naming scheme are not part of BIDS specification. This error is most commonly caused by typos in file names that make them not BIDS compatible. Please consult the specification and make sure your files are named correctly. If this is not a file naming issue (for example when including files not yet covered by the BIDS specification) you should include a ".bidsignore" file in your dataset (see https://github.com/bids-standard/bids-validator#bidsignore for details). Please note that derived (processed) data should be placed in /derivatives folder and source data (such as DICOMS or behavioural logs in proprietary formats) should be placed in the /sourcedata folder. (code: 1 - NOT_INCLUDED)[39m
 		./sub-0050802/func/sub-0050802_task-rest_run-1_bold.nii.gz.4BD6767D
@@ -26,8 +26,8 @@ bids-validator@1.4.0
 
 
         [34m[4mSummary:[24m[39m                 [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
-        115 Files, 3.47GB        rest                    T1w                   
-        55 - Subjects                                    bold                  
+        115 Files, 3.47GB        rest                    MRI                   
+        55 - Subjects                                                          
         1 - Session                                                            
 
 

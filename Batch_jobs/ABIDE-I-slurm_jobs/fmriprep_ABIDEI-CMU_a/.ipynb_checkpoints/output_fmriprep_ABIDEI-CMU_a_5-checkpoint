@@ -1,0 +1,290 @@
+Tue Jul 12 03:34:42 EDT 2022
+/data/aglinska
+/data/aglinska/data/ABIDE/RawDataBIDS/CMU_a/
+/data/aglinska/data/ABIDE/Derivatives/fmriprep3/
+sub-0050654
+bids-validator@1.8.0
+
+	[31m1: [ERR] Invalid JSON file. The file is not formatted according the schema. (code: 55 - JSON_SCHEMA_VALIDATION_ERROR)[39m
+		./task-rest_bold.json
+			Evidence: .AcquisitionDuration should be number
+
+[36m	Please visit https://neurostars.org/search?q=JSON_SCHEMA_VALIDATION_ERROR for existing conversations about this issue.[39m
+
+	[33m1: [WARN] The recommended file /README is missing. See Section 03 (Modality agnostic files) of the BIDS specification. (code: 101 - README_FILE_MISSING)[39m
+
+[36m	Please visit https://neurostars.org/search?q=README_FILE_MISSING for existing conversations about this issue.[39m
+
+	[33m2: [WARN] The Authors field of dataset_description.json should contain an array of fields - with one author per field. This was triggered because there are no authors, which will make DOI registration from dataset metadata impossible. (code: 113 - NO_AUTHORS)[39m
+
+[36m	Please visit https://neurostars.org/search?q=NO_AUTHORS for existing conversations about this issue.[39m
+
+
+        [34m[4mSummary:[24m[39m                 [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
+        32 Files, 525.6MB        rest                    MRI                   
+        14 - Subjects                                                          
+        1 - Session                                                            
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+
+Tue Jul 12 04:31:05 EDT 2022
+/data/aglinska
+/data/aglinska/data/ABIDE/RawDataBIDS/CMU_a/
+/data/aglinska/data/ABIDE/Derivatives/fmriprep3/
+sub-0050654
+bids-validator@1.8.0
+
+	[33m1: [WARN] The recommended file /README is missing. See Section 03 (Modality agnostic files) of the BIDS specification. (code: 101 - README_FILE_MISSING)[39m
+
+[36m	Please visit https://neurostars.org/search?q=README_FILE_MISSING for existing conversations about this issue.[39m
+
+	[33m2: [WARN] The Authors field of dataset_description.json should contain an array of fields - with one author per field. This was triggered because there are no authors, which will make DOI registration from dataset metadata impossible. (code: 113 - NO_AUTHORS)[39m
+
+[36m	Please visit https://neurostars.org/search?q=NO_AUTHORS for existing conversations about this issue.[39m
+
+
+        [34m[4mSummary:[24m[39m                 [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
+        32 Files, 525.6MB        rest                    MRI                   
+        14 - Subjects                                                          
+        1 - Session                                                            
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+
+220712-04:33:41,431 nipype.workflow IMPORTANT:
+	 Running fMRIPrep version 22.0.0rc3
+
+         License NOTICE ##################################################
+         fMRIPrep 22.0.0rc3
+         Copyright 2022 The NiPreps Developers.
+         
+         This product includes software developed by
+         the NiPreps Community (https://nipreps.org/).
+         
+         Portions of this software were developed at the Department of
+         Psychology at Stanford University, Stanford, CA, US.
+         
+         This software redistributes the versioneer Python package, which is
+         Public domain source code.
+         
+         This software is also distributed as a Docker container image.
+         The bootstraping file for the image ("Dockerfile") is licensed
+         under the MIT License.
+         
+         This software may be distributed through an add-on package called
+         "Docker Wrapper" that is under the BSD 3-clause License.
+         #################################################################
+220712-04:33:41,480 nipype.workflow IMPORTANT:
+	 Building fMRIPrep's workflow:
+           * BIDS dataset path: /data/aglinska/data/ABIDE/RawDataBIDS/CMU_a.
+           * Participant list: ['0050654'].
+           * Run identifier: 20220712-043315_639d2891-00a8-4c5a-b948-27ccc153d300.
+           * Output spaces: MNI152NLin2009cAsym:res-2.
+           * Pre-run FreeSurfer's SUBJECTS_DIR: /data/aglinska/data/ABIDE/Derivatives/fmriprep3/sourcedata/freesurfer.
+220712-04:33:44,192 nipype.workflow INFO:
+	 No single-band-reference found for sub-0050654_task-rest_run-1_bold.nii.gz.
+220712-04:33:49,476 nipype.workflow INFO:
+	 fMRIPrep workflow graph with 321 nodes built successfully.
+220712-04:34:08,876 nipype.workflow IMPORTANT:
+	 fMRIPrep started!
+220712-04:34:15,145 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.brain_extraction_wf.full_wm" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/brain_extraction_wf/full_wm".
+220712-04:34:15,160 nipype.workflow INFO:
+	 [Node] Executing "full_wm" <nipype.interfaces.utility.wrappers.Function>
+220712-04:34:15,273 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.bold_source" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/bold_source".
+220712-04:34:15,274 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.func_derivatives_wf.raw_sources" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/func_derivatives_wf/raw_sources".
+220712-04:34:15,300 nipype.workflow INFO:
+	 [Node] Executing "bold_source" <nipype.interfaces.utility.base.Select>
+220712-04:34:15,301 nipype.workflow INFO:
+	 [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+220712-04:34:15,315 nipype.workflow INFO:
+	 [Node] Finished "bold_source", elapsed time 0.001853s.
+220712-04:34:15,319 nipype.workflow INFO:
+	 [Node] Finished "raw_sources", elapsed time 0.001922s.
+220712-04:34:16,128 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.get_dummy" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/get_dummy".
+220712-04:34:16,129 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.brain_extraction_wf.res_tmpl" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/brain_extraction_wf/res_tmpl".
+220712-04:34:16,135 nipype.workflow INFO:
+	 [Node] Executing "res_tmpl" <niworkflows.interfaces.nibabel.RegridToZooms>
+220712-04:34:16,136 nipype.workflow INFO:
+	 [Node] Executing "get_dummy" <niworkflows.interfaces.bold.NonsteadyStatesDetector>
+220712-04:34:16,151 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.brain_extraction_wf.lap_tmpl" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/brain_extraction_wf/lap_tmpl".
+220712-04:34:16,157 nipype.workflow INFO:
+	 [Node] Executing "lap_tmpl" <nipype.interfaces.ants.utils.ImageMath>
+220712-04:34:16,170 nipype.workflow INFO:
+	 [Node] Setting-up "_val_bold0" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/val_bold/mapflow/_val_bold0".
+220712-04:34:16,175 nipype.workflow INFO:
+	 [Node] Executing "_val_bold0" <niworkflows.interfaces.header.ValidateImage>
+220712-04:34:16,245 nipype.workflow INFO:
+	 [Node] Finished "_val_bold0", elapsed time 0.069537s.
+220712-04:34:16,680 nipype.workflow INFO:
+	 [Node] Finished "full_wm", elapsed time 1.418287s.
+220712-04:34:16,840 nipype.workflow INFO:
+	 [Node] Finished "get_dummy", elapsed time 0.703548s.
+220712-04:34:17,297 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.select_bold" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/select_bold".
+220712-04:34:17,648 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.bidssrc" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/bidssrc".
+220712-04:34:17,654 nipype.workflow INFO:
+	 [Node] Executing "bidssrc" <niworkflows.interfaces.bids.BIDSDataGrabber>
+220712-04:34:17,690 nipype.interface INFO:
+	 No "t2w" images found for sub-0050654
+220712-04:34:17,690 nipype.interface INFO:
+	 No "flair" images found for sub-0050654
+220712-04:34:17,690 nipype.interface INFO:
+	 No "fmap" images found for sub-0050654
+220712-04:34:17,690 nipype.interface INFO:
+	 No "sbref" images found for sub-0050654
+220712-04:34:17,690 nipype.interface INFO:
+	 No "roi" images found for sub-0050654
+220712-04:34:17,691 nipype.workflow INFO:
+	 [Node] Finished "bidssrc", elapsed time 0.00117s.
+220712-04:34:17,755 nipype.workflow INFO:
+	 [Node] Finished "res_tmpl", elapsed time 1.567321s.
+220712-04:34:18,130 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.gen_avg" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/gen_avg".
+220712-04:34:18,157 nipype.workflow INFO:
+	 [Node] Executing "select_bold" <nipype.interfaces.utility.base.Select>
+220712-04:34:18,163 nipype.workflow INFO:
+	 [Node] Executing "gen_avg" <niworkflows.interfaces.images.RobustAverage>
+220712-04:34:18,175 nipype.workflow INFO:
+	 [Node] Finished "select_bold", elapsed time 0.000583s.
+220712-04:34:18,938 nipype.interface INFO:
+	 stderr 2022-07-12T04:34:18.938174:++ 3dvolreg: AFNI version=AFNI_22.1.14 (Jun 24 2022) [64-bit]
+220712-04:34:18,938 nipype.interface INFO:
+	 stderr 2022-07-12T04:34:18.938174:++ Authored by: RW Cox
+220712-04:34:18,938 nipype.interface INFO:
+	 stderr 2022-07-12T04:34:18.938943:** AFNI converts NIFTI_datatype=4 (INT16) in file /data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/gen_avg/sub-0050654_task-rest_run-1_bold_sliced.nii.gz to FLOAT32
+220712-04:34:18,939 nipype.interface INFO:
+	 stderr 2022-07-12T04:34:18.939012:     Warnings of this type will be muted for this session.
+220712-04:34:18,939 nipype.interface INFO:
+	 stderr 2022-07-12T04:34:18.939012:     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+220712-04:34:18,939 nipype.interface INFO:
+	 stderr 2022-07-12T04:34:18.939418:++ Coarse del was 10, replaced with 3
+220712-04:34:19,401 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.anat_template_wf.t1w_ref_dimensions" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/anat_template_wf/t1w_ref_dimensions".
+220712-04:34:19,498 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.bold_split" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/bold_split".
+220712-04:34:19,502 nipype.workflow INFO:
+	 [Node] Executing "bold_split" <nipype.interfaces.fsl.utils.Split>
+220712-04:34:20,850 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.bids_info" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/bids_info".
+220712-04:34:20,854 nipype.workflow INFO:
+	 [Node] Executing "bids_info" <niworkflows.interfaces.bids.BIDSInfo>
+220712-04:34:20,863 nipype.workflow INFO:
+	 [Node] Finished "bids_info", elapsed time 0.007901s.
+220712-04:34:20,928 nipype.workflow INFO:
+	 [Node] Executing "t1w_ref_dimensions" <niworkflows.interfaces.images.TemplateDimensions>
+220712-04:34:21,170 nipype.workflow INFO:
+	 [Node] Finished "t1w_ref_dimensions", elapsed time 0.241693s.
+220712-04:34:21,518 nipype.workflow INFO:
+	 [Node] Setting-up "_t1w_conform0" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/anat_template_wf/t1w_conform/mapflow/_t1w_conform0".
+220712-04:34:21,522 nipype.workflow INFO:
+	 [Node] Executing "_t1w_conform0" <niworkflows.interfaces.images.Conform>
+220712-04:34:21,685 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.anat_derivatives_wf.raw_sources" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/anat_derivatives_wf/raw_sources".
+220712-04:34:21,694 nipype.workflow INFO:
+	 [Node] Executing "raw_sources" <nipype.interfaces.utility.wrappers.Function>
+220712-04:34:21,695 nipype.workflow INFO:
+	 [Node] Finished "raw_sources", elapsed time 0.000461s.
+220712-04:34:21,893 nipype.workflow INFO:
+	 [Node] Finished "_t1w_conform0", elapsed time 0.370277s.
+220712-04:34:22,548 nipype.workflow INFO:
+	 [Node] Finished "bold_split", elapsed time 3.045254s.
+220712-04:34:23,430 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.anat_template_wf.get1st" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/anat_template_wf/get1st".
+220712-04:34:23,439 nipype.workflow INFO:
+	 [Node] Executing "get1st" <nipype.interfaces.utility.base.Select>
+220712-04:34:23,439 nipype.workflow INFO:
+	 [Node] Finished "get1st", elapsed time 0.000208s.
+220712-04:34:23,571 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.bold_std_trans_wf.gen_ref" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/bold_std_trans_wf/_std_target_MNI152NLin2009cAsym.res2/gen_ref".
+220712-04:34:23,681 nipype.workflow INFO:
+	 [Node] Executing "gen_ref" <niworkflows.interfaces.nibabel.GenerateSamplingReference>
+220712-04:34:23,682 nipype.workflow INFO:
+	 [Node] Finished "gen_ref", elapsed time 0.000161s.
+220712-04:34:25,453 nipype.workflow INFO:
+	 [Node] Finished "lap_tmpl", elapsed time 9.081469s.
+220712-04:34:27,293 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.brain_extraction_wf.mrg_tmpl" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/brain_extraction_wf/mrg_tmpl".
+220712-04:34:27,343 nipype.workflow INFO:
+	 [Node] Executing "mrg_tmpl" <nipype.interfaces.utility.base.Merge>
+220712-04:34:27,344 nipype.workflow INFO:
+	 [Node] Finished "mrg_tmpl", elapsed time 0.000222s.
+220712-04:34:27,344 nipype.workflow INFO:
+	 [Node] Setting-up "_truncate_images0" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/brain_extraction_wf/truncate_images/mapflow/_truncate_images0".
+220712-04:34:27,348 nipype.workflow INFO:
+	 [Node] Executing "_truncate_images0" <nipype.interfaces.ants.utils.ImageMath>
+220712-04:34:31,83 nipype.workflow INFO:
+	 [Node] Finished "_truncate_images0", elapsed time 3.53147s.
+220712-04:34:31,328 nipype.workflow INFO:
+	 [Node] Setting-up "_inu_n40" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/brain_extraction_wf/inu_n4/mapflow/_inu_n40".
+220712-04:34:31,333 nipype.workflow INFO:
+	 [Node] Executing "_inu_n40" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+220712-04:34:31,517 nipype.interface INFO:
+	 stderr 2022-07-12T04:34:31.517100:++ Max displacement in automask = 2.15 (mm) at sub-brick 10
+220712-04:34:31,517 nipype.interface INFO:
+	 stderr 2022-07-12T04:34:31.517100:++ Max delta displ  in automask = 1.63 (mm) at sub-brick 11
+220712-04:34:32,256 nipype.workflow INFO:
+	 [Node] Finished "gen_avg", elapsed time 14.080703s.
+220712-04:34:33,324 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.initial_boldref_wf.enhance_and_skullstrip_bold_wf.init_aff" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/initial_boldref_wf/enhance_and_skullstrip_bold_wf/init_aff".
+220712-04:34:33,334 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+220712-04:34:33,371 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.bold_hmc_wf.mcflirt" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/bold_hmc_wf/mcflirt".
+220712-04:34:33,378 nipype.workflow INFO:
+	 [Node] Executing "mcflirt" <nipype.interfaces.fsl.preprocess.MCFLIRT>
+220712-04:35:02,328 nipype.workflow INFO:
+	 [Node] Finished "_inu_n40", elapsed time 30.879026s.
+220712-04:35:03,373 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.brain_extraction_wf.res_target" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/brain_extraction_wf/res_target".
+220712-04:35:03,377 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.brain_extraction_wf.lap_target" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/brain_extraction_wf/lap_target".
+220712-04:35:03,382 nipype.workflow INFO:
+	 [Node] Executing "lap_target" <nipype.interfaces.ants.utils.ImageMath>
+220712-04:35:03,416 nipype.workflow INFO:
+	 [Node] Executing "res_target" <niworkflows.interfaces.nibabel.RegridToZooms>
+220712-04:35:04,447 nipype.workflow INFO:
+	 [Node] Finished "res_target", elapsed time 1.029671s.
+220712-04:35:05,338 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.brain_extraction_wf.init_aff" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/brain_extraction_wf/init_aff".
+220712-04:35:05,361 nipype.workflow INFO:
+	 [Node] Executing "init_aff" <nipype.interfaces.ants.utils.AI>
+220712-04:35:08,406 nipype.workflow INFO:
+	 [Node] Finished "mcflirt", elapsed time 35.026635s.
+220712-04:35:08,599 nipype.workflow INFO:
+	 [Node] Finished "lap_target", elapsed time 5.216613s.
+220712-04:35:09,406 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.bold_hmc_wf.fsl2itk" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/bold_hmc_wf/fsl2itk".
+220712-04:35:09,569 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.anat_preproc_wf.brain_extraction_wf.mrg_target" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/anat_preproc_wf/brain_extraction_wf/mrg_target".
+220712-04:35:09,582 nipype.workflow INFO:
+	 [Node] Executing "mrg_target" <nipype.interfaces.utility.base.Merge>
+220712-04:35:09,583 nipype.workflow INFO:
+	 [Node] Finished "mrg_target", elapsed time 0.000275s.
+220712-04:35:09,707 nipype.workflow INFO:
+	 [Node] Executing "fsl2itk" <niworkflows.interfaces.itk.MCFLIRT2ITK>
+220712-04:35:10,488 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.bold_hmc_wf.normalize_motion" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/bold_hmc_wf/normalize_motion".
+220712-04:35:10,634 nipype.workflow INFO:
+	 [Node] Executing "normalize_motion" <niworkflows.interfaces.confounds.NormalizeMotionParams>
+220712-04:35:10,644 nipype.workflow INFO:
+	 [Node] Finished "normalize_motion", elapsed time 0.009227s.
+220712-04:35:11,358 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.bold_confounds_wf.fdisp" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/bold_confounds_wf/fdisp".
+220712-04:35:12,217 nipype.workflow INFO:
+	 [Node] Executing "fdisp" <nipype.algorithms.confounds.FramewiseDisplacement>
+220712-04:35:12,224 nipype.workflow INFO:
+	 [Node] Finished "fdisp", elapsed time 0.006244s.
+220712-04:35:39,369 nipype.workflow INFO:
+	 [Node] Finished "fsl2itk", elapsed time 29.661576s.
+220712-04:35:43,563 nipype.workflow INFO:
+	 [Node] Setting-up "fmriprep_22_0_wf.single_subject_0050654_wf.func_preproc_task_rest_run_1_wf.bold_bold_trans_wf.bold_transform" in "/data/aglinska/work/fmriprep_22_0_wf/single_subject_0050654_wf/func_preproc_task_rest_run_1_wf/bold_bold_trans_wf/bold_transform".
+220712-04:35:43,715 nipype.workflow INFO:
+	 [Node] Executing "bold_transform" <niworkflows.interfaces.itk.MultiApplyTransforms>

@@ -1,0 +1,15 @@
+INFO:    Converting SIF file to temporary sandbox...
+WARNING: underlay of /etc/localtime required more than 50 (107) bind mounts
+Traceback (most recent call last):
+  File "/opt/conda/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/cli/run.py", line 38, in main
+    parse_args()
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/cli/parser.py", line 796, in parse_args
+    validate_input_dir(
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/utils/bids.py", line 175, in validate_input_dir
+    subprocess.check_call(['bids-validator', str(bids_dir), '-c', temp.name])
+  File "/opt/conda/lib/python3.9/subprocess.py", line 373, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['bids-validator', '/data/aglinska/data/ABIDE/RawDataBIDS/CMU_a', '-c', '/tmp/tmpmo7jrh66.json']' returned non-zero exit status 1.
+INFO:    Cleaning up image...

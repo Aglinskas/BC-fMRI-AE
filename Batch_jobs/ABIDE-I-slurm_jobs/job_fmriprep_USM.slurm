@@ -21,14 +21,14 @@ date
 cd $HOME
 
 data_dir=$HOME'/data/ABIDE/RawDataBIDS/USM/'
-sing_image=$HOME/fmriprep.simg
+sing_image=$HOME/fmriprep-22
 
 cd $data_dir
 files=(sub*)
 
 cd $HOME
 
-output_dir=$HOME/data/ABIDE/Derivatives/fmriprep/
+output_dir=$HOME/data/ABIDE/Derivatives/fmriprep3/
 
 fs_lic=$HOME'/fs_licence.txt'
 
@@ -39,6 +39,6 @@ echo $data_dir
 echo $output_dir
 echo $sub
 
-singularity run --bind /data/aglinska/scratch:/scratch --cleanenv $sing_image $data_dir $output_dir participant --participant-label $sub --fs-no-reconall --task-id 'rest' --fs-license-file $fs_lic --ignore slicetiming
+singularity run --bind /data/aglinska/scratch:/scratch --cleanenv $sing_image $data_dir $output_dir participant --participant-label $sub --fs-no-reconall --task-id 'rest' --fs-license-file $fs_lic --ignore slicetiming --output-spaces MNI152NLin2009cAsym:res-2
 
 
