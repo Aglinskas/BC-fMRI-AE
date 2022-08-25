@@ -1,0 +1,38 @@
+INFO:    Converting SIF file to temporary sandbox...
+WARNING: underlay of /etc/localtime required more than 50 (107) bind mounts
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.9/site-packages/bids/layout/index.py", line 269, in load_json
+    return json.load(handle)
+  File "/opt/conda/lib/python3.9/json/__init__.py", line 293, in load
+    return loads(fp.read(),
+  File "/opt/conda/lib/python3.9/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/opt/conda/lib/python3.9/json/decoder.py", line 340, in decode
+    raise JSONDecodeError("Extra data", s, end)
+json.decoder.JSONDecodeError: Extra data: line 2 column 22 (char 22)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/conda/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/cli/run.py", line 38, in main
+    parse_args()
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/cli/parser.py", line 770, in parse_args
+    config.from_dict({})
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/config.py", line 681, in from_dict
+    execution.load(settings, init=initialize('execution'), ignore=ignore)
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/config.py", line 238, in load
+    cls.init()
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/config.py", line 481, in init
+    cls._layout = BIDSLayout(
+  File "/opt/conda/lib/python3.9/site-packages/bids/layout/layout.py", line 152, in __init__
+    indexer(self)
+  File "/opt/conda/lib/python3.9/site-packages/bids/layout/index.py", line 111, in __call__
+    self._index_metadata()
+  File "/opt/conda/lib/python3.9/site-packages/bids/layout/index.py", line 375, in _index_metadata
+    file_md.update(pl())
+  File "/opt/conda/lib/python3.9/site-packages/bids/layout/index.py", line 272, in load_json
+    raise IOError(msg) from e
+OSError: Error occurred while trying to decode JSON from file /data/aglinska/data/ABIDE2/RawData/ABIDEII-KKI_1/acq-rc8chan_T1w.json
+INFO:    Cleaning up image...

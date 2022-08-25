@@ -1,0 +1,4 @@
+Tue Aug 16 15:59:58 EDT 2022
+919
+/data/aglinska/BC-fMRI-AE/Notebooks/004-ABIDE-I-and-II-compcorr-filter.ipynb
+/data/aglinska/BC-fMRI-AE/Assets/data_preprocessed_f3_notebooks/03_preprocess_919.ipynb

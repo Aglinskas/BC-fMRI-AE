@@ -1,0 +1,20 @@
+INFO:    Converting SIF file to temporary sandbox...
+WARNING: underlay of /etc/localtime required more than 50 (107) bind mounts
+You are using fMRIPrep-22.0.0rc3, and a newer version of fMRIPrep is available: 22.0.0.
+Please check out our documentation about how and when to upgrade:
+https://fmriprep.readthedocs.io/en/latest/faq.html#upgrading
+Traceback (most recent call last):
+  File "/opt/conda/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/cli/run.py", line 175, in main
+    failed_reports = generate_reports(
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/reports/core.py", line 105, in generate_reports
+    report_errors = [
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/reports/core.py", line 106, in <listcomp>
+    run_reports(
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/reports/core.py", line 88, in run_reports
+    return Report(
+  File "/opt/conda/lib/python3.9/site-packages/niworkflows/reports/core.py", line 389, in generate_report
+    re.compile("<body>(.*?)</body>", re.DOTALL | re.IGNORECASE)
+IndexError: list index out of range
+INFO:    Cleaning up image...

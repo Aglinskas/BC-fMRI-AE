@@ -1,0 +1,73 @@
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/004-ABIDE-I-and-II-compcorr-filter.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/data_preprocessed_f3_notebooks/03_preprocess_870.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpyq2kbdp3'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp0rsscqyz'
+Executing:   0%|          | 0/73 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|▏         | 1/73 [00:05<06:02,  5.04s/cell]Executing:   4%|▍         | 3/73 [00:23<07:18,  6.27s/cell]Executing:   7%|▋         | 5/73 [00:23<04:59,  4.41s/cell]Executing:  10%|▉         | 7/73 [00:23<03:24,  3.10s/cell]Executing:  12%|█▏        | 9/73 [00:23<02:20,  2.20s/cell]Executing:  15%|█▌        | 11/73 [00:23<01:36,  1.55s/cell]Executing:  18%|█▊        | 13/73 [00:32<02:25,  2.42s/cell]Executing:  21%|██        | 15/73 [00:32<01:39,  1.71s/cell]Executing:  23%|██▎       | 17/73 [00:32<01:08,  1.22s/cell]Executing:  26%|██▌       | 19/73 [00:33<00:46,  1.15cell/s]Executing:  29%|██▉       | 21/73 [00:33<00:32,  1.59cell/s]Executing:  32%|███▏      | 23/73 [00:33<00:22,  2.17cell/s]Executing:  34%|███▍      | 25/73 [00:33<00:19,  2.45cell/s]Executing:  37%|███▋      | 27/73 [00:34<00:13,  3.29cell/s]Executing:  40%|███▉      | 29/73 [00:34<00:10,  4.32cell/s]Executing:  42%|████▏     | 31/73 [00:34<00:07,  5.50cell/s]Executing:  45%|████▌     | 33/73 [00:34<00:06,  5.98cell/s]Executing:  48%|████▊     | 35/73 [00:34<00:05,  7.15cell/s]Executing:  51%|█████     | 37/73 [00:43<00:51,  1.44s/cell]Executing:  51%|█████     | 37/73 [00:44<00:43,  1.21s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [24]":
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-24-ed678b2a363d> in <module>
+----> 1 rfmat_nii = filt(im=rmat_nii,tr=data['tr'],lowf=.01,highf=.1,order=3)
+      2 srfmat_nii = ants.smooth_image(image=rfmat_nii,sigma=4,sigma_in_physical_coordinates=True,FWHM=True,max_kernel_width=32)
+
+<ipython-input-17-24fc9497fa79> in filt(im, tr, lowf, highf, order)
+      1 def filt(im,tr,lowf=.01,highf=.1,order=3):
+----> 2     imfilt = ants.bandpass_filter_matrix(im,tr=tr, lowf=lowf, highf=highf, order=order)
+      3     return imfilt
+
+~/anaconda3/lib/python3.8/site-packages/ants/utils/quantile.py in bandpass_filter_matrix(matrix, tr, lowf, highf, order)
+    288     matrixOut = matrix.copy()
+    289     for k in range( ncolumns ):
+--> 290         matrixOut[:,k] = butter_bandpass_filter(
+    291             matrix[:,k], lowf, highf, fs, order=order )
+    292     return matrixOut
+
+~/anaconda3/lib/python3.8/site-packages/ants/utils/quantile.py in butter_bandpass_filter(data, lowcut, highcut, fs, order)
+    280     def butter_bandpass_filter(data, lowcut, highcut, fs, order ):
+    281         b, a = butter_bandpass(lowcut, highcut, fs, order=order)
+--> 282         y = filtfilt(b, a, data)
+    283         return y
+    284 
+
+~/anaconda3/lib/python3.8/site-packages/scipy/signal/signaltools.py in filtfilt(b, a, x, axis, padtype, padlen, method, irlen)
+   3891 
+   3892     # method == "pad"
+-> 3893     edge, ext = _validate_pad(padtype, padlen, x, axis,
+   3894                               ntaps=max(len(a), len(b)))
+   3895 
+
+~/anaconda3/lib/python3.8/site-packages/scipy/signal/signaltools.py in _validate_pad(padtype, padlen, x, axis, ntaps)
+   3941     # x's 'axis' dimension must be bigger than edge.
+   3942     if x.shape[axis] <= edge:
+-> 3943         raise ValueError("The length of the input vector x must be greater "
+   3944                          "than padlen, which is %d." % edge)
+   3945 
+
+ValueError: The length of the input vector x must be greater than padlen, which is 21.
+

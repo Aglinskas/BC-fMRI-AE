@@ -1,0 +1,18 @@
+INFO:    Converting SIF file to temporary sandbox...
+WARNING: underlay of /etc/localtime required more than 50 (107) bind mounts
+You are using fMRIPrep-22.0.0rc3, and a newer version of fMRIPrep is available: 22.0.0.
+Please check out our documentation about how and when to upgrade:
+https://fmriprep.readthedocs.io/en/latest/faq.html#upgrading
+Traceback (most recent call last):
+  File "/opt/conda/bin/fmriprep", line 8, in <module>
+    sys.exit(main())
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/cli/run.py", line 38, in main
+    parse_args()
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/cli/parser.py", line 796, in parse_args
+    validate_input_dir(
+  File "/opt/conda/lib/python3.9/site-packages/fmriprep/utils/bids.py", line 175, in validate_input_dir
+    subprocess.check_call(['bids-validator', str(bids_dir), '-c', temp.name])
+  File "/opt/conda/lib/python3.9/subprocess.py", line 373, in check_call
+    raise CalledProcessError(retcode, cmd)
+subprocess.CalledProcessError: Command '['bids-validator', '/data/aglinska/data/ABIDE2/RawData/ABIDEII-GU_1', '-c', '/tmp/tmpt5b4bwuw.json']' returned non-zero exit status 1.
+INFO:    Cleaning up image...

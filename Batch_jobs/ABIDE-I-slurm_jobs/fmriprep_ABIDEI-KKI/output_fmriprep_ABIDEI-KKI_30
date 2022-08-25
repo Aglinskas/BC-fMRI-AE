@@ -33,3 +33,38 @@ bids-validator@1.8.0
 
 [36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
 
+Thu Aug 11 09:14:35 EDT 2022
+/data/aglinska
+/data/aglinska/data/ABIDE/RawDataBIDS/KKI/
+/data/aglinska/data/ABIDE/Derivatives/fmriprep4/
+sub-0050802
+bids-validator@1.8.0
+
+	[31m1: [ERR] Files with such naming scheme are not part of BIDS specification. This error is most commonly caused by typos in file names that make them not BIDS compatible. Please consult the specification and make sure your files are named correctly. If this is not a file naming issue (for example when including files not yet covered by the BIDS specification) you should include a ".bidsignore" file in your dataset (see https://github.com/bids-standard/bids-validator#bidsignore for details). Please note that derived (processed) data should be placed in /derivatives folder and source data (such as DICOMS or behavioural logs in proprietary formats) should be placed in the /sourcedata folder. (code: 1 - NOT_INCLUDED)[39m
+		./sub-0050802/func/sub-0050802_task-rest_run-1_bold.nii.gz.4BD6767D
+			Evidence: sub-0050802_task-rest_run-1_bold.nii.gz.4BD6767D
+
+[36m	Please visit https://neurostars.org/search?q=NOT_INCLUDED for existing conversations about this issue.[39m
+
+	[33m1: [WARN] NIfTI file's header field for unit information for x, y, z, and t dimensions empty or too short (code: 41 - NIFTI_UNIT)[39m
+		./sub-0050802/anat/sub-0050802_T1w.nii.gz
+
+[36m	Please visit https://neurostars.org/search?q=NIFTI_UNIT for existing conversations about this issue.[39m
+
+	[33m2: [WARN] The recommended file /README is missing. See Section 03 (Modality agnostic files) of the BIDS specification. (code: 101 - README_FILE_MISSING)[39m
+
+[36m	Please visit https://neurostars.org/search?q=README_FILE_MISSING for existing conversations about this issue.[39m
+
+	[33m3: [WARN] The Authors field of dataset_description.json should contain an array of fields - with one author per field. This was triggered because there are no authors, which will make DOI registration from dataset metadata impossible. (code: 113 - NO_AUTHORS)[39m
+
+[36m	Please visit https://neurostars.org/search?q=NO_AUTHORS for existing conversations about this issue.[39m
+
+
+        [34m[4mSummary:[24m[39m                 [34m[4mAvailable Tasks:[24m[39m        [34m[4mAvailable Modalities:[24m[39m 
+        115 Files, 3.47GB        rest                    MRI                   
+        55 - Subjects                                                          
+        1 - Session                                                            
+
+
+[36m	If you have any questions, please post on https://neurostars.org/tags/bids.[39m
+

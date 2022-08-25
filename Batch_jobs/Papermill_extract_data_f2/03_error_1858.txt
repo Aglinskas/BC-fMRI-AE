@@ -1,0 +1,42 @@
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/004-ABIDE-I-and-II-compcorr-filter.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/data_preprocessed_f3_notebooks/03_preprocess_1858.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp6e9x4r9i'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpb3lpyo0l'
+Executing:   0%|          | 0/73 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|▏         | 1/73 [00:04<05:31,  4.61s/cell]Executing:   4%|▍         | 3/73 [00:22<06:54,  5.92s/cell]Executing:   7%|▋         | 5/73 [00:22<04:43,  4.17s/cell]Executing:  10%|▉         | 7/73 [00:22<03:13,  2.94s/cell]Executing:  12%|█▏        | 9/73 [00:23<02:12,  2.08s/cell]Executing:  15%|█▌        | 11/73 [00:23<01:31,  1.48s/cell]Executing:  16%|█▋        | 12/73 [00:40<01:29,  1.48s/cell]Executing:  18%|█▊        | 13/73 [00:52<05:23,  5.40s/cell]Executing:  21%|██        | 15/73 [00:52<03:40,  3.79s/cell]Executing:  23%|██▎       | 17/73 [00:52<02:29,  2.68s/cell]Executing:  26%|██▌       | 19/73 [00:52<01:42,  1.90s/cell]Executing:  29%|██▉       | 21/73 [00:52<01:10,  1.35s/cell]Executing:  32%|███▏      | 23/73 [00:52<00:48,  1.04cell/s]Executing:  34%|███▍      | 25/73 [00:53<00:36,  1.31cell/s]Executing:  37%|███▋      | 27/73 [00:53<00:25,  1.79cell/s]Executing:  40%|███▉      | 29/73 [00:53<00:18,  2.40cell/s]Executing:  42%|████▏     | 31/73 [00:53<00:13,  3.19cell/s]Executing:  45%|████▌     | 33/73 [00:54<00:10,  3.92cell/s]Executing:  48%|████▊     | 35/73 [00:54<00:07,  4.99cell/s]Executing:  48%|████▊     | 35/73 [01:10<00:07,  4.99cell/s]Executing:  49%|████▉     | 36/73 [02:09<14:00, 22.72s/cell]Executing:  51%|█████     | 37/73 [05:49<49:09, 81.92s/cell]Executing:  52%|█████▏    | 38/73 [05:49<33:28, 57.38s/cell]Executing:  55%|█████▍    | 40/73 [06:11<23:50, 43.35s/cell]Executing:  56%|█████▌    | 41/73 [06:15<16:50, 31.57s/cell]Kernel died while waiting for execute reply.
+Executing:  58%|█████▊    | 42/73 [06:19<12:09, 23.52s/cell]Executing:  58%|█████▊    | 42/73 [06:20<04:41,  9.07s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 816, in async_execute_cell
+    exec_reply = await self.task_poll_for_reply
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 107, in execute_notebook
+    nb = papermill_engines.execute_notebook_with_engine(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 49, in execute_notebook_with_engine
+    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 343, in execute_notebook
+    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 402, in execute_managed_notebook
+    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/clientwrap.py", line 45, in execute
+    self.papermill_execute_cells()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/clientwrap.py", line 72, in papermill_execute_cells
+    self.execute_cell(cell, index)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/data/aglinska/anaconda3/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 820, in async_execute_cell
+    raise DeadKernelError("Kernel died")
+nbclient.exceptions.DeadKernelError: Kernel died
