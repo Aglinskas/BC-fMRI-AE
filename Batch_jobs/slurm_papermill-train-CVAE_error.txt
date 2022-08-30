@@ -1,0 +1,285 @@
+Input Notebook:  009-train-CVAE-cmats.ipynb
+Output Notebook: ./papermill/papermill|009-train-CVAE-cmats|2022-08-26-08-08-52.ipynb
+Executing:   0%|          | 0/63 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   2%|▏         | 1/63 [00:02<03:04,  2.97s/cell]Executing:   3%|▎         | 2/63 [00:03<02:09,  2.13s/cell]2022-08-26 08:09:02.980768: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-08-26 08:09:27.088088: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-08-26 08:09:27.110661: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-08-26 08:09:27.114201: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a969c60 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-08-26 08:09:27.114237: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-08-26 08:09:27.122896: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-08-26 08:09:27.421541: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9ece50 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-08-26 08:09:27.421617: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-08-26 08:09:27.421632: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (1): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-08-26 08:09:27.421640: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (2): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-08-26 08:09:27.421647: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (3): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-08-26 08:09:27.424051: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:27.424917: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 1 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:27.425755: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 2 with properties: 
+pciBusID: 0000:86:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:27.426585: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 3 with properties: 
+pciBusID: 0000:af:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:27.426620: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-08-26 08:09:27.428746: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-08-26 08:09:27.430670: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-08-26 08:09:27.431408: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-08-26 08:09:27.433130: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-08-26 08:09:27.434436: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-08-26 08:09:27.438068: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-08-26 08:09:27.443617: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0, 1, 2, 3
+2022-08-26 08:09:27.443659: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-08-26 08:09:28.932491: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-08-26 08:09:28.932563: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 1 2 3 
+2022-08-26 08:09:28.932575: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N Y Y Y 
+2022-08-26 08:09:28.932583: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 1:   Y N Y Y 
+2022-08-26 08:09:28.932591: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 2:   Y Y N Y 
+2022-08-26 08:09:28.932599: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 3:   Y Y Y N 
+2022-08-26 08:09:28.936043: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:0 with 49 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:18:00.0, compute capability: 7.0)
+2022-08-26 08:09:28.937696: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:1 with 14337 MB memory) -> physical GPU (device: 1, name: Tesla V100-SXM2-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2022-08-26 08:09:28.939026: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:2 with 14337 MB memory) -> physical GPU (device: 2, name: Tesla V100-SXM2-16GB, pci bus id: 0000:86:00.0, compute capability: 7.0)
+2022-08-26 08:09:28.940669: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:3 with 14337 MB memory) -> physical GPU (device: 3, name: Tesla V100-SXM2-16GB, pci bus id: 0000:af:00.0, compute capability: 7.0)
+Executing:   6%|▋         | 4/63 [00:30<05:30,  5.60s/cell]Executing:  10%|▉         | 6/63 [00:30<03:45,  3.96s/cell]2022-08-26 08:09:29.382476: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.383392: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 1 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.384248: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 2 with properties: 
+pciBusID: 0000:86:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.385089: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 3 with properties: 
+pciBusID: 0000:af:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.385121: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-08-26 08:09:29.385143: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-08-26 08:09:29.385157: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-08-26 08:09:29.385169: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-08-26 08:09:29.385183: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-08-26 08:09:29.385198: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-08-26 08:09:29.385212: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-08-26 08:09:29.390737: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0, 1, 2, 3
+2022-08-26 08:09:29.390810: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-08-26 08:09:29.390823: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 1 2 3 
+2022-08-26 08:09:29.390832: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N Y Y Y 
+2022-08-26 08:09:29.390839: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 1:   Y N Y Y 
+2022-08-26 08:09:29.390848: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 2:   Y Y N Y 
+2022-08-26 08:09:29.390855: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 3:   Y Y Y N 
+2022-08-26 08:09:29.393967: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:0 with 49 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:18:00.0, compute capability: 7.0)
+2022-08-26 08:09:29.394793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:1 with 14337 MB memory) -> physical GPU (device: 1, name: Tesla V100-SXM2-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2022-08-26 08:09:29.395625: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:2 with 14337 MB memory) -> physical GPU (device: 2, name: Tesla V100-SXM2-16GB, pci bus id: 0000:86:00.0, compute capability: 7.0)
+2022-08-26 08:09:29.396470: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:3 with 14337 MB memory) -> physical GPU (device: 3, name: Tesla V100-SXM2-16GB, pci bus id: 0000:af:00.0, compute capability: 7.0)
+2022-08-26 08:09:29.398017: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.398858: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 1 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.399682: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 2 with properties: 
+pciBusID: 0000:86:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.400495: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 3 with properties: 
+pciBusID: 0000:af:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.400518: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-08-26 08:09:29.400534: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-08-26 08:09:29.400547: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-08-26 08:09:29.400560: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-08-26 08:09:29.400572: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-08-26 08:09:29.400584: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-08-26 08:09:29.400596: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-08-26 08:09:29.405975: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0, 1, 2, 3
+2022-08-26 08:09:29.406865: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.407707: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 1 with properties: 
+pciBusID: 0000:3b:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.408525: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 2 with properties: 
+pciBusID: 0000:86:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.409337: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 3 with properties: 
+pciBusID: 0000:af:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-08-26 08:09:29.409360: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-08-26 08:09:29.409378: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-08-26 08:09:29.409392: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-08-26 08:09:29.409405: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-08-26 08:09:29.409418: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-08-26 08:09:29.409432: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-08-26 08:09:29.409444: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-08-26 08:09:29.414840: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0, 1, 2, 3
+2022-08-26 08:09:29.414888: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-08-26 08:09:29.414900: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 1 2 3 
+2022-08-26 08:09:29.414910: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N Y Y Y 
+2022-08-26 08:09:29.414917: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 1:   Y N Y Y 
+2022-08-26 08:09:29.414925: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 2:   Y Y N Y 
+2022-08-26 08:09:29.414934: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 3:   Y Y Y N 
+2022-08-26 08:09:29.418030: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 49 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:18:00.0, compute capability: 7.0)
+2022-08-26 08:09:29.418869: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 14337 MB memory) -> physical GPU (device: 1, name: Tesla V100-SXM2-16GB, pci bus id: 0000:3b:00.0, compute capability: 7.0)
+2022-08-26 08:09:29.419709: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:2 with 14337 MB memory) -> physical GPU (device: 2, name: Tesla V100-SXM2-16GB, pci bus id: 0000:86:00.0, compute capability: 7.0)
+2022-08-26 08:09:29.420515: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:3 with 14337 MB memory) -> physical GPU (device: 3, name: Tesla V100-SXM2-16GB, pci bus id: 0000:af:00.0, compute capability: 7.0)
+2022-08-26 08:09:29.493103: I tensorflow/stream_executor/cuda/cuda_driver.cc:775] failed to allocate 49.00M (51380224 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2022-08-26 08:09:29.493890: I tensorflow/stream_executor/cuda/cuda_driver.cc:775] failed to allocate 44.10M (46242304 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2022-08-26 08:09:39.500748: W tensorflow/core/common_runtime/bfc_allocator.cc:431] Allocator (GPU_0_bfc) ran out of memory trying to allocate 107.86MiB (rounded to 113100800)requested by op Conv2D
+Current allocation summary follows.
+2022-08-26 08:09:39.500919: I tensorflow/core/common_runtime/bfc_allocator.cc:970] BFCAllocator dump for GPU_0_bfc
+2022-08-26 08:09:39.500973: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (256): 	Total Chunks: 6, Chunks in use: 6. 1.5KiB allocated for chunks. 1.5KiB in use in bin. 148B client-requested in use in bin.
+2022-08-26 08:09:39.500983: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (512): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.500994: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (1024): 	Total Chunks: 1, Chunks in use: 1. 1.2KiB allocated for chunks. 1.2KiB in use in bin. 1.0KiB client-requested in use in bin.
+2022-08-26 08:09:39.501005: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (2048): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501012: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (4096): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501022: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (8192): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501032: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (16384): 	Total Chunks: 3, Chunks in use: 1. 55.2KiB allocated for chunks. 18.5KiB in use in bin. 18.4KiB client-requested in use in bin.
+2022-08-26 08:09:39.501040: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (32768): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501047: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (65536): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501055: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (131072): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501062: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (262144): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501069: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (524288): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501077: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (1048576): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501084: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (2097152): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501091: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (4194304): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501099: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (8388608): 	Total Chunks: 2, Chunks in use: 0. 22.83MiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501108: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (16777216): 	Total Chunks: 1, Chunks in use: 1. 16.80MiB allocated for chunks. 16.80MiB in use in bin. 11.44MiB client-requested in use in bin.
+2022-08-26 08:09:39.501115: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501124: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501132: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501139: I tensorflow/core/common_runtime/bfc_allocator.cc:977] Bin (268435456): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2022-08-26 08:09:39.501148: I tensorflow/core/common_runtime/bfc_allocator.cc:993] Bin for 107.86MiB was 64.00MiB, Chunk State: 
+2022-08-26 08:09:39.501156: I tensorflow/core/common_runtime/bfc_allocator.cc:1006] Next region of size 41618176
+2022-08-26 08:09:39.501166: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] InUse at 155108000000 of size 1280 next 1
+2022-08-26 08:09:39.501173: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] InUse at 155108000500 of size 256 next 9
+2022-08-26 08:09:39.501179: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] InUse at 155108000600 of size 256 next 12
+2022-08-26 08:09:39.501188: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] Free  at 155108000700 of size 18432 next 6
+2022-08-26 08:09:39.501196: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] InUse at 155108004f00 of size 256 next 7
+2022-08-26 08:09:39.501202: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] InUse at 155108005000 of size 256 next 8
+2022-08-26 08:09:39.501209: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] Free  at 155108005100 of size 19200 next 10
+2022-08-26 08:09:39.501217: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] InUse at 155108009c00 of size 18944 next 11
+2022-08-26 08:09:39.501225: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] Free  at 15510800e600 of size 11942400 next 2
+2022-08-26 08:09:39.501239: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] InUse at 155108b72000 of size 256 next 3
+2022-08-26 08:09:39.501248: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] Free  at 155108b72100 of size 12000000 next 4
+2022-08-26 08:09:39.501256: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] InUse at 1551096e3c00 of size 256 next 5
+2022-08-26 08:09:39.501264: I tensorflow/core/common_runtime/bfc_allocator.cc:1026] InUse at 1551096e3d00 of size 17616384 next 18446744073709551615
+2022-08-26 08:09:39.501270: I tensorflow/core/common_runtime/bfc_allocator.cc:1031]      Summary of in-use Chunks by size: 
+2022-08-26 08:09:39.501279: I tensorflow/core/common_runtime/bfc_allocator.cc:1034] 6 Chunks of size 256 totalling 1.5KiB
+2022-08-26 08:09:39.501286: I tensorflow/core/common_runtime/bfc_allocator.cc:1034] 1 Chunks of size 1280 totalling 1.2KiB
+2022-08-26 08:09:39.501293: I tensorflow/core/common_runtime/bfc_allocator.cc:1034] 1 Chunks of size 18944 totalling 18.5KiB
+2022-08-26 08:09:39.501300: I tensorflow/core/common_runtime/bfc_allocator.cc:1034] 1 Chunks of size 17616384 totalling 16.80MiB
+2022-08-26 08:09:39.501307: I tensorflow/core/common_runtime/bfc_allocator.cc:1038] Sum Total of in-use chunks: 16.82MiB
+2022-08-26 08:09:39.501314: I tensorflow/core/common_runtime/bfc_allocator.cc:1040] total_region_allocated_bytes_: 41618176 memory_limit_: 51380224 available bytes: 9762048 curr_region_allocation_bytes_: 102760448
+2022-08-26 08:09:39.501328: I tensorflow/core/common_runtime/bfc_allocator.cc:1046] Stats: 
+Limit:                        51380224
+InUse:                        17638144
+MaxInUse:                     41618176
+NumAllocs:                          18
+MaxAllocSize:                 17616384
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2022-08-26 08:09:39.501338: W tensorflow/core/common_runtime/bfc_allocator.cc:439] *___________________________*____________________________******************************xxxxxxxxxxxxx
+2022-08-26 08:09:39.501361: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at conv_ops.cc:539 : Resource exhausted: OOM when allocating tensor with shape[100,94,94,32] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+Executing:  13%|█▎        | 8/63 [00:43<04:18,  4.70s/cell]Executing:  13%|█▎        | 8/63 [00:44<05:08,  5.61s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [7]":
+---------------------------------------------------------------------------
+ResourceExhaustedError                    Traceback (most recent call last)
+<ipython-input-7-ce39b43bd677> in <module>
+     25 # We run each op once to warm up; see: https://stackoverflow.com/a/45067900
+     26 cpu()
+---> 27 gpu()
+     28 
+     29 # Run the op several times.
+
+<ipython-input-7-ce39b43bd677> in gpu()
+     20   with tf.device('/device:GPU:0'):
+     21     random_image_gpu = tf.random.normal((100, 100, 100, 3))
+---> 22     net_gpu = tf.keras.layers.Conv2D(32, 7)(random_image_gpu)
+     23     return tf.math.reduce_sum(net_gpu)
+     24 
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/keras/engine/base_layer.py in __call__(self, *args, **kwargs)
+    983 
+    984         with ops.enable_auto_cast_variables(self._compute_dtype_object):
+--> 985           outputs = call_fn(inputs, *args, **kwargs)
+    986 
+    987         if self._activity_regularizer:
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/keras/layers/convolutional.py in call(self, inputs)
+    245       inputs = array_ops.pad(inputs, self._compute_causal_padding(inputs))
+    246 
+--> 247     outputs = self._convolution_op(inputs, self.kernel)
+    248 
+    249     if self.use_bias:
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/util/dispatch.py in wrapper(*args, **kwargs)
+    199     """Call target, and fall back on dispatchers if there is a TypeError."""
+    200     try:
+--> 201       return target(*args, **kwargs)
+    202     except (TypeError, ValueError):
+    203       # Note: convert_to_eager_tensor currently raises a ValueError, not a
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/ops/nn_ops.py in convolution_v2(input, filters, strides, padding, data_format, dilations, name)
+   1008     dilations=None,
+   1009     name=None):
+-> 1010   return convolution_internal(
+   1011       input,  # pylint: disable=redefined-builtin
+   1012       filters,
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/ops/nn_ops.py in convolution_internal(input, filters, strides, padding, data_format, dilations, name, call_from_convolution, num_spatial_dims)
+   1138         op = conv1d
+   1139 
+-> 1140       return op(
+   1141           input,
+   1142           filters,
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/ops/nn_ops.py in _conv2d_expanded_batch(input, filters, strides, padding, data_format, dilations, name)
+   2582     # We avoid calling squeeze_batch_dims to reduce extra python function
+   2583     # call slowdown in eager mode.  This branch doesn't require reshapes.
+-> 2584     return gen_nn_ops.conv2d(
+   2585         input,
+   2586         filter=filters,
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/ops/gen_nn_ops.py in conv2d(input, filter, strides, padding, use_cudnn_on_gpu, explicit_paddings, data_format, dilations, name)
+    936       return _result
+    937     except _core._NotOkStatusException as e:
+--> 938       _ops.raise_from_not_ok_status(e, name)
+    939     except _core._FallbackException:
+    940       pass
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/ops.py in raise_from_not_ok_status(e, name)
+   6841   message = e.message + (" name: " + name if name is not None else "")
+   6842   # pylint: disable=protected-access
+-> 6843   six.raise_from(core._status_to_exception(e.code, message), None)
+   6844   # pylint: enable=protected-access
+   6845 
+
+~/anaconda3/lib/python3.8/site-packages/six.py in raise_from(value, from_value)
+
+ResourceExhaustedError: OOM when allocating tensor with shape[100,94,94,32] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc [Op:Conv2D]
+
