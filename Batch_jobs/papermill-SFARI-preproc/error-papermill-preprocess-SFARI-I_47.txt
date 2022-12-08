@@ -1,51 +1,10 @@
-Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/014-SFARI-compcorr-filter.ipynb
-Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-preproc/47-run1-sfari-compcorr.ipynb
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/004-SFARI-compcorr-filter.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/data_preprocessed_sfari-run1_notebooks/47-run2-sfari-compcorr.ipynb
 Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
 Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
-Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpza69lnnj'
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpdsjzvguk'
 Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
 Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
-Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpivk0xkx0'
-Executing:   0%|          | 0/36 [00:00<?, ?cell/s]Executing:   0%|          | 0/36 [01:08<?, ?cell/s]
-Traceback (most recent call last):
-  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
-    sys.exit(papermill())
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
-    return self.main(*args, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
-    rv = self.invoke(ctx)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
-    return callback(*args, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
-    return f(get_current_context(), *args, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
-    execute_notebook(
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 107, in execute_notebook
-    nb = papermill_engines.execute_notebook_with_engine(
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 49, in execute_notebook_with_engine
-    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 343, in execute_notebook
-    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 402, in execute_managed_notebook
-    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/clientwrap.py", line 43, in execute
-    with self.setup_kernel(**kwargs):
-  File "/data/aglinska/anaconda3/lib/python3.8/contextlib.py", line 113, in __enter__
-    return next(self.gen)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 439, in setup_kernel
-    self.start_new_kernel_client()
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
-    return just_run(coro(*args, **kwargs))
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
-    return loop.run_until_complete(coro)
-  File "/data/aglinska/anaconda3/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
-    return future.result()
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 410, in async_start_new_kernel_client
-    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 85, in ensure_async
-    result = await obj
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/asynchronous/client.py", line 143, in wait_for_ready
-    raise RuntimeError("Kernel didn't respond in %d seconds" % timeout)
-RuntimeError: Kernel didn't respond in 60 seconds
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp1nsk6few'
+Executing:   0%|          | 0/70 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|▏         | 1/70 [00:03<03:48,  3.32s/cell]Executing:   4%|▍         | 3/70 [00:19<05:18,  4.76s/cell]Executing:   7%|▋         | 5/70 [00:19<03:37,  3.35s/cell]Executing:  10%|█         | 7/70 [00:20<02:33,  2.43s/cell]Executing:  13%|█▎        | 9/70 [00:20<01:44,  1.72s/cell]Executing:  16%|█▌        | 11/70 [00:20<01:11,  1.22s/cell]Executing:  19%|█▊        | 13/70 [00:20<00:49,  1.15cell/s]Executing:  21%|██▏       | 15/70 [00:20<00:34,  1.59cell/s]Executing:  24%|██▍       | 17/70 [00:26<01:08,  1.29s/cell]Executing:  27%|██▋       | 19/70 [00:26<00:46,  1.09cell/s]Executing:  30%|███       | 21/70 [00:26<00:32,  1.51cell/s]Executing:  33%|███▎      | 23/70 [00:26<00:22,  2.08cell/s]Executing:  36%|███▌      | 25/70 [00:26<00:16,  2.81cell/s]Executing:  39%|███▊      | 27/70 [00:26<00:11,  3.74cell/s]Executing:  41%|████▏     | 29/70 [00:27<00:10,  3.76cell/s]Executing:  44%|████▍     | 31/70 [00:27<00:08,  4.39cell/s]Executing:  46%|████▌     | 32/70 [00:39<00:08,  4.39cell/s]Executing:  47%|████▋     | 33/70 [00:48<02:01,  3.28s/cell]Executing:  49%|████▊     | 34/70 [01:17<06:31, 10.88s/cell]Executing:  51%|█████▏    | 36/70 [01:17<04:19,  7.64s/cell]Executing:  53%|█████▎    | 37/70 [01:17<03:02,  5.52s/cell]Executing:  54%|█████▍    | 38/70 [01:18<02:10,  4.09s/cell]Executing:  56%|█████▌    | 39/70 [01:19<01:36,  3.11s/cell]Executing:  57%|█████▋    | 40/70 [01:19<01:06,  2.22s/cell]Executing:  59%|█████▊    | 41/70 [01:19<00:47,  1.64s/cell]Executing:  61%|██████▏   | 43/70 [01:20<00:31,  1.18s/cell]Executing:  63%|██████▎   | 44/70 [01:59<05:25, 12.52s/cell]Executing:  64%|██████▍   | 45/70 [01:59<03:40,  8.84s/cell]Executing:  66%|██████▌   | 46/70 [01:59<02:30,  6.26s/cell]Executing:  67%|██████▋   | 47/70 [01:59<01:42,  4.45s/cell]Executing:  69%|██████▊   | 48/70 [02:00<01:11,  3.27s/cell]Executing:  70%|███████   | 49/70 [02:10<01:50,  5.26s/cell]Executing:  71%|███████▏  | 50/70 [02:20<02:12,  6.64s/cell]Executing:  73%|███████▎  | 51/70 [02:20<01:29,  4.69s/cell]Executing:  74%|███████▍  | 52/70 [02:20<00:59,  3.32s/cell]Executing:  76%|███████▌  | 53/70 [02:20<00:40,  2.36s/cell]Executing:  77%|███████▋  | 54/70 [02:20<00:27,  1.70s/cell]Executing:  79%|███████▊  | 55/70 [02:52<02:40, 10.68s/cell]Executing:  80%|████████  | 56/70 [02:52<01:45,  7.52s/cell]Executing:  81%|████████▏ | 57/70 [02:52<01:08,  5.30s/cell]Executing:  83%|████████▎ | 58/70 [02:52<00:44,  3.75s/cell]Executing:  84%|████████▍ | 59/70 [02:52<00:29,  2.66s/cell]Executing:  86%|████████▌ | 60/70 [02:53<00:21,  2.14s/cell]Executing:  87%|████████▋ | 61/70 [02:54<00:15,  1.76s/cell]Executing:  89%|████████▊ | 62/70 [02:55<00:11,  1.50s/cell]Executing:  90%|█████████ | 63/70 [02:56<00:09,  1.31s/cell]Executing:  91%|█████████▏| 64/70 [02:56<00:05,  1.05cell/s]Executing:  93%|█████████▎| 65/70 [02:56<00:03,  1.42cell/s]Executing:  94%|█████████▍| 66/70 [02:56<00:02,  1.90cell/s]Executing:  96%|█████████▌| 67/70 [02:56<00:01,  2.48cell/s]Executing:  97%|█████████▋| 68/70 [02:56<00:00,  3.16cell/s]Executing:  99%|█████████▊| 69/70 [02:57<00:00,  3.25cell/s]Executing: 100%|██████████| 70/70 [02:57<00:00,  3.99cell/s]Executing: 100%|██████████| 70/70 [02:58<00:00,  2.55s/cell]

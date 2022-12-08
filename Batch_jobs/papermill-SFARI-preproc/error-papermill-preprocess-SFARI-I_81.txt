@@ -1,13 +1,34 @@
-Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/014-SFARI-compcorr-filter.ipynb
-Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-preproc/81-run1-sfari-compcorr.ipynb
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/004-SFARI-compcorr-filter.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/data_preprocessed_sfari-run1_notebooks/81-run2-sfari-compcorr.ipynb
 Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
 Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
-Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpbr4gn1ii'
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpm9bmeei2'
 Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
 Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
-Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp63d_9j41'
-Executing:   0%|          | 0/36 [00:00<?, ?cell/s]Executing notebook with kernel: python3
-Executing:   3%|▎         | 1/36 [00:03<02:19,  4.00s/cell]Executing:  11%|█         | 4/36 [00:04<01:29,  2.81s/cell]Executing:  14%|█▍        | 5/36 [00:25<04:17,  8.32s/cell]Executing:  22%|██▏       | 8/36 [00:26<02:46,  5.93s/cell]Executing:  31%|███       | 11/36 [00:26<01:44,  4.16s/cell]Executing:  39%|███▉      | 14/36 [00:26<01:04,  2.92s/cell]Executing:  44%|████▍     | 16/36 [00:27<00:42,  2.11s/cell]Executing:  50%|█████     | 18/36 [00:27<00:28,  1.57s/cell]Executing:  56%|█████▌    | 20/36 [00:29<00:21,  1.33s/cell]Executing:  58%|█████▊    | 21/36 [00:31<00:26,  1.78s/cell]Executing:  58%|█████▊    | 21/36 [00:33<00:24,  1.61s/cell]
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpl6pttq24'
+Executing:   0%|          | 0/70 [00:00<?, ?cell/s]Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/data/aglinska/anaconda3/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel_launcher.py", line 16, in <module>
+    app.launch_new_instance()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/traitlets/config/application.py", line 844, in launch_instance
+    app.initialize(argv)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/traitlets/config/application.py", line 87, in inner
+    return method(app, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelapp.py", line 567, in initialize
+    self.init_sockets()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelapp.py", line 281, in init_sockets
+    self.control_port = self._bind_socket(self.control_socket, self.control_port)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelapp.py", line 218, in _bind_socket
+    return self._try_bind_socket(s, port)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/ipykernel/kernelapp.py", line 194, in _try_bind_socket
+    s.bind("tcp://%s:%i" % (self.ip, port))
+  File "zmq/backend/cython/socket.pyx", line 550, in zmq.backend.cython.socket.Socket.bind
+  File "zmq/backend/cython/checkrc.pxd", line 26, in zmq.backend.cython.checkrc._check_rc
+zmq.error.ZMQError: Address already in use
+Executing:   0%|          | 0/70 [00:04<?, ?cell/s]
 Traceback (most recent call last):
   File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
     sys.exit(papermill())
@@ -23,54 +44,30 @@ Traceback (most recent call last):
     return f(get_current_context(), *args, **kwargs)
   File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
     execute_notebook(
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [21]":
----------------------------------------------------------------------------
-ValueError                                Traceback (most recent call last)
-<ipython-input-21-cb4824ef1709> in <module>
-----> 1 rfmat_nii = filt(im=rmat_nii,
-      2      tr=data['tr'],
-      3      lowf=.01,
-      4      highf=.1,
-      5      order=3)
-
-<ipython-input-13-24fc9497fa79> in filt(im, tr, lowf, highf, order)
-      1 def filt(im,tr,lowf=.01,highf=.1,order=3):
-----> 2     imfilt = ants.bandpass_filter_matrix(im,tr=tr, lowf=lowf, highf=highf, order=order)
-      3     return imfilt
-
-~/anaconda3/lib/python3.8/site-packages/ants/utils/quantile.py in bandpass_filter_matrix(matrix, tr, lowf, highf, order)
-    288     matrixOut = matrix.copy()
-    289     for k in range( ncolumns ):
---> 290         matrixOut[:,k] = butter_bandpass_filter(
-    291             matrix[:,k], lowf, highf, fs, order=order )
-    292     return matrixOut
-
-~/anaconda3/lib/python3.8/site-packages/ants/utils/quantile.py in butter_bandpass_filter(data, lowcut, highcut, fs, order)
-    280     def butter_bandpass_filter(data, lowcut, highcut, fs, order ):
-    281         b, a = butter_bandpass(lowcut, highcut, fs, order=order)
---> 282         y = filtfilt(b, a, data)
-    283         return y
-    284 
-
-~/anaconda3/lib/python3.8/site-packages/scipy/signal/signaltools.py in filtfilt(b, a, x, axis, padtype, padlen, method, irlen)
-   3891 
-   3892     # method == "pad"
--> 3893     edge, ext = _validate_pad(padtype, padlen, x, axis,
-   3894                               ntaps=max(len(a), len(b)))
-   3895 
-
-~/anaconda3/lib/python3.8/site-packages/scipy/signal/signaltools.py in _validate_pad(padtype, padlen, x, axis, ntaps)
-   3941     # x's 'axis' dimension must be bigger than edge.
-   3942     if x.shape[axis] <= edge:
--> 3943         raise ValueError("The length of the input vector x must be greater "
-   3944                          "than padlen, which is %d." % edge)
-   3945 
-
-ValueError: The length of the input vector x must be greater than padlen, which is 21.
-
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 107, in execute_notebook
+    nb = papermill_engines.execute_notebook_with_engine(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 49, in execute_notebook_with_engine
+    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 343, in execute_notebook
+    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 402, in execute_managed_notebook
+    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/clientwrap.py", line 43, in execute
+    with self.setup_kernel(**kwargs):
+  File "/data/aglinska/anaconda3/lib/python3.8/contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 439, in setup_kernel
+    self.start_new_kernel_client()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/data/aglinska/anaconda3/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/client.py", line 410, in async_start_new_kernel_client
+    await ensure_async(self.kc.wait_for_ready(timeout=self.startup_timeout))
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/nbclient/util.py", line 85, in ensure_async
+    result = await obj
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/jupyter_client/asynchronous/client.py", line 139, in wait_for_ready
+    raise RuntimeError('Kernel died before replying to kernel_info')
+RuntimeError: Kernel died before replying to kernel_info

@@ -1,13 +1,13 @@
-Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/014-SFARI-compcorr-filter.ipynb
-Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-preproc/27-run1-sfari-compcorr.ipynb
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/004-SFARI-compcorr-filter.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/data_preprocessed_sfari-run1_notebooks/27-run2-sfari-compcorr.ipynb
 Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
 Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
-Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpbpos53j_'
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmppf69nw1b'
 Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
 Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
-Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpqmqmikuh'
-Executing:   0%|          | 0/36 [00:00<?, ?cell/s]Executing notebook with kernel: python3
-Executing:   3%|▎         | 1/36 [00:06<03:36,  6.19s/cell]Executing:  11%|█         | 4/36 [00:06<02:18,  4.34s/cell]Executing:  14%|█▍        | 5/36 [00:23<04:14,  8.21s/cell]Executing:  22%|██▏       | 8/36 [00:25<02:45,  5.89s/cell]Executing:  31%|███       | 11/36 [00:25<01:43,  4.14s/cell]Executing:  39%|███▉      | 14/36 [00:25<01:04,  2.91s/cell]Executing:  44%|████▍     | 16/36 [00:26<00:45,  2.29s/cell]Executing:  47%|████▋     | 17/36 [00:27<00:33,  1.74s/cell]Executing:  50%|█████     | 18/36 [00:27<00:22,  1.26s/cell]Executing:  56%|█████▌    | 20/36 [00:29<00:19,  1.22s/cell]Executing:  58%|█████▊    | 21/36 [00:31<00:21,  1.45s/cell]Executing:  58%|█████▊    | 21/36 [00:34<00:24,  1.62s/cell]
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp70k2v9t6'
+Executing:   0%|          | 0/70 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|▏         | 1/70 [00:05<06:36,  5.75s/cell]Executing:   4%|▍         | 3/70 [00:33<09:06,  8.15s/cell]Executing:   7%|▋         | 5/70 [00:33<06:12,  5.73s/cell]Executing:  10%|█         | 7/70 [00:35<04:30,  4.29s/cell]Executing:  13%|█▎        | 9/70 [00:35<03:04,  3.02s/cell]Executing:  16%|█▌        | 11/70 [00:35<02:06,  2.14s/cell]Executing:  19%|█▊        | 13/70 [00:35<01:26,  1.52s/cell]Executing:  21%|██▏       | 15/70 [00:35<00:59,  1.09s/cell]Executing:  24%|██▍       | 17/70 [00:42<01:29,  1.69s/cell]Executing:  27%|██▋       | 19/70 [00:42<01:01,  1.21s/cell]Executing:  30%|███       | 21/70 [00:42<00:42,  1.15cell/s]Executing:  33%|███▎      | 23/70 [00:42<00:29,  1.58cell/s]Executing:  36%|███▌      | 25/70 [00:42<00:21,  2.14cell/s]Executing:  39%|███▊      | 27/70 [00:42<00:15,  2.85cell/s]Executing:  41%|████▏     | 29/70 [00:43<00:14,  2.88cell/s]Executing:  43%|████▎     | 30/70 [00:43<00:12,  3.27cell/s]Executing:  46%|████▌     | 32/70 [00:43<00:09,  4.18cell/s]Executing:  47%|████▋     | 33/70 [00:47<00:44,  1.20s/cell]Executing:  49%|████▊     | 34/70 [00:50<01:02,  1.74s/cell]Executing:  49%|████▊     | 34/70 [00:53<00:56,  1.58s/cell]
 Traceback (most recent call last):
   File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
     sys.exit(papermill())
@@ -29,17 +29,14 @@ Traceback (most recent call last):
     raise error
 papermill.exceptions.PapermillExecutionError: 
 ---------------------------------------------------------------------------
-Exception encountered at "In [21]":
+Exception encountered at "In [25]":
 ---------------------------------------------------------------------------
 ValueError                                Traceback (most recent call last)
-<ipython-input-21-cb4824ef1709> in <module>
-----> 1 rfmat_nii = filt(im=rmat_nii,
-      2      tr=data['tr'],
-      3      lowf=.01,
-      4      highf=.1,
-      5      order=3)
+<ipython-input-25-ed678b2a363d> in <module>
+----> 1 rfmat_nii = filt(im=rmat_nii,tr=data['tr'],lowf=.01,highf=.1,order=3)
+      2 srfmat_nii = ants.smooth_image(image=rfmat_nii,sigma=4,sigma_in_physical_coordinates=True,FWHM=True,max_kernel_width=32)
 
-<ipython-input-13-24fc9497fa79> in filt(im, tr, lowf, highf, order)
+<ipython-input-18-24fc9497fa79> in filt(im, tr, lowf, highf, order)
       1 def filt(im,tr,lowf=.01,highf=.1,order=3):
 ----> 2     imfilt = ants.bandpass_filter_matrix(im,tr=tr, lowf=lowf, highf=highf, order=order)
       3     return imfilt

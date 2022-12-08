@@ -1,43 +1,0 @@
-Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/014-SFARI-compcorr-filter.ipynb
-Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-preproc/204-run1-sfari-compcorr.ipynb
-Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
-Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
-Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmptchx0s8_'
-Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
-Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
-Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpjr9_fzb9'
-Executing:   0%|          | 0/36 [00:00<?, ?cell/s]Executing notebook with kernel: python3
-Executing:   3%|▎         | 1/36 [00:03<01:59,  3.43s/cell]Executing:  11%|█         | 4/36 [00:03<01:17,  2.41s/cell]Executing:  14%|█▍        | 5/36 [00:23<04:00,  7.76s/cell]Executing:  22%|██▏       | 8/36 [00:25<02:35,  5.56s/cell]Executing:  31%|███       | 11/36 [00:25<01:37,  3.90s/cell]Executing:  39%|███▉      | 14/36 [00:25<01:00,  2.74s/cell]Executing:  44%|████▍     | 16/36 [00:29<00:52,  2.61s/cell]Executing:  44%|████▍     | 16/36 [00:31<00:39,  1.99s/cell]
-Traceback (most recent call last):
-  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
-    sys.exit(papermill())
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
-    return self.main(*args, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
-    rv = self.invoke(ctx)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
-    return callback(*args, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
-    return f(get_current_context(), *args, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
-    execute_notebook(
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [16]":
----------------------------------------------------------------------------
-IndexError                                Traceback (most recent call last)
-<ipython-input-16-6b2831697ab1> in <module>
-----> 1 sub = subjects[s]
-      2 print(sub)
-      3 data = get_data(sub)
-      4 n = data['epi'].shape[-1]
-      5 print(data['epi'].shape)
-
-IndexError: index 204 is out of bounds for axis 0 with size 202
-

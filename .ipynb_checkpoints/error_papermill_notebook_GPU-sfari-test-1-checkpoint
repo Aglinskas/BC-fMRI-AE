@@ -1,0 +1,105 @@
+ERROR: Unable to locate a modulefile for 'tensorflow/2.3.1gpu'
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-az-0-run1/CVAE_train_2022-11-29-13-43-59.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmptdzub493'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpol7knpho'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   0%|          | 0/123 [00:05<?, ?cell/s]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/clientwrap.py", line 71, in papermill_execute_cells
+    self.nb_man.cell_start(cell, index)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 216, in cell_start
+    self.save()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 139, in save
+    write_ipynb(self.nb, self.output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 397, in write_ipynb
+    papermill_io.write(nbformat.writes(nb), path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 128, in write
+    return self.get_handler(path).write(buf, path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 211, in write
+    raise FileNotFoundError("output folder {} doesn't exist.".format(dirname))
+FileNotFoundError: output folder /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-az-0-run1 doesn't exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 343, in execute_notebook
+    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 402, in execute_managed_notebook
+    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/clientwrap.py", line 45, in execute
+    self.papermill_execute_cells()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/clientwrap.py", line 77, in papermill_execute_cells
+    self.nb_man.cell_complete(self.nb.cells[index], cell_index=index)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 255, in cell_complete
+    self.save()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 139, in save
+    write_ipynb(self.nb, self.output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 397, in write_ipynb
+    papermill_io.write(nbformat.writes(nb), path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 128, in write
+    return self.get_handler(path).write(buf, path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 211, in write
+    raise FileNotFoundError("output folder {} doesn't exist.".format(dirname))
+FileNotFoundError: output folder /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-az-0-run1 doesn't exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 107, in execute_notebook
+    nb = papermill_engines.execute_notebook_with_engine(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 49, in execute_notebook_with_engine
+    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 346, in execute_notebook
+    nb_man.notebook_complete()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 285, in notebook_complete
+    self.save()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 139, in save
+    write_ipynb(self.nb, self.output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 397, in write_ipynb
+    papermill_io.write(nbformat.writes(nb), path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 128, in write
+    return self.get_handler(path).write(buf, path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 211, in write
+    raise FileNotFoundError("output folder {} doesn't exist.".format(dirname))
+FileNotFoundError: output folder /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-az-0-run1 doesn't exist.
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-az-0-run2/CVAE_train_2022-11-29-13-44-18.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpqy680_t1'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpepdnq4fm'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:00<01:55,  1.06cell/s]Executing:   2%|▏         | 3/123 [00:01<01:22,  1.45cell/s]Executing:   4%|▍         | 5/123 [00:01<00:59,  1.97cell/s]Executing:   5%|▍         | 6/123 [00:01<00:48,  2.41cell/s]Executing:   7%|▋         | 8/123 [00:01<00:36,  3.18cell/s]2022-11-29 13:44:25.854728: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1

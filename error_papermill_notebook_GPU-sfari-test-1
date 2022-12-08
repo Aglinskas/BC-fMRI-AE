@@ -1,0 +1,161 @@
+ERROR: Unable to locate a modulefile for 'tensorflow/2.3.1gpu'
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-az-0-run1/CVAE_train_2022-11-29-13-43-59.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmptdzub493'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpol7knpho'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   0%|          | 0/123 [00:05<?, ?cell/s]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/clientwrap.py", line 71, in papermill_execute_cells
+    self.nb_man.cell_start(cell, index)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 216, in cell_start
+    self.save()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 139, in save
+    write_ipynb(self.nb, self.output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 397, in write_ipynb
+    papermill_io.write(nbformat.writes(nb), path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 128, in write
+    return self.get_handler(path).write(buf, path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 211, in write
+    raise FileNotFoundError("output folder {} doesn't exist.".format(dirname))
+FileNotFoundError: output folder /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-az-0-run1 doesn't exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 343, in execute_notebook
+    cls.execute_managed_notebook(nb_man, kernel_name, log_output=log_output, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 402, in execute_managed_notebook
+    return PapermillNotebookClient(nb_man, **final_kwargs).execute()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/clientwrap.py", line 45, in execute
+    self.papermill_execute_cells()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/clientwrap.py", line 77, in papermill_execute_cells
+    self.nb_man.cell_complete(self.nb.cells[index], cell_index=index)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 255, in cell_complete
+    self.save()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 139, in save
+    write_ipynb(self.nb, self.output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 397, in write_ipynb
+    papermill_io.write(nbformat.writes(nb), path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 128, in write
+    return self.get_handler(path).write(buf, path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 211, in write
+    raise FileNotFoundError("output folder {} doesn't exist.".format(dirname))
+FileNotFoundError: output folder /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-az-0-run1 doesn't exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 107, in execute_notebook
+    nb = papermill_engines.execute_notebook_with_engine(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 49, in execute_notebook_with_engine
+    return self.get_engine(engine_name).execute_notebook(nb, kernel_name, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 346, in execute_notebook
+    nb_man.notebook_complete()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 285, in notebook_complete
+    self.save()
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 69, in wrapper
+    return func(self, *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/engines.py", line 139, in save
+    write_ipynb(self.nb, self.output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 397, in write_ipynb
+    papermill_io.write(nbformat.writes(nb), path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 128, in write
+    return self.get_handler(path).write(buf, path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/iorw.py", line 211, in write
+    raise FileNotFoundError("output folder {} doesn't exist.".format(dirname))
+FileNotFoundError: output folder /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-az-0-run1 doesn't exist.
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-az-0-run2/CVAE_train_2022-11-29-13-44-18.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpqy680_t1'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpepdnq4fm'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:00<01:55,  1.06cell/s]Executing:   2%|▏         | 3/123 [00:01<01:22,  1.45cell/s]Executing:   4%|▍         | 5/123 [00:01<00:59,  1.97cell/s]Executing:   5%|▍         | 6/123 [00:01<00:48,  2.41cell/s]Executing:   7%|▋         | 8/123 [00:01<00:36,  3.18cell/s]2022-11-29 13:44:25.854728: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:44:52.874515: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:44:52.899252: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:44:52.902814: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a969b70 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:44:52.902842: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:44:52.908706: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:44:53.048990: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9f1f20 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:44:53.049052: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:44:53.071117: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:44:53.071181: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:44:53.073487: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:44:53.075189: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:44:53.076035: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:44:53.077707: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:44:53.078901: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:44:53.082162: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:44:53.083806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:44:53.083852: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:44:55.186565: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-11-29 13:44:55.186621: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 
+2022-11-29 13:44:55.186631: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N 
+2022-11-29 13:44:55.188498: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/device:GPU:0 with 14763 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:18:00.0, compute capability: 7.0)
+Executing:   7%|▋         | 9/123 [00:35<19:47, 10.41s/cell]Executing:   8%|▊         | 10/123 [00:35<13:51,  7.36s/cell]Executing:   9%|▉         | 11/123 [00:36<09:42,  5.20s/cell]Executing:  11%|█         | 13/123 [00:36<06:42,  3.66s/cell]Executing:  12%|█▏        | 15/123 [00:58<10:45,  5.97s/cell]Executing:  14%|█▍        | 17/123 [00:59<07:25,  4.21s/cell]Executing:  15%|█▍        | 18/123 [00:59<05:14,  2.99s/cell]Executing:  16%|█▋        | 20/123 [00:59<03:38,  2.12s/cell]Executing:  17%|█▋        | 21/123 [01:00<02:52,  1.69s/cell]Executing:  19%|█▊        | 23/123 [01:00<02:00,  1.21s/cell]Executing:  20%|██        | 25/123 [01:00<01:28,  1.10cell/s]Executing:  22%|██▏       | 27/123 [01:00<01:03,  1.51cell/s]Executing:  24%|██▎       | 29/123 [01:01<00:52,  1.78cell/s]Executing:  25%|██▌       | 31/123 [01:01<00:38,  2.38cell/s]Executing:  27%|██▋       | 33/123 [01:01<00:28,  3.11cell/s]Executing:  28%|██▊       | 35/123 [01:02<00:22,  3.94cell/s]Executing:  30%|███       | 37/123 [01:02<00:17,  4.88cell/s]Executing:  31%|███       | 38/123 [01:02<00:14,  5.68cell/s]Executing:  33%|███▎      | 40/123 [01:02<00:12,  6.60cell/s]Executing:  34%|███▍      | 42/123 [01:03<00:18,  4.30cell/s]Executing:  36%|███▌      | 44/123 [01:03<00:15,  5.22cell/s]Executing:  37%|███▋      | 46/123 [01:03<00:12,  6.14cell/s]Executing:  38%|███▊      | 47/123 [01:03<00:10,  6.94cell/s]Executing:  40%|███▉      | 49/123 [01:04<00:09,  7.80cell/s]Executing:  41%|████      | 50/123 [01:04<00:08,  8.21cell/s]Executing:  42%|████▏     | 52/123 [01:04<00:08,  8.72cell/s]Executing:  44%|████▍     | 54/123 [01:04<00:07,  9.13cell/s]Executing:  45%|████▍     | 55/123 [01:04<00:07,  8.57cell/s]Executing:  46%|████▋     | 57/123 [01:04<00:07,  8.97cell/s]Executing:  47%|████▋     | 58/123 [01:05<00:07,  8.73cell/s]Executing:  49%|████▉     | 60/123 [01:05<00:06,  9.17cell/s]2022-11-29 13:45:24.933256: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:45:24.933326: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:45:24.933360: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:45:24.933377: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:45:24.933393: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:45:24.933409: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:45:24.933424: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:45:24.933439: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:45:24.935008: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:45:24.936270: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:45:24.936306: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:45:24.936328: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:45:24.936341: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:45:24.936353: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:45:24.936365: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:45:24.936377: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:45:24.936388: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:45:24.937957: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:45:24.938005: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-11-29 13:45:24.938016: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0 
+2022-11-29 13:45:24.938024: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N 
+2022-11-29 13:45:24.939613: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1402] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14763 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:18:00.0, compute capability: 7.0)
+Executing:  50%|████▉     | 61/123 [01:06<00:24,  2.55cell/s]Executing:  51%|█████     | 63/123 [01:06<00:18,  3.29cell/s]Executing:  52%|█████▏    | 64/123 [01:06<00:14,  4.10cell/s]Executing:  53%|█████▎    | 65/123 [01:06<00:11,  4.96cell/s]Executing:  54%|█████▎    | 66/123 [01:06<00:09,  5.84cell/s]Executing:  54%|█████▍    | 67/123 [01:06<00:08,  6.66cell/s]Executing:  55%|█████▌    | 68/123 [01:06<00:07,  7.39cell/s]Executing:  56%|█████▌    | 69/123 [01:07<00:07,  7.51cell/s]Executing:  57%|█████▋    | 70/123 [01:07<00:06,  8.08cell/s]Executing:  58%|█████▊    | 71/123 [01:07<00:06,  8.51cell/s]Executing:  59%|█████▊    | 72/123 [01:07<00:05,  8.84cell/s]Executing:  59%|█████▉    | 73/123 [01:07<00:05,  9.12cell/s]Executing:  60%|██████    | 74/123 [01:07<00:05,  9.19cell/s]Executing:  61%|██████    | 75/123 [01:07<00:05,  9.28cell/s]2022-11-29 13:45:27.623623: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:45:28.506257: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+Autosave too slow: 38.05 sec, over 25% limit. Backing off to 10 sec
+Autosave too slow: 26.73 sec, over 25% limit. Backing off to 20 sec
+Autosave too slow: 46.46 sec, over 25% limit. Backing off to 40 sec
+Autosave too slow: 12.43 sec, over 25% limit. Backing off to 80 sec

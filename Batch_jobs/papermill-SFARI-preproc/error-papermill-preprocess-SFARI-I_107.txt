@@ -1,71 +1,10 @@
-Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/014-SFARI-compcorr-filter.ipynb
-Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-preproc/107-run1-sfari-compcorr.ipynb
+Input Notebook:  /data/aglinska/BC-fMRI-AE/Notebooks/004-SFARI-compcorr-filter.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/data_preprocessed_sfari-run1_notebooks/107-run2-sfari-compcorr.ipynb
 Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
 Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
-Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp7h6p861d'
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpx4gvtxqc'
 Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
 Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
-Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpl08ig253'
-Executing:   0%|          | 0/36 [00:00<?, ?cell/s]Executing notebook with kernel: python3
-Executing:   3%|▎         | 1/36 [00:04<02:40,  4.57s/cell]Executing:  11%|█         | 4/36 [00:04<01:42,  3.21s/cell]Executing:  14%|█▍        | 5/36 [00:22<03:57,  7.67s/cell]Executing:  22%|██▏       | 8/36 [00:23<02:33,  5.47s/cell]Executing:  31%|███       | 11/36 [00:23<01:35,  3.84s/cell]Executing:  42%|████▏     | 15/36 [00:23<00:56,  2.70s/cell]Executing:  47%|████▋     | 17/36 [00:25<00:40,  2.15s/cell]Executing:  53%|█████▎    | 19/36 [00:25<00:26,  1.54s/cell]Executing:  56%|█████▌    | 20/36 [00:30<00:24,  1.54s/cell]
-Traceback (most recent call last):
-  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
-    sys.exit(papermill())
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
-    return self.main(*args, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
-    rv = self.invoke(ctx)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
-    return ctx.invoke(self.callback, **ctx.params)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
-    return callback(*args, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
-    return f(get_current_context(), *args, **kwargs)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
-    execute_notebook(
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
-    raise_for_execution_errors(nb, output_path)
-  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
-    raise error
-papermill.exceptions.PapermillExecutionError: 
----------------------------------------------------------------------------
-Exception encountered at "In [20]":
----------------------------------------------------------------------------
-KeyError                                  Traceback (most recent call last)
-<ipython-input-20-49f89985061e> in <module>
-      7 scrubbed_nii = make_4depi(mat,data['epi'])
-      8 
-----> 9 rmat = regress(mat,data['conf'].iloc[~scrub_idx])
-     10 
-     11 rmat_nii = make_4depi(rmat,data['epi'])
-
-<ipython-input-10-0e66fab4cb49> in regress(flat_epi, conf, idx)
-     16 
-     17 
----> 18     X = conf[keys].values[idx]
-     19     n = X.shape[0]
-     20     X = np.hstack((X,np.ones(n)[:,np.newaxis])) # Add mean
-
-~/anaconda3/lib/python3.8/site-packages/pandas/core/frame.py in __getitem__(self, key)
-   2906             if is_iterator(key):
-   2907                 key = list(key)
--> 2908             indexer = self.loc._get_listlike_indexer(key, axis=1, raise_missing=True)[1]
-   2909 
-   2910         # take() does not accept boolean indexers
-
-~/anaconda3/lib/python3.8/site-packages/pandas/core/indexing.py in _get_listlike_indexer(self, key, axis, raise_missing)
-   1252             keyarr, indexer, new_indexer = ax._reindex_non_unique(keyarr)
-   1253 
--> 1254         self._validate_read_indexer(keyarr, indexer, axis, raise_missing=raise_missing)
-   1255         return keyarr, indexer
-   1256 
-
-~/anaconda3/lib/python3.8/site-packages/pandas/core/indexing.py in _validate_read_indexer(self, key, indexer, axis, raise_missing)
-   1302             if raise_missing:
-   1303                 not_found = list(set(key) - set(ax))
--> 1304                 raise KeyError(f"{not_found} not in index")
-   1305 
-   1306             # we skip the warning on Categorical
-
-KeyError: "['a_comp_cor_05'] not in index"
-
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpck6edf4i'
+Executing:   0%|          | 0/70 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|▏         | 1/70 [00:03<03:42,  3.22s/cell]Executing:   4%|▍         | 3/70 [00:18<05:04,  4.55s/cell]Executing:   7%|▋         | 5/70 [00:18<03:28,  3.20s/cell]Executing:  10%|█         | 7/70 [00:19<02:25,  2.32s/cell]Executing:  13%|█▎        | 9/70 [00:19<01:39,  1.64s/cell]Executing:  16%|█▌        | 11/70 [00:19<01:08,  1.16s/cell]Executing:  19%|█▊        | 13/70 [00:19<00:47,  1.20cell/s]Executing:  21%|██▏       | 15/70 [00:19<00:33,  1.66cell/s]Executing:  24%|██▍       | 17/70 [00:24<01:04,  1.22s/cell]Executing:  27%|██▋       | 19/70 [00:25<00:44,  1.15cell/s]Executing:  30%|███       | 21/70 [00:25<00:30,  1.59cell/s]Executing:  33%|███▎      | 23/70 [00:25<00:21,  2.17cell/s]Executing:  36%|███▌      | 25/70 [00:25<00:15,  2.93cell/s]Executing:  39%|███▊      | 27/70 [00:25<00:11,  3.89cell/s]Executing:  41%|████▏     | 29/70 [00:26<00:10,  3.89cell/s]Executing:  44%|████▍     | 31/70 [00:26<00:08,  4.55cell/s]Executing:  47%|████▋     | 33/70 [00:33<00:43,  1.18s/cell]Executing:  49%|████▊     | 34/70 [00:54<04:14,  7.08s/cell]Executing:  51%|█████▏    | 36/70 [00:54<02:49,  4.98s/cell]Executing:  53%|█████▎    | 37/70 [00:54<02:00,  3.65s/cell]Executing:  54%|█████▍    | 38/70 [00:55<01:26,  2.69s/cell]Executing:  56%|█████▌    | 39/70 [00:56<01:06,  2.15s/cell]Executing:  57%|█████▋    | 40/70 [00:56<00:46,  1.54s/cell]Executing:  59%|█████▊    | 41/70 [00:56<00:34,  1.17s/cell]Executing:  61%|██████▏   | 43/70 [00:56<00:22,  1.18cell/s]Executing:  63%|██████▎   | 44/70 [01:19<03:15,  7.52s/cell]Executing:  64%|██████▍   | 45/70 [01:20<02:13,  5.33s/cell]Executing:  66%|██████▌   | 46/70 [01:20<01:31,  3.82s/cell]Executing:  67%|██████▋   | 47/70 [01:20<01:04,  2.79s/cell]Executing:  69%|██████▊   | 48/70 [01:21<00:46,  2.12s/cell]Executing:  70%|███████   | 49/70 [01:26<01:02,  2.97s/cell]Executing:  71%|███████▏  | 50/70 [01:31<01:12,  3.61s/cell]Executing:  73%|███████▎  | 51/70 [01:31<00:48,  2.57s/cell]Executing:  74%|███████▍  | 52/70 [01:31<00:32,  1.83s/cell]Executing:  76%|███████▌  | 53/70 [01:31<00:22,  1.32s/cell]Executing:  77%|███████▋  | 54/70 [01:31<00:15,  1.03cell/s]Executing:  79%|███████▊  | 55/70 [01:55<01:56,  7.77s/cell]Executing:  80%|████████  | 56/70 [01:55<01:16,  5.48s/cell]Executing:  81%|████████▏ | 57/70 [01:55<00:50,  3.88s/cell]Executing:  83%|████████▎ | 58/70 [01:55<00:33,  2.75s/cell]Executing:  84%|████████▍ | 59/70 [01:55<00:21,  1.97s/cell]Executing:  86%|████████▌ | 60/70 [01:56<00:16,  1.65s/cell]Executing:  87%|████████▋ | 61/70 [01:57<00:12,  1.37s/cell]Executing:  89%|████████▊ | 62/70 [01:58<00:09,  1.17s/cell]Executing:  90%|█████████ | 63/70 [01:59<00:07,  1.04s/cell]Executing:  91%|█████████▏| 64/70 [01:59<00:04,  1.31cell/s]Executing:  93%|█████████▎| 65/70 [01:59<00:02,  1.75cell/s]Executing:  94%|█████████▍| 66/70 [01:59<00:01,  2.28cell/s]Executing:  96%|█████████▌| 67/70 [01:59<00:01,  2.90cell/s]Executing:  97%|█████████▋| 68/70 [01:59<00:00,  3.58cell/s]Executing:  99%|█████████▊| 69/70 [02:00<00:00,  3.45cell/s]Executing: 100%|██████████| 70/70 [02:00<00:00,  4.15cell/s]Executing: 100%|██████████| 70/70 [02:01<00:00,  1.74s/cell]

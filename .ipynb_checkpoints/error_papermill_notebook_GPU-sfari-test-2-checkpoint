@@ -1,0 +1,741 @@
+ERROR: Unable to locate a modulefile for 'tensorflow/2.3.1gpu'
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-v100-0-run1/CVAE_train_2022-11-29-13-45-53.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpqq12q0dy'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpdyls9127'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:06<13:44,  6.76s/cell]Executing:   2%|▏         | 2/123 [00:06<09:36,  4.77s/cell]Executing:   2%|▏         | 3/123 [00:06<06:44,  3.37s/cell]Executing:   3%|▎         | 4/123 [00:07<04:44,  2.39s/cell]Executing:   4%|▍         | 5/123 [00:07<03:21,  1.71s/cell]Executing:   5%|▍         | 6/123 [00:07<02:28,  1.27s/cell]Executing:   7%|▋         | 8/123 [00:07<01:45,  1.09cell/s]2022-11-29 13:46:17.873499: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:46:48.058108: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:46:48.142990: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:46:48.145431: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a96ab40 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:46:48.145465: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:46:48.159704: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:46:48.547588: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9eed20 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:46:48.547651: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:46:48.591595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:46:48.591678: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:46:48.686831: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:46:48.739281: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:46:48.752273: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:46:48.848834: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:46:48.861169: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:46:49.028577: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:46:49.030427: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:46:49.030509: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Executing:   7%|▋         | 9/123 [00:47<23:46, 12.51s/cell]Executing:   7%|▋         | 9/123 [00:49<10:21,  5.46s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [6]":
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-6-14a8ea79f8e9> in <module>
+      1 import tensorflow as tf
+----> 2 tf.test.gpu_device_name()
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py in gpu_device_name()
+    129 def gpu_device_name():
+    130   """Returns the name of a GPU device if available or the empty string."""
+--> 131   for x in device_lib.list_local_devices():
+    132     if x.device_type == "GPU" or x.device_type == "SYCL":
+    133       return compat.as_str(x.name)
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/device_lib.py in list_local_devices(session_config)
+     41     serialized_config = session_config.SerializeToString()
+     42   return [
+---> 43       _convert(s) for s in _pywrap_device_lib.list_devices(serialized_config)
+     44   ]
+
+RuntimeError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
+
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-v100-0-run2/CVAE_train_2022-11-29-13-46-55.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpqvrktvpa'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpjlfbgkbp'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:06<12:52,  6.33s/cell]Executing:   2%|▏         | 3/123 [00:06<08:54,  4.46s/cell]Executing:   4%|▍         | 5/123 [00:06<06:11,  3.15s/cell]Executing:   5%|▍         | 6/123 [00:06<04:25,  2.27s/cell]Executing:   7%|▋         | 8/123 [00:07<03:05,  1.61s/cell]2022-11-29 13:47:17.411089: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:47:42.750684: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:47:42.773960: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:47:42.776483: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a96b400 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:47:42.776513: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:47:42.788670: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:47:43.016317: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9ef570 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:47:43.016374: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:47:43.017035: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:47:43.017091: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:47:43.019769: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:47:43.021955: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:47:43.024318: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:47:43.026744: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:47:43.027997: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:47:43.032277: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:47:43.033193: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:47:43.033241: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Executing:   7%|▋         | 9/123 [00:41<21:30, 11.32s/cell]Executing:   7%|▋         | 9/123 [00:41<08:50,  4.65s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [6]":
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-6-14a8ea79f8e9> in <module>
+      1 import tensorflow as tf
+----> 2 tf.test.gpu_device_name()
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py in gpu_device_name()
+    129 def gpu_device_name():
+    130   """Returns the name of a GPU device if available or the empty string."""
+--> 131   for x in device_lib.list_local_devices():
+    132     if x.device_type == "GPU" or x.device_type == "SYCL":
+    133       return compat.as_str(x.name)
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/device_lib.py in list_local_devices(session_config)
+     41     serialized_config = session_config.SerializeToString()
+     42   return [
+---> 43       _convert(s) for s in _pywrap_device_lib.list_devices(serialized_config)
+     44   ]
+
+RuntimeError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
+
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-v100-0-run3/CVAE_train_2022-11-29-13-47-47.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpokrcvo8u'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmphjvy6oh6'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:03<07:11,  3.54s/cell]Executing:   2%|▏         | 3/123 [00:03<05:00,  2.50s/cell]Executing:   4%|▍         | 5/123 [00:03<03:30,  1.78s/cell]Executing:   5%|▍         | 6/123 [00:04<02:33,  1.31s/cell]Executing:   7%|▋         | 8/123 [00:04<01:48,  1.06cell/s]2022-11-29 13:47:59.740590: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:48:09.122412: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:48:09.144971: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:48:09.147903: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a96afc0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:48:09.147940: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:48:09.157299: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:48:09.410331: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9ef1a0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:48:09.410384: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:48:09.431911: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:48:09.431974: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:48:09.434535: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:48:09.436863: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:48:09.437605: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:48:09.439360: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:48:09.440378: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:48:09.444482: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:48:09.445274: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:48:09.445312: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Executing:   7%|▋         | 9/123 [00:18<09:35,  5.05s/cell]Executing:   7%|▋         | 9/123 [00:19<04:09,  2.19s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [6]":
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-6-14a8ea79f8e9> in <module>
+      1 import tensorflow as tf
+----> 2 tf.test.gpu_device_name()
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py in gpu_device_name()
+    129 def gpu_device_name():
+    130   """Returns the name of a GPU device if available or the empty string."""
+--> 131   for x in device_lib.list_local_devices():
+    132     if x.device_type == "GPU" or x.device_type == "SYCL":
+    133       return compat.as_str(x.name)
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/device_lib.py in list_local_devices(session_config)
+     41     serialized_config = session_config.SerializeToString()
+     42   return [
+---> 43       _convert(s) for s in _pywrap_device_lib.list_devices(serialized_config)
+     44   ]
+
+RuntimeError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
+
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-v100-0-run4/CVAE_train_2022-11-29-13-48-13.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpo7b0t3j2'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp8xik3k_4'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:02<04:33,  2.25s/cell]Executing:   2%|▏         | 3/123 [00:02<03:11,  1.60s/cell]Executing:   4%|▍         | 5/123 [00:02<02:15,  1.15s/cell]Executing:   5%|▍         | 6/123 [00:02<01:41,  1.15cell/s]Executing:   7%|▋         | 8/123 [00:03<01:12,  1.58cell/s]2022-11-29 13:48:19.498997: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:48:28.289961: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:48:28.310951: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:48:28.313640: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a96ae60 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:48:28.313670: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:48:28.321404: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:48:28.581048: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9eefd0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:48:28.581101: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:48:28.583510: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:48:28.583562: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:48:28.586140: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:48:28.588302: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:48:28.589027: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:48:28.591161: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:48:28.592420: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:48:28.596572: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:48:28.597320: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:48:28.597355: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Executing:   7%|▋         | 9/123 [00:16<08:27,  4.45s/cell]Executing:   7%|▋         | 9/123 [00:17<03:47,  2.00s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [6]":
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-6-14a8ea79f8e9> in <module>
+      1 import tensorflow as tf
+----> 2 tf.test.gpu_device_name()
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py in gpu_device_name()
+    129 def gpu_device_name():
+    130   """Returns the name of a GPU device if available or the empty string."""
+--> 131   for x in device_lib.list_local_devices():
+    132     if x.device_type == "GPU" or x.device_type == "SYCL":
+    133       return compat.as_str(x.name)
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/device_lib.py in list_local_devices(session_config)
+     41     serialized_config = session_config.SerializeToString()
+     42   return [
+---> 43       _convert(s) for s in _pywrap_device_lib.list_devices(serialized_config)
+     44   ]
+
+RuntimeError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
+
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-v100-0-run5/CVAE_train_2022-11-29-13-48-34.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpvajhrxt4'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpgvhovau9'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:03<06:27,  3.18s/cell]Executing:   2%|▏         | 3/123 [00:03<04:30,  2.25s/cell]Executing:   4%|▍         | 5/123 [00:03<03:09,  1.60s/cell]Executing:   5%|▍         | 6/123 [00:03<02:18,  1.19s/cell]Executing:   7%|▋         | 8/123 [00:03<01:38,  1.17cell/s]2022-11-29 13:48:46.104702: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:48:58.459373: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:48:58.481969: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:48:58.485551: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a969aa0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:48:58.485588: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:48:58.495009: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:48:58.724340: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9edc30 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:48:58.724393: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:48:58.726470: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:48:58.726518: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:48:58.729147: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:48:58.731205: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:48:58.732285: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:48:58.734344: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:48:58.735656: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:48:58.739972: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:48:58.740799: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:48:58.740838: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Executing:   7%|▋         | 9/123 [00:21<11:11,  5.89s/cell]Executing:   7%|▋         | 9/123 [00:22<04:49,  2.54s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [6]":
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-6-14a8ea79f8e9> in <module>
+      1 import tensorflow as tf
+----> 2 tf.test.gpu_device_name()
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py in gpu_device_name()
+    129 def gpu_device_name():
+    130   """Returns the name of a GPU device if available or the empty string."""
+--> 131   for x in device_lib.list_local_devices():
+    132     if x.device_type == "GPU" or x.device_type == "SYCL":
+    133       return compat.as_str(x.name)
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/device_lib.py in list_local_devices(session_config)
+     41     serialized_config = session_config.SerializeToString()
+     42   return [
+---> 43       _convert(s) for s in _pywrap_device_lib.list_devices(serialized_config)
+     44   ]
+
+RuntimeError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
+
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-v100-0-run6/CVAE_train_2022-11-29-13-49-04.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpp8kq05df'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpau5pdtfa'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:02<04:22,  2.15s/cell]Executing:   2%|▏         | 3/123 [00:02<03:03,  1.53s/cell]Executing:   4%|▍         | 5/123 [00:02<02:09,  1.10s/cell]Executing:   5%|▍         | 6/123 [00:02<01:37,  1.20cell/s]Executing:   7%|▋         | 8/123 [00:02<01:09,  1.65cell/s]2022-11-29 13:49:10.284745: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:49:16.008405: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:49:16.028945: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:49:16.031570: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a96b4c0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:49:16.031599: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:49:16.039964: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:49:16.266282: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9ef6a0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:49:16.266331: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:49:16.267998: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:49:16.268045: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:49:16.270235: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:49:16.272203: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:49:16.272743: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:49:16.274283: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:49:16.275200: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:49:16.278852: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:49:16.279574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:49:16.279609: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Executing:   7%|▋         | 9/123 [00:12<06:14,  3.29s/cell]Executing:   7%|▋         | 9/123 [00:12<02:43,  1.44s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [6]":
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-6-14a8ea79f8e9> in <module>
+      1 import tensorflow as tf
+----> 2 tf.test.gpu_device_name()
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py in gpu_device_name()
+    129 def gpu_device_name():
+    130   """Returns the name of a GPU device if available or the empty string."""
+--> 131   for x in device_lib.list_local_devices():
+    132     if x.device_type == "GPU" or x.device_type == "SYCL":
+    133       return compat.as_str(x.name)
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/device_lib.py in list_local_devices(session_config)
+     41     serialized_config = session_config.SerializeToString()
+     42   return [
+---> 43       _convert(s) for s in _pywrap_device_lib.list_devices(serialized_config)
+     44   ]
+
+RuntimeError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
+
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-v100-0-run7/CVAE_train_2022-11-29-13-49-19.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpyw_u8yeo'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp5aa7nvi6'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:02<04:20,  2.13s/cell]Executing:   2%|▏         | 3/123 [00:02<03:02,  1.52s/cell]Executing:   4%|▍         | 5/123 [00:02<02:08,  1.09s/cell]Executing:   5%|▍         | 6/123 [00:02<01:36,  1.21cell/s]Executing:   7%|▋         | 8/123 [00:02<01:09,  1.65cell/s]2022-11-29 13:49:25.515618: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:49:34.333250: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:49:34.354945: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:49:34.357512: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a96b050 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:49:34.357538: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:49:34.365513: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:49:34.608911: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9ef1e0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:49:34.608960: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:49:34.610573: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:49:34.610626: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:49:34.612929: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:49:34.614955: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:49:34.615544: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:49:34.617429: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:49:34.618523: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:49:34.622032: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:49:34.622806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:49:34.622851: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Executing:   7%|▋         | 9/123 [00:15<08:05,  4.26s/cell]Executing:   7%|▋         | 9/123 [00:16<03:34,  1.89s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [6]":
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-6-14a8ea79f8e9> in <module>
+      1 import tensorflow as tf
+----> 2 tf.test.gpu_device_name()
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py in gpu_device_name()
+    129 def gpu_device_name():
+    130   """Returns the name of a GPU device if available or the empty string."""
+--> 131   for x in device_lib.list_local_devices():
+    132     if x.device_type == "GPU" or x.device_type == "SYCL":
+    133       return compat.as_str(x.name)
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/device_lib.py in list_local_devices(session_config)
+     41     serialized_config = session_config.SerializeToString()
+     42   return [
+---> 43       _convert(s) for s in _pywrap_device_lib.list_devices(serialized_config)
+     44   ]
+
+RuntimeError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
+
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-v100-0-run8/CVAE_train_2022-11-29-13-49-39.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpathrwzrk'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmphw62j3u6'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:04<09:34,  4.71s/cell]Executing:   2%|▏         | 3/123 [00:04<06:38,  3.32s/cell]Executing:   4%|▍         | 5/123 [00:05<04:37,  2.35s/cell]Executing:   5%|▍         | 6/123 [00:05<03:20,  1.71s/cell]Executing:   7%|▋         | 8/123 [00:05<02:20,  1.22s/cell]2022-11-29 13:49:50.037220: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:49:59.956244: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:49:59.977877: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:49:59.980347: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a96b2e0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:49:59.980380: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:49:59.988170: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:50:00.263303: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9e3bf0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:50:00.263357: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:50:00.263986: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:50:00.264049: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:50:00.266522: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:50:00.268588: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:50:00.269170: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:50:00.271074: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:50:00.272182: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:50:00.276042: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:50:00.276860: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:50:00.276912: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Executing:   7%|▋         | 9/123 [00:19<09:30,  5.01s/cell]Executing:   7%|▋         | 9/123 [00:19<04:12,  2.21s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [6]":
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-6-14a8ea79f8e9> in <module>
+      1 import tensorflow as tf
+----> 2 tf.test.gpu_device_name()
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py in gpu_device_name()
+    129 def gpu_device_name():
+    130   """Returns the name of a GPU device if available or the empty string."""
+--> 131   for x in device_lib.list_local_devices():
+    132     if x.device_type == "GPU" or x.device_type == "SYCL":
+    133       return compat.as_str(x.name)
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/device_lib.py in list_local_devices(session_config)
+     41     serialized_config = session_config.SerializeToString()
+     42   return [
+---> 43       _convert(s) for s in _pywrap_device_lib.list_devices(serialized_config)
+     44   ]
+
+RuntimeError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
+
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-v100-0-run9/CVAE_train_2022-11-29-13-50-03.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpls43b4gj'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpv29z8grh'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:02<04:38,  2.29s/cell]Executing:   2%|▏         | 3/123 [00:02<03:15,  1.63s/cell]Executing:   4%|▍         | 5/123 [00:02<02:17,  1.17s/cell]Executing:   5%|▍         | 6/123 [00:02<01:42,  1.14cell/s]Executing:   7%|▋         | 8/123 [00:03<01:13,  1.56cell/s]2022-11-29 13:50:10.511234: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:50:23.850455: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:50:23.871888: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:50:23.874210: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a96af40 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:50:23.874243: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:50:23.881507: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:50:24.128348: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9ef0d0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:50:24.128403: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:50:24.130433: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:50:24.130492: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:50:24.133039: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:50:24.135151: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:50:24.135757: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:50:24.137835: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:50:24.138986: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:50:24.143177: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:50:24.144057: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:50:24.144109: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Executing:   7%|▋         | 9/123 [00:21<11:24,  6.00s/cell]Executing:   7%|▋         | 9/123 [00:22<04:51,  2.56s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [6]":
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-6-14a8ea79f8e9> in <module>
+      1 import tensorflow as tf
+----> 2 tf.test.gpu_device_name()
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py in gpu_device_name()
+    129 def gpu_device_name():
+    130   """Returns the name of a GPU device if available or the empty string."""
+--> 131   for x in device_lib.list_local_devices():
+    132     if x.device_type == "GPU" or x.device_type == "SYCL":
+    133       return compat.as_str(x.name)
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/device_lib.py in list_local_devices(session_config)
+     41     serialized_config = session_config.SerializeToString()
+     42   return [
+---> 43       _convert(s) for s in _pywrap_device_lib.list_devices(serialized_config)
+     44   ]
+
+RuntimeError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
+
+Input Notebook:  0091-train-CVAE-cmats-with-SFARI.ipynb
+Output Notebook: /data/aglinska/BC-fMRI-AE/Assets/tf_weights/with-SFARI-v100-0-run10/CVAE_train_2022-11-29-13-50-30.ipynb
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/Grammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmp2zhm6t2p'
+Generating grammar tables from /data/aglinska/anaconda3/lib/python3.8/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /data/aglinska/.cache/black/21.8b0/PatternGrammar3.8.5.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/data/aglinska/.cache/black/21.8b0/tmpc52phv_7'
+Executing:   0%|          | 0/123 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   1%|          | 1/123 [00:05<11:04,  5.45s/cell]Executing:   2%|▏         | 3/123 [00:05<07:40,  3.84s/cell]Executing:   4%|▍         | 5/123 [00:05<05:20,  2.72s/cell]Executing:   5%|▍         | 6/123 [00:06<03:49,  1.96s/cell]Executing:   7%|▋         | 8/123 [00:06<02:41,  1.40s/cell]2022-11-29 13:50:46.446446: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:50:56.844945: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-11-29 13:50:56.867921: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2400000000 Hz
+2022-11-29 13:50:56.870714: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a96b200 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:50:56.870749: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2022-11-29 13:50:56.878392: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2022-11-29 13:50:57.117348: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55555a9ef370 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2022-11-29 13:50:57.117418: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2022-11-29 13:50:57.119867: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:18:00.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2022-11-29 13:50:57.119930: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2022-11-29 13:50:57.122972: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2022-11-29 13:50:57.125423: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2022-11-29 13:50:57.126127: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2022-11-29 13:50:57.128592: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2022-11-29 13:50:57.130019: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2022-11-29 13:50:57.136042: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2022-11-29 13:50:57.136931: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0
+2022-11-29 13:50:57.136980: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Executing:   7%|▋         | 9/123 [00:21<10:49,  5.70s/cell]Executing:   7%|▋         | 9/123 [00:22<04:46,  2.52s/cell]
+Traceback (most recent call last):
+  File "/data/aglinska/anaconda3/bin/papermill", line 8, in <module>
+    sys.exit(papermill())
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 829, in __call__
+    return self.main(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 782, in main
+    rv = self.invoke(ctx)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 1066, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/core.py", line 610, in invoke
+    return callback(*args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/click/decorators.py", line 21, in new_func
+    return f(get_current_context(), *args, **kwargs)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/cli.py", line 250, in papermill
+    execute_notebook(
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 122, in execute_notebook
+    raise_for_execution_errors(nb, output_path)
+  File "/data/aglinska/anaconda3/lib/python3.8/site-packages/papermill/execute.py", line 234, in raise_for_execution_errors
+    raise error
+papermill.exceptions.PapermillExecutionError: 
+---------------------------------------------------------------------------
+Exception encountered at "In [6]":
+---------------------------------------------------------------------------
+RuntimeError                              Traceback (most recent call last)
+<ipython-input-6-14a8ea79f8e9> in <module>
+      1 import tensorflow as tf
+----> 2 tf.test.gpu_device_name()
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/framework/test_util.py in gpu_device_name()
+    129 def gpu_device_name():
+    130   """Returns the name of a GPU device if available or the empty string."""
+--> 131   for x in device_lib.list_local_devices():
+    132     if x.device_type == "GPU" or x.device_type == "SYCL":
+    133       return compat.as_str(x.name)
+
+~/anaconda3/lib/python3.8/site-packages/tensorflow/python/client/device_lib.py in list_local_devices(session_config)
+     41     serialized_config = session_config.SerializeToString()
+     42   return [
+---> 43       _convert(s) for s in _pywrap_device_lib.list_devices(serialized_config)
+     44   ]
+
+RuntimeError: CUDA runtime implicit initialization on GPU:0 failed. Status: out of memory
+

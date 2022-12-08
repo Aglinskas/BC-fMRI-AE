@@ -1,4 +1,4 @@
-Tue Apr 26 12:26:22 EDT 2022
+Tue Nov 29 06:37:42 EST 2022
 142
-/data/aglinska/BC-fMRI-AE/Notebooks/014-SFARI-compcorr-filter.ipynb
-/data/aglinska/BC-fMRI-AE/Assets/papermill-SFARI-preproc/142-run1-sfari-compcorr.ipynb
+/data/aglinska/BC-fMRI-AE/Notebooks/004-SFARI-compcorr-filter.ipynb
+/data/aglinska/BC-fMRI-AE/Assets/data_preprocessed_sfari-run1_notebooks/142-run2-sfari-compcorr.ipynb
